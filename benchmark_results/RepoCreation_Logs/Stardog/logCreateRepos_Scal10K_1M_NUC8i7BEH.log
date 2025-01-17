@@ -1,0 +1,119 @@
+All of the following environment variables (Geographica/scripts/prepareRunEnvironment.sh) are defined:
+	{DatasetBaseDir, StardogBaseDir, STARDOG_HOME, STARDOG_SERVER_JAVA_ARGS, StardogSpatialPrecision, CompletionReportDaemonIP, CompletionReportDaemonPort, ScalabilityGenScriptName, ScalabilityGzipRefDSName}
+0 args provided
+Unable to connect to server at http://localhost:5820 Connection refused (Connection refused).
+rm: cannot remove '/data/StarDog/stardog.properties': No such file or directory
+
+************************************************************
+This copy of Stardog is licensed to Theofilos Ioannidis (tioannid@di.uoa.gr), Kapodistrian University of Athens
+This is a Enterprise license
+This license will expire in 61 days on Mon May 20 14:18:28 EEST 2024
+************************************************************
+
+                                                             :;   
+                                      ;;                   `;`:   
+  `'+',    ::                        `++                    `;:`  
+ +###++,  ,#+                        `++                    .     
+ ##+.,',  '#+                         ++                     +    
+,##      ####++  ####+:   ##,++` .###+++   .####+    ####++++#    
+`##+     ####+'  ##+#++   ###++``###'+++  `###'+++  ###`,++,:     
+ ####+    ##+        ++.  ##:   ###  `++  ###  `++` ##`  ++:      
+  ###++,  ##+        ++,  ##`   ##;  `++  ##:   ++; ##,  ++:      
+    ;+++  ##+    ####++,  ##`   ##:  `++  ##:   ++' ;##'#++       
+     ;++  ##+   ###  ++,  ##`   ##'  `++  ##;   ++:  ####+        
+,.   +++  ##+   ##:  ++,  ##`   ###  `++  ###  .++  '#;           
+,####++'  +##++ ###+#+++` ##`   :####+++  `####++'  ;####++`      
+`####+;    ##++  ###+,++` ##`    ;###:++   `###+;   `###++++      
+                                                    ##   `++      
+                                                   .##   ;++      
+                                                    #####++`      
+                                                     `;;;.        
+************************************************************
+
+
+Stardog server 7.9.1 started on Tue Mar 19 15:25:18 EET 2024.
+
+Stardog server is listening on all network interfaces.
+HTTP server available at http://localhost:5820.
+
+STARDOG=/data/stardog-7.9.1/bin/..
+
+STARDOG_EXT=/data/stardog-7.9.1/server/ext
+
+STARDOG_HOME=/data/StarDog/
+
+| spatial.use.jts | true      |
+Running script with syntax: 	./createAllStardogDBRepos.sh /data/Geographica2_Datasets /data/stardog-7.9.1 /data/StarDog "-Xms8g -Xmx8g -XX:MaxDirectMemorySize=17g" 11 192.168.1.44 3333 /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+Script start time: Τρι 19 Μαρ 2024 03:25:19 μμ EET
+Checking/Creating scalability 10K dataset ...
+	Scalability 10K dataset already exists
+Generating scalability 10K repository ...
+./createStardogDBRepo.sh scalability_10K /data/Geographica2_Datasets/Scalability/10K N-TRIPLES /data/stardog-7.9.1 /data/StarDog 11 192.168.1.44 3333
+time  /data/stardog-7.9.1/bin/stardog-admin db create -o spatial.enabled=true spatial.use.jts=true -n scalability_10K  /data/Geographica2_Datasets/Scalability/10K
+Bulk loading data to new database scalability_10K.
+Loaded 10,000 triples to scalability_10K from 1 file(s) in 00:00:49.303 @ 0.2K triples/sec.
+Successfully created database 'scalability_10K'.
+
+
+real	0m50,650s
+user	0m3,241s
+sys	0m0,173s
+Stardog repository "/data/StarDog/scalability_10K/" has size: 21MB
+| optimize.spatial                            | false                                                                            |
+| spatial.distance.precision                  | 8                                                                                |
+| spatial.enabled                             | true                                                                             |
+| spatial.error.percentage                    | 0.025                                                                            |
+| spatial.index.dirty                         | false                                                                            |
+| spatial.index.version                       | 1                                                                                |
+| spatial.precision                           | 11                                                                               |
+| spatial.result.limit                        | 10000                                                                            |
+| spatial.result.page_size                    | 100000                                                                           |
+| spatial.use.jts                             | true                                                                             |
+Checking/Creating scalability 100K dataset ...
+	Scalability 100K dataset already exists
+Generating scalability 100K repository ...
+./createStardogDBRepo.sh scalability_100K /data/Geographica2_Datasets/Scalability/100K N-TRIPLES /data/stardog-7.9.1 /data/StarDog 11 192.168.1.44 3333
+time  /data/stardog-7.9.1/bin/stardog-admin db create -o spatial.enabled=true spatial.use.jts=true -n scalability_100K  /data/Geographica2_Datasets/Scalability/100K
+Bulk loading data to new database scalability_100K.
+Loaded 100,000 triples to scalability_100K from 4 file(s) in 00:02:10.695 @ 0.8K triples/sec.
+Successfully created database 'scalability_100K'.
+
+
+real	2m12,060s
+user	0m3,335s
+sys	0m0,152s
+Stardog repository "/data/StarDog/scalability_100K/" has size: 65MB
+| optimize.spatial                            | false                                                                            |
+| spatial.distance.precision                  | 8                                                                                |
+| spatial.enabled                             | true                                                                             |
+| spatial.error.percentage                    | 0.025                                                                            |
+| spatial.index.dirty                         | false                                                                            |
+| spatial.index.version                       | 1                                                                                |
+| spatial.precision                           | 11                                                                               |
+| spatial.result.limit                        | 10000                                                                            |
+| spatial.result.page_size                    | 100000                                                                           |
+| spatial.use.jts                             | true                                                                             |
+Checking/Creating scalability 1M dataset ...
+	Scalability 1M dataset already exists
+Generating scalability 1M repository ...
+./createStardogDBRepo.sh scalability_1M /data/Geographica2_Datasets/Scalability/1M N-TRIPLES /data/stardog-7.9.1 /data/StarDog 11 192.168.1.44 3333
+time  /data/stardog-7.9.1/bin/stardog-admin db create -o spatial.enabled=true spatial.use.jts=true -n scalability_1M  /data/Geographica2_Datasets/Scalability/1M
+Bulk loading data to new database scalability_1M.
+Loaded 1,000,000 triples to scalability_1M from 4 file(s) in 00:24:57.107 @ 0.7K triples/sec.
+Successfully created database 'scalability_1M'.
+
+
+real	24m58,476s
+user	0m3,589s
+sys	0m0,377s
+Stardog repository "/data/StarDog/scalability_1M/" has size: 839MB
+| optimize.spatial                            | false                                                                            |
+| spatial.distance.precision                  | 8                                                                                |
+| spatial.enabled                             | true                                                                             |
+| spatial.error.percentage                    | 0.025                                                                            |
+| spatial.index.dirty                         | false                                                                            |
+| spatial.index.version                       | 1                                                                                |
+| spatial.precision                           | 11                                                                               |
+| spatial.result.limit                        | 10000                                                                            |
+| spatial.result.page_size                    | 100000                                                                           |
+| spatial.use.jts                             | true                                                                             |
