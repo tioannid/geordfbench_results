@@ -1,0 +1,77 @@
+All of the following environment variables (geordfbench/scripts/prepareRunEnvironment.sh) are defined: 
+	{DatasetBaseDir, RDF4JRepoBaseDir, JVM_Xmx, EnableLuceneSail, CompletionReportDaemonIP, CompletionReportDaemonPort, ScalabilityGenScriptName, ScalabilityGzipRefDSName}
+Running script with syntax: 
+	./createAllRDF4JRepos.sh false /data/Geographica2_Datasets /data/RDF4J_4.3.15_LuceneRepos/server -Xmx24g true 192.168.1.44 3333 /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+Script start time: Mon 28 Apr 2025 04:21:18 pm EEST
+/data/RDF4J_4.3.15_LuceneRepos/server dir does not exist.
+	Creating it now ...
+Checking/Creating scalability 10K dataset ...
+	Scalability 10K dataset already exists
+Generating scalability 10K repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_LuceneRepos/server scalability_10K false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/10K -Xmx24g true "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_10K" "FALSE" "true" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_10K" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/10K" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+68   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes and forceSync = false
+71   [main] INFO  RDF4JSystem  - Adding Lucene sail on top of NativeStore
+73   [main] INFO  RDF4JSystem  - Lucene sail will spatially index properties: http://www.opengis.net/ont/geosparql#asWKT
+216  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_10K
+775  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_10K
+835  [main] INFO  RepoUtil  - RDF4J created with manager lucene repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_10K" in 74 msecs
+835  [main] INFO  RDF4JSystem  - Closing connection...
+837  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+1    [main] INFO  RDF4JSystem  - Loading file scalability_10K.nt ...
+2500 [main] INFO  RDF4JSystem  - Finished loading file scalability_10K.nt in 2492 msecs
+2506 [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/10K" to repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_10K" in 2599 msecs
+2506 [main] INFO  RDF4JSystem  - Closing connection...
+2508 [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_10K" has size: 7MB
+Checking/Creating scalability 100K dataset ...
+	Scalability 100K dataset already exists
+Generating scalability 100K repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_LuceneRepos/server scalability_100K false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/100K -Xmx24g true "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_100K" "FALSE" "true" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_100K" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/100K" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+77   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes and forceSync = false
+79   [main] INFO  RDF4JSystem  - Adding Lucene sail on top of NativeStore
+81   [main] INFO  RDF4JSystem  - Lucene sail will spatially index properties: http://www.opengis.net/ont/geosparql#asWKT
+229  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_100K
+629  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_100K
+691  [main] INFO  RepoUtil  - RDF4J created with manager lucene repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_100K" in 73 msecs
+692  [main] INFO  RDF4JSystem  - Closing connection...
+693  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - Loading file scalability_100K.nt ...
+4377 [main] INFO  RDF4JSystem  - Finished loading file scalability_100K.nt in 4374 msecs
+4385 [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/100K" to repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_100K" in 4414 msecs
+4385 [main] INFO  RDF4JSystem  - Closing connection...
+4387 [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_100K" has size: 21MB
+Checking/Creating scalability 1M dataset ...
+	Scalability 1M dataset already exists
+Generating scalability 1M repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_LuceneRepos/server scalability_1M false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/1M -Xmx24g true "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_1M" "FALSE" "true" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_LuceneRepos/server" "scalability_1M" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/1M" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+81   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes and forceSync = false
+84   [main] INFO  RDF4JSystem  - Adding Lucene sail on top of NativeStore
+86   [main] INFO  RDF4JSystem  - Lucene sail will spatially index properties: http://www.opengis.net/ont/geosparql#asWKT
+236  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_1M
+714  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_1M
+763  [main] INFO  RepoUtil  - RDF4J created with manager lucene repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_1M" in 79 msecs
+763  [main] INFO  RDF4JSystem  - Closing connection...
+764  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - Loading file scalability_1M.nt ...
+23600 [main] INFO  RDF4JSystem  - Finished loading file scalability_1M.nt in 23596 msecs
+23608 [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/1M" to repo "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_1M" in 23627 msecs
+23608 [main] INFO  RDF4JSystem  - Closing connection...
+23611 [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_LuceneRepos/server/repositories/scalability_1M" has size: 205MB
+Script end time: Mon 28 Apr 2025 04:21:56 pm EEST

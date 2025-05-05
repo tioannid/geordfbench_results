@@ -1,1 +1,1 @@
-# GeoRDFBench Framework v1.0 Benchmark Results
+# GeoRDFBench Framework v2.0 Benchmark Results

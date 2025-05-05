@@ -1,0 +1,26 @@
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = 531f9c1#_2025-04-26_JenaGeoSPARQLSUT_CreateRepo_Scalability10K_1M_JenaGeoSPARQL
+ActiveSUT = JenaGeoSPARQLSUT
+ExperimentResultDir = /data/JenaGeoSPARQLSUT/531f9c1#_2025-04-26_JenaGeoSPARQLSUT_CreateRepo_Scalability10K_1M_JenaGeoSPARQL
+ExperimentDesc = 531f9c1#_2025-04-26_JenaGeoSPARQLSUT_CreateRepo_Scalability10K_1M_JenaGeoSPARQL
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+JenaGeoSPARQL SUT
+-----------------
+JenaBaseDir = /data/apache-jena-4.10.0
+JenaGeoSPARQLRepoBaseDir = /data/JenaGeoSPARQL_4.10.0_Repos
+Version = 4.10.0
+

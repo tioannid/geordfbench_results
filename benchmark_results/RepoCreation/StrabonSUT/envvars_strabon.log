@@ -1,0 +1,26 @@
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = c13aee6#_2025-05-04_StrabonSUT_CreateRepo_Scalability10K_1M_Strabon
+ActiveSUT = StrabonSUT
+ExperimentResultDir = /data/StrabonSUT/c13aee6#_2025-05-04_StrabonSUT_CreateRepo_Scalability10K_1M_Strabon
+ExperimentDesc = c13aee6#_2025-05-04_StrabonSUT_CreateRepo_Scalability10K_1M_Strabon
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+Strabon SUT
+-----------
+StrabonBaseDir = /data/Strabon
+StrabonLoaderBaseDir = /data/StrabonLoader
+Version = 3.3.3-SNAPSHOT
+

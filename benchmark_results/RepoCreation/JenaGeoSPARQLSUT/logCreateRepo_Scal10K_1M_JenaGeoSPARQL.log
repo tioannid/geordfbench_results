@@ -1,0 +1,57 @@
+Σαβ 26 Απρ 2025 02:51:19 μμ EEST
+
+/data/JenaGeoSPARQL_4.10.0_Repos dir does not exist.
+	Creating it now ...
+Checking/Creating scalability 10K dataset ...
+	Scalability 10K dataset already exists
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10K repo does not exist
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10K directory created
+vm.max_map_count = 262144
+14:51:26 INFO  loader          :: Loader = LoaderPhased
+14:51:26 INFO  loader          :: Start: /data/Geographica2_Datasets/Scalability/10K/scalability_10K.nt
+14:51:26 INFO  loader          :: Finished: /data/Geographica2_Datasets/Scalability/10K/scalability_10K.nt: 10,000 tuples in 0.50s (Avg: 19,920)
+14:51:27 INFO  loader          :: Finish - index SPO
+14:51:28 INFO  loader          :: Start replay index SPO
+14:51:28 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP
+14:51:28 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP [10,000 items, 0.0 seconds]
+14:51:28 INFO  loader          :: Finish - index OSP
+14:51:28 INFO  loader          :: Finish - index POS
+14:51:28 INFO  loader          :: Time = 2.493 seconds : Triples = 10,000 : Rate = 4,011 /s
+vm.max_map_count = 65530
+JenaGeoSPARQL TDB2 repository "/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10K" has size: 5MB
+Checking/Creating scalability 100K dataset ...
+	Scalability 100K dataset already exists
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_100K repo does not exist
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_100K directory created
+vm.max_map_count = 262144
+14:51:35 INFO  loader          :: Loader = LoaderPhased
+14:51:35 INFO  loader          :: Start: /data/Geographica2_Datasets/Scalability/100K/scalability_100K.nt
+14:51:36 INFO  loader          :: Finished: /data/Geographica2_Datasets/Scalability/100K/scalability_100K.nt: 100,000 tuples in 0.86s (Avg: 116,144)
+14:51:37 INFO  loader          :: Finish - index SPO
+14:51:38 INFO  loader          :: Start replay index SPO
+14:51:38 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP
+14:51:38 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP [100,000 items, 0.0 seconds]
+14:51:39 INFO  loader          :: Finish - index OSP
+14:51:39 INFO  loader          :: Finish - index POS
+14:51:39 INFO  loader          :: Time = 3.912 seconds : Triples = 100,000 : Rate = 25,562 /s
+vm.max_map_count = 65530
+JenaGeoSPARQL TDB2 repository "/data/JenaGeoSPARQL_4.10.0_Repos/scalability_100K" has size: 22MB
+Checking/Creating scalability 1M dataset ...
+	Scalability 1M dataset already exists
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_1M repo does not exist
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_1M directory created
+vm.max_map_count = 262144
+14:51:46 INFO  loader          :: Loader = LoaderPhased
+14:51:46 INFO  loader          :: Start: /data/Geographica2_Datasets/Scalability/1M/scalability_1M.nt
+14:51:51 INFO  loader          :: Add: 1,000,000 scalability_1M.nt (Batch: 200,040 / Avg: 200,040)
+14:51:51 INFO  loader          :: Finished: /data/Geographica2_Datasets/Scalability/1M/scalability_1M.nt: 1,000,000 tuples in 5.00s (Avg: 200,000)
+14:51:57 INFO  loader          :: Finish - index SPO
+14:51:58 INFO  loader          :: Start replay index SPO
+14:51:58 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP
+14:51:58 INFO  loader          :: Add: 1,000,000 Index (Batch: 4,878,048 / Avg: 4,878,048)
+14:51:58 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP [1,000,000 items, 0.2 seconds]
+14:52:02 INFO  loader          :: Finish - index OSP
+14:52:02 INFO  loader          :: Finish - index POS
+14:52:02 INFO  loader          :: Time = 16.609 seconds : Triples = 1,000,000 : Rate = 60,208 /s
+vm.max_map_count = 65530
+JenaGeoSPARQL TDB2 repository "/data/JenaGeoSPARQL_4.10.0_Repos/scalability_1M" has size: 207MB

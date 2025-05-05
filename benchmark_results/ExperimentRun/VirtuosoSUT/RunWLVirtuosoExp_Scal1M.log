@@ -1,0 +1,960 @@
+ARGS = -surl http://localhost:1111 -susr dba -spwd dba -rbd virtuoso-opensource-7.2.14/repos -expdesc 2025-04-27_VirtuosoSUT_RunWL_Scal1M -wl /data/geordfbench/json_defs/workloads/scalabilityFunc1M_WLoriginal.json -h /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json -rs /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json -rpsr /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RunVirtuosoExperimentWorkload  - args[0] = -surl
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[1] = http://localhost:1111
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[2] = -susr
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[3] = dba
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[4] = -spwd
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[5] = dba
+1    [main] INFO  RunVirtuosoExperimentWorkload  - args[6] = -rbd
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[7] = virtuoso-opensource-7.2.14/repos
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[8] = -expdesc
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[9] = 2025-04-27_VirtuosoSUT_RunWL_Scal1M
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[10] = -wl
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[11] = /data/geordfbench/json_defs/workloads/scalabilityFunc1M_WLoriginal.json
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[12] = -h
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[13] = /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[14] = -rs
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[15] = /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[16] = -rpsr
+2    [main] INFO  RunVirtuosoExperimentWorkload  - args[17] = /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+5    [main] INFO  RunVirtuosoExperimentWorkload  - |==> Experiment related options
+9    [main] INFO  RunVirtuosoExperimentWorkload  - Experiment description:	2025-04-27_VirtuosoSUT_RunWL_Scal1M
+9    [main] INFO  RunVirtuosoExperimentWorkload  - |==> Workload, Host, Report related options
+9    [main] INFO  RunVirtuosoExperimentWorkload  - Workload specs configuration JSON file:	/data/geordfbench/json_defs/workloads/scalabilityFunc1M_WLoriginal.json
+10   [main] INFO  RunVirtuosoExperimentWorkload  - List of queries to include in the run:	all
+10   [main] INFO  RunVirtuosoExperimentWorkload  - Host configuration JSON file:	/data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+10   [main] INFO  RunVirtuosoExperimentWorkload  - Report specs configuration JSON file:	/data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+11   [main] INFO  RunVirtuosoExperimentWorkload  - Report source specs configuration JSON file:	/data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+11   [main] INFO  RunVirtuosoExperimentWorkload  - |==> Repository/Store options
+11   [main] INFO  RunVirtuosoExperimentWorkload  - Virtuoso Server endpoint URL:	http://localhost:1111
+11   [main] INFO  RunVirtuosoExperimentWorkload  - Virtuoso server username:	dba
+12   [main] INFO  RunVirtuosoExperimentWorkload  - Virtuoso server password:	dba
+12   [main] INFO  RunVirtuosoExperimentWorkload  - |==> System options
+12   [main] INFO  RunVirtuosoExperimentWorkload  - BaseDir:	virtuoso-opensource-7.2.14/repos
+284  [main] INFO  RunVirtuosoExperimentWorkload  - {SimpleGeospatialWL: ScalabilityFunc, ,
+	{GeographicaDS: scalability_1M, Scalability/1M,
+	{GenericGeospatialSimpleDS: scalability_1M, N-TRIPLES}}
+	{StaticTempParamQS: scalabilityFunc, ,false, SimpleES{ COLD=3, WARM=3, action=RUN, maxduration=604800 secs, repmaxduration=86400 secs, func=QUERY_MEDIAN }}}
+590  [main] INFO  RDF4JBasedSUT  - Reading VirtuosoSUT properties from file : jar:file:/data/geordfbench/VirtuosoSUT/target/VirtuosoSUT-2.0.0-SNAPSHOT.jar!/virtuoso.properties
+603  [main] INFO  VirtuosoSUT  - Initializing..
+603  [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+15634 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+15634 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/data/geordfbench/VirtuosoSUT/target/logback-classic-1.1.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/data/geordfbench/VirtuosoSUT/target/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+15713 [main] INFO  ExperimentWorkload  - VirtuosoSystem-dependent translation of the queryset scalabilityFunc
+15713 [main] INFO  ExperimentWorkload  - VirtuosoSystem-dependent namespace prefixes merged with the prefixes of queryset scalabilityFunc
+15714 [main] INFO  VirtuosoSUT  - Closing..
+15715 [main] INFO  VirtuosoSystem  - Closing connection...
+15715 [main] INFO  VirtuosoSystem  - Repository closed.
+20727 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+20728 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+20967 [main] INFO  RunVirtuosoExperimentWorkload  - Start ScalabilityFunc
+20976 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+20977 [main] INFO  UbuntuJammyOS  - Syncing...
+21227 [main] INFO  UbuntuJammyOS  - Clearing caches...
+26611 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+26611 [main] INFO  VirtuosoSUT  - Initializing..
+26611 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+42155 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+42155 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+42178 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+42199 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+42200 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+42203 [Thread-1] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+42204 [Thread-1] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+42228 [Thread-1] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+42801 [Thread-1] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+42807 [Thread-1] INFO  RDF4JbasedExecutor  - 	s1		o1		
+42807 [Thread-1] INFO  RDF4JbasedExecutor  - ------------------------------------>
+42807 [Thread-1] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+42877 [Thread-1] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+42878 [Thread-1] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+42878 [Thread-1] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+51593 [Thread-1] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+51594 [Thread-1] INFO  RDF4JbasedExecutor  - <------------------------------------
+51594 [Thread-1] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+51595 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+51656 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): <COMPLETED-NONE> 573224756 + 8785350808 = 9358575564 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+51665 [main] INFO  VirtuosoSUT  - Closing..
+51665 [main] INFO  VirtuosoSystem  - Closing connection...
+51665 [main] INFO  VirtuosoSystem  - Repository closed.
+56681 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+56681 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+56709 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+56709 [main] INFO  UbuntuJammyOS  - Syncing...
+56936 [main] INFO  UbuntuJammyOS  - Clearing caches...
+62008 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+62008 [main] INFO  VirtuosoSUT  - Initializing..
+62009 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+77398 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+77399 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+77406 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+77407 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+77407 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+77408 [Thread-2] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+77409 [Thread-2] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+77410 [Thread-2] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+77911 [Thread-2] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+77911 [Thread-2] INFO  RDF4JbasedExecutor  - 	s1		o1		
+77911 [Thread-2] INFO  RDF4JbasedExecutor  - ------------------------------------>
+77912 [Thread-2] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+77914 [Thread-2] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+77915 [Thread-2] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+77915 [Thread-2] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+86625 [Thread-2] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+86625 [Thread-2] INFO  RDF4JbasedExecutor  - <------------------------------------
+86625 [Thread-2] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+86625 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+86637 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): <COMPLETED-NONE> 500992578 + 8712776382 = 9213768960 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+86638 [main] INFO  VirtuosoSUT  - Closing..
+86638 [main] INFO  VirtuosoSystem  - Closing connection...
+86638 [main] INFO  VirtuosoSystem  - Repository closed.
+91650 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+91651 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+91679 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+91679 [main] INFO  UbuntuJammyOS  - Syncing...
+91963 [main] INFO  UbuntuJammyOS  - Clearing caches...
+97033 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+97033 [main] INFO  VirtuosoSUT  - Initializing..
+97034 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+112365 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+112366 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+112372 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+112372 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+112372 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+112372 [Thread-3] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+112373 [Thread-3] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+112373 [Thread-3] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+113012 [Thread-3] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+113013 [Thread-3] INFO  RDF4JbasedExecutor  - 	s1		o1		
+113013 [Thread-3] INFO  RDF4JbasedExecutor  - ------------------------------------>
+113013 [Thread-3] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+113021 [Thread-3] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+113022 [Thread-3] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+113022 [Thread-3] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+122280 [Thread-3] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+122281 [Thread-3] INFO  RDF4JbasedExecutor  - <------------------------------------
+122281 [Thread-3] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+122281 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+122295 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): <COMPLETED-NONE> 639808721 + 9267097675 = 9906906396 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+122296 [main] INFO  VirtuosoSUT  - Closing..
+122296 [main] INFO  VirtuosoSystem  - Closing connection...
+122296 [main] INFO  VirtuosoSystem  - Repository closed.
+127311 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+127311 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+127338 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+127338 [main] INFO  UbuntuJammyOS  - Syncing...
+127656 [main] INFO  UbuntuJammyOS  - Clearing caches...
+132723 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+132723 [main] INFO  VirtuosoSUT  - Initializing..
+132724 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+148255 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+148256 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+148262 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+148263 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+148263 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+148263 [Thread-4] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+148264 [Thread-4] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+148265 [Thread-4] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+154922 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+154923 [Thread-4] INFO  RDF4JbasedExecutor  - 	s1		s2		
+154923 [Thread-4] INFO  RDF4JbasedExecutor  - ------------------------------------>
+154923 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+154923 [Thread-4] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+154923 [Thread-4] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+154963 [Thread-4] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+169952 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+169952 [Thread-4] INFO  RDF4JbasedExecutor  - <------------------------------------
+169952 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+169952 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+169964 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 6657989632 + 15028449275 = 21686438907 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+169964 [main] INFO  VirtuosoSUT  - Closing..
+169964 [main] INFO  VirtuosoSystem  - Closing connection...
+169964 [main] INFO  VirtuosoSystem  - Repository closed.
+174977 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+174978 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+175002 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+175002 [main] INFO  UbuntuJammyOS  - Syncing...
+175242 [main] INFO  UbuntuJammyOS  - Clearing caches...
+180314 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+180314 [main] INFO  VirtuosoSUT  - Initializing..
+180315 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+195735 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+195736 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+195762 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+195762 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+195762 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+195762 [Thread-5] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+195762 [Thread-5] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+195763 [Thread-5] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+202365 [Thread-5] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+202365 [Thread-5] INFO  RDF4JbasedExecutor  - 	s1		s2		
+202365 [Thread-5] INFO  RDF4JbasedExecutor  - ------------------------------------>
+202365 [Thread-5] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+202365 [Thread-5] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+202365 [Thread-5] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+202407 [Thread-5] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+217420 [Thread-5] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+217420 [Thread-5] INFO  RDF4JbasedExecutor  - <------------------------------------
+217420 [Thread-5] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+217421 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+217433 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 6602236492 + 15055452834 = 21657689326 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+217433 [main] INFO  VirtuosoSUT  - Closing..
+217433 [main] INFO  VirtuosoSystem  - Closing connection...
+217433 [main] INFO  VirtuosoSystem  - Repository closed.
+222447 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+222447 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+222473 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+222473 [main] INFO  UbuntuJammyOS  - Syncing...
+222959 [main] INFO  UbuntuJammyOS  - Clearing caches...
+228039 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+228039 [main] INFO  VirtuosoSUT  - Initializing..
+228039 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+243454 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+243454 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+243461 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+243462 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+243462 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+243462 [Thread-6] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+243463 [Thread-6] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+243463 [Thread-6] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+250141 [Thread-6] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+250141 [Thread-6] INFO  RDF4JbasedExecutor  - 	s1		s2		
+250141 [Thread-6] INFO  RDF4JbasedExecutor  - ------------------------------------>
+250141 [Thread-6] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+250141 [Thread-6] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+250141 [Thread-6] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+250202 [Thread-6] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+265114 [Thread-6] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+265114 [Thread-6] INFO  RDF4JbasedExecutor  - <------------------------------------
+265114 [Thread-6] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+265114 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+265126 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 6677946701 + 14973090574 = 21651037275 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+265126 [main] INFO  VirtuosoSUT  - Closing..
+265126 [main] INFO  VirtuosoSystem  - Closing connection...
+265127 [main] INFO  VirtuosoSystem  - Repository closed.
+270139 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+270139 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+270167 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+270167 [main] INFO  UbuntuJammyOS  - Syncing...
+270359 [main] INFO  UbuntuJammyOS  - Clearing caches...
+275430 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+275430 [main] INFO  VirtuosoSUT  - Initializing..
+275430 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+290797 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+290798 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+290805 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+290806 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+290806 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+290806 [Thread-7] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+290807 [Thread-7] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+290807 [Thread-7] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+297302 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+297302 [Thread-7] INFO  RDF4JbasedExecutor  - 	s1		s2		
+297302 [Thread-7] INFO  RDF4JbasedExecutor  - ------------------------------------>
+297302 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+297302 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+297302 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+297302 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+312364 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+312364 [Thread-7] INFO  RDF4JbasedExecutor  - <------------------------------------
+312364 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+312364 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+312376 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 6494526622 + 15061671166 = 21556197788 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+312376 [main] INFO  VirtuosoSUT  - Closing..
+312377 [main] INFO  VirtuosoSystem  - Closing connection...
+312377 [main] INFO  VirtuosoSystem  - Repository closed.
+317389 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+317390 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+317415 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+317415 [main] INFO  UbuntuJammyOS  - Syncing...
+317716 [main] INFO  UbuntuJammyOS  - Clearing caches...
+322785 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+322785 [main] INFO  VirtuosoSUT  - Initializing..
+322785 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+338443 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+338444 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+338476 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+338476 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+338476 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+338476 [Thread-8] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+338477 [Thread-8] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+338477 [Thread-8] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+345224 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+345224 [Thread-8] INFO  RDF4JbasedExecutor  - 	s1		s2		
+345224 [Thread-8] INFO  RDF4JbasedExecutor  - ------------------------------------>
+345224 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+345224 [Thread-8] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+345224 [Thread-8] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+345224 [Thread-8] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+360140 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+360140 [Thread-8] INFO  RDF4JbasedExecutor  - <------------------------------------
+360140 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+360140 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+360153 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 6747162901 + 14915825181 = 21662988082 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+360153 [main] INFO  VirtuosoSUT  - Closing..
+360153 [main] INFO  VirtuosoSystem  - Closing connection...
+360153 [main] INFO  VirtuosoSystem  - Repository closed.
+365165 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+365165 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+365193 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+365193 [main] INFO  UbuntuJammyOS  - Syncing...
+365569 [main] INFO  UbuntuJammyOS  - Clearing caches...
+370635 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+370635 [main] INFO  VirtuosoSUT  - Initializing..
+370635 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+386122 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+386122 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+386156 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+386156 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+386156 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+386156 [Thread-9] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+386157 [Thread-9] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+386157 [Thread-9] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+393024 [Thread-9] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+393024 [Thread-9] INFO  RDF4JbasedExecutor  - 	s1		s2		
+393024 [Thread-9] INFO  RDF4JbasedExecutor  - ------------------------------------>
+393024 [Thread-9] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+393024 [Thread-9] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+393024 [Thread-9] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+393024 [Thread-9] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+407906 [Thread-9] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+407906 [Thread-9] INFO  RDF4JbasedExecutor  - <------------------------------------
+407906 [Thread-9] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+407906 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+407920 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 6866919096 + 14881853448 = 21748772544 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+407920 [main] INFO  VirtuosoSUT  - Closing..
+407920 [main] INFO  VirtuosoSystem  - Closing connection...
+407921 [main] INFO  VirtuosoSystem  - Repository closed.
+412932 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+412932 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+412958 [main] INFO  UbuntuJammyOS  - Syncing...
+413173 [main] INFO  UbuntuJammyOS  - Clearing caches...
+418247 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+418247 [main] INFO  VirtuosoSUT  - Initializing..
+418248 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+433549 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+433549 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+433568 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [0, SC1_Geometries_Intersects_GivenPolygon] to warm up caches
+433568 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+433569 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+433569 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+433569 [Thread-10] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+433569 [Thread-10] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+433569 [Thread-10] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+433931 [Thread-10] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+433931 [Thread-10] INFO  RDF4JbasedExecutor  - 	s1		o1		
+433931 [Thread-10] INFO  RDF4JbasedExecutor  - ------------------------------------>
+433931 [Thread-10] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+433936 [Thread-10] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+433936 [Thread-10] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+433936 [Thread-10] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+443493 [Thread-10] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+443493 [Thread-10] INFO  RDF4JbasedExecutor  - <------------------------------------
+443493 [Thread-10] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+443493 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+443509 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+443509 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+443509 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+443509 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+443509 [Thread-11] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+443509 [Thread-11] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+443509 [Thread-11] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+443551 [Thread-11] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+443551 [Thread-11] INFO  RDF4JbasedExecutor  - 	s1		o1		
+443551 [Thread-11] INFO  RDF4JbasedExecutor  - ------------------------------------>
+443551 [Thread-11] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+443551 [Thread-11] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+443551 [Thread-11] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+443551 [Thread-11] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+447770 [Thread-11] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+447770 [Thread-11] INFO  RDF4JbasedExecutor  - <------------------------------------
+447770 [Thread-11] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+447770 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+447783 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): <COMPLETED-NONE> 41296788 + 4219425682 = 4260722470 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+447784 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+447784 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+447784 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+447784 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+447784 [Thread-12] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+447784 [Thread-12] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+447784 [Thread-12] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+447823 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+447823 [Thread-12] INFO  RDF4JbasedExecutor  - 	s1		o1		
+447823 [Thread-12] INFO  RDF4JbasedExecutor  - ------------------------------------>
+447823 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+447824 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+447824 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+447824 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+452013 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+452013 [Thread-12] INFO  RDF4JbasedExecutor  - <------------------------------------
+452013 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+452014 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+452026 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): <COMPLETED-NONE> 38972817 + 4189808313 = 4228781130 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+452026 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+452026 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+452026 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+452027 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+452027 [Thread-13] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+452027 [Thread-13] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+452027 [Thread-13] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+452068 [Thread-13] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+452068 [Thread-13] INFO  RDF4JbasedExecutor  - 	s1		o1		
+452068 [Thread-13] INFO  RDF4JbasedExecutor  - ------------------------------------>
+452068 [Thread-13] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+452068 [Thread-13] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/360949937	"MULTIPOLYGON(((-3.540616 52.9336451,-3.5405451 52.9337223,-3.5403749 52.9336656,-3.5404458 52.9335883,-3.540616 52.9336451)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+452068 [Thread-13] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/railways/Geometry/137215253	"MULTILINESTRING((-4.0859183 52.9264687,-4.0860909 52.9265261,-4.0861863 52.9265657,-4.086297 52.9266006,-4.0864288 52.9266317,-4.0866117 52.9266566,-4.0868859 52.9266837,-4.0877379 52.9266816,-4.0879161 52.9266684,-4.0880694 52.9266421,-4.0882461 52.9266005,-4.088354 52.9265586,-4.0884231 52.9265151,-4.0884355 52.9265073,-4.088476 52.9264817,-4.0885588 52.9263828,-4.0886073 52.9263064,-4.0886295 52.9262263))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+452068 [Thread-13] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/pofw/Geometry/117426129	"MULTIPOLYGON(((-3.583654 53.2852776,-3.5835628 53.2852808,-3.5835655 53.2853016,-3.5830076 53.2853257,-3.5829915 53.285199,-3.5835494 53.2851733,-3.5835574 53.2852182,-3.5836459 53.2852134,-3.583654 53.2852776)))"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry>	
+456229 [Thread-13] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+456229 [Thread-13] INFO  RDF4JbasedExecutor  - <------------------------------------
+456229 [Thread-13] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+456229 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+456241 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): <COMPLETED-NONE> 40760674 + 4160833875 = 4201594549 nsecs, 80501 results, 0 scan errors - ACCURACY NOT DETERMINED
+456242 [main] INFO  UbuntuJammyOS  - Syncing...
+456492 [main] INFO  UbuntuJammyOS  - Clearing caches...
+461609 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+461609 [main] INFO  VirtuosoSUT  - Initializing..
+461609 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+476756 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+476757 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+476764 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] to warm up caches
+476764 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+476765 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+476765 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+476765 [Thread-14] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+476765 [Thread-14] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+476765 [Thread-14] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+479024 [Thread-14] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+479024 [Thread-14] INFO  RDF4JbasedExecutor  - 	s1		s2		
+479024 [Thread-14] INFO  RDF4JbasedExecutor  - ------------------------------------>
+479024 [Thread-14] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+479024 [Thread-14] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+479024 [Thread-14] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+479067 [Thread-14] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+494082 [Thread-14] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+494082 [Thread-14] INFO  RDF4JbasedExecutor  - <------------------------------------
+494082 [Thread-14] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+494082 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+494093 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+494093 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+494093 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+494093 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+494093 [Thread-15] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+494094 [Thread-15] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+494094 [Thread-15] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+496068 [Thread-15] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+496068 [Thread-15] INFO  RDF4JbasedExecutor  - 	s1		s2		
+496068 [Thread-15] INFO  RDF4JbasedExecutor  - ------------------------------------>
+496068 [Thread-15] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+496068 [Thread-15] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+496068 [Thread-15] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+496068 [Thread-15] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+511408 [Thread-15] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+511408 [Thread-15] INFO  RDF4JbasedExecutor  - <------------------------------------
+511408 [Thread-15] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+511409 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+511423 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 1974176874 + 15340489589 = 17314666463 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+511423 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+511423 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+511423 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+511423 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+511423 [Thread-16] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+511424 [Thread-16] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+511424 [Thread-16] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+513471 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+513471 [Thread-16] INFO  RDF4JbasedExecutor  - 	s1		s2		
+513471 [Thread-16] INFO  RDF4JbasedExecutor  - ------------------------------------>
+513471 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+513471 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+513471 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+513471 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+528967 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+528967 [Thread-16] INFO  RDF4JbasedExecutor  - <------------------------------------
+528967 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+528967 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+528979 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 2047600820 + 15495280735 = 17542881555 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+528980 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+528980 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+528980 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+528980 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+528980 [Thread-17] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+528980 [Thread-17] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+528980 [Thread-17] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+531024 [Thread-17] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+531024 [Thread-17] INFO  RDF4JbasedExecutor  - 	s1		s2		
+531024 [Thread-17] INFO  RDF4JbasedExecutor  - ------------------------------------>
+531024 [Thread-17] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+531024 [Thread-17] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+531024 [Thread-17] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+531024 [Thread-17] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+546315 [Thread-17] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+546315 [Thread-17] INFO  RDF4JbasedExecutor  - <------------------------------------
+546315 [Thread-17] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+546316 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+546330 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 2043328532 + 15291714156 = 17335042688 nsecs, 813 results, 0 scan errors - ACCURACY NOT DETERMINED
+546331 [main] INFO  UbuntuJammyOS  - Syncing...
+546616 [main] INFO  UbuntuJammyOS  - Clearing caches...
+551703 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+551703 [main] INFO  VirtuosoSUT  - Initializing..
+551703 [main] INFO  VirtuosoSUT  - Starting Virtuoso server...
+566902 [main] INFO  VirtuosoSystem  - Uninitialized VirtuosoRepository created with query timeout = 0
+566902 [main] INFO  VirtuosoSystem  - Initialized VirtuosoRepository has query timeout = 86400
+566909 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] to warm up caches
+566909 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+566910 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+566910 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+566910 [Thread-18] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+566911 [Thread-18] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+566911 [Thread-18] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+568888 [Thread-18] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+568888 [Thread-18] INFO  RDF4JbasedExecutor  - 	s1		s2		
+568888 [Thread-18] INFO  RDF4JbasedExecutor  - ------------------------------------>
+568888 [Thread-18] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+568888 [Thread-18] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+568888 [Thread-18] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+568888 [Thread-18] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+584142 [Thread-18] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+584142 [Thread-18] INFO  RDF4JbasedExecutor  - <------------------------------------
+584142 [Thread-18] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+584142 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+584153 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+584153 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+584154 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+584154 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+584154 [Thread-19] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+584154 [Thread-19] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+584154 [Thread-19] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+586206 [Thread-19] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+586206 [Thread-19] INFO  RDF4JbasedExecutor  - 	s1		s2		
+586206 [Thread-19] INFO  RDF4JbasedExecutor  - ------------------------------------>
+586206 [Thread-19] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+586206 [Thread-19] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+586206 [Thread-19] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+586206 [Thread-19] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+601363 [Thread-19] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+601363 [Thread-19] INFO  RDF4JbasedExecutor  - <------------------------------------
+601363 [Thread-19] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+601363 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+601375 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 2051667296 + 15156872935 = 17208540231 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+601375 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+601375 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+601375 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+601375 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+601375 [Thread-20] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+601375 [Thread-20] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+601375 [Thread-20] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+603450 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+603450 [Thread-20] INFO  RDF4JbasedExecutor  - 	s1		s2		
+603450 [Thread-20] INFO  RDF4JbasedExecutor  - ------------------------------------>
+603450 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+603450 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+603450 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+603450 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+619087 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+619088 [Thread-20] INFO  RDF4JbasedExecutor  - <------------------------------------
+619088 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+619088 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+619099 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 2074659452 + 15637441184 = 17712100636 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+619100 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX bif: <http://www.openlinksw.com/schemas/bif#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+619100 [main] INFO  VirtuosoSUT  - Starting QueryExecutor thread
+619100 [main] INFO  VirtuosoSUT  - Waiting for QueryExecutor thread to finish
+619100 [main] INFO  VirtuosoSUT  - Timeout progress step is 21600000 msecs
+619100 [Thread-21] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+619100 [Thread-21] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+619100 [Thread-21] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+621108 [Thread-21] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+621108 [Thread-21] INFO  RDF4JbasedExecutor  - 	s1		s2		
+621108 [Thread-21] INFO  RDF4JbasedExecutor  - ------------------------------------>
+621108 [Thread-21] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+621108 [Thread-21] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+621108 [Thread-21] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+621108 [Thread-21] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+636538 [Thread-21] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+636538 [Thread-21] INFO  RDF4JbasedExecutor  - <------------------------------------
+636538 [Thread-21] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+636538 [main] INFO  VirtuosoSUT  - Percentage of expired timeout is 0.0 %
+636550 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 2007582472 + 15429804616 = 17437387088 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+636550 [main] INFO  VirtuosoSUT  - Closing..
+636550 [main] INFO  VirtuosoSystem  - Closing connection...
+636550 [main] INFO  VirtuosoSystem  - Repository closed.
+641562 [main] INFO  VirtuosoSUT  - Closed (caches not cleared)
+641562 [main] INFO  VirtuosoSUT  - Stopping Virtuoso server...
+642307 [main] INFO  PostgreSQLRepSrc  - Deferred mode for PostgreSQLRepSrc was enabled. 18 records were flushed
+642309 [main] INFO  GenericExprerimentResultsCollector  - Export statistics in "/data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload"
+642510 [main] INFO  GenericExprerimentResultsCollector  - Created non existing directory
+642543 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold
+642557 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold-long
+642557 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold
+642558 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold-long
+642558 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold
+642559 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold-long
+642559 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm
+642560 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm-long
+642560 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm
+642561 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm-long
+642561 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm
+642562 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/VirtuosoSUT/2025-04-27_VirtuosoSUT_RunWL_Scal1M/Scalability/1M/VirtuosoSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm-long
+642562 [main] INFO  GenericExprerimentResultsCollector  - Cache COLD
+642562 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 573224756 + 8785350808 = 9358575564 nsecs, 80501 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 500992578 + 8712776382 = 9213768960 nsecs, 80501 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 639808721 + 9267097675 = 9906906396 nsecs, 80501 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 6657989632 + 15028449275 = 21686438907 nsecs, 813 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 6602236492 + 15055452834 = 21657689326 nsecs, 813 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 6677946701 + 14973090574 = 21651037275 nsecs, 813 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 6494526622 + 15061671166 = 21556197788 nsecs, 239 results, 0 scan errors
+642564 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 6747162901 + 14915825181 = 21662988082 nsecs, 239 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 6866919096 + 14881853448 = 21748772544 nsecs, 239 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - Cache WARM
+642565 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 41296788 + 4219425682 = 4260722470 nsecs, 80501 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 38972817 + 4189808313 = 4228781130 nsecs, 80501 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 40760674 + 4160833875 = 4201594549 nsecs, 80501 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 1974176874 + 15340489589 = 17314666463 nsecs, 813 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 2047600820 + 15495280735 = 17542881555 nsecs, 813 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 2043328532 + 15291714156 = 17335042688 nsecs, 813 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 2051667296 + 15156872935 = 17208540231 nsecs, 239 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 2074659452 + 15637441184 = 17712100636 nsecs, 239 results, 0 scan errors
+642565 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 2007582472 + 15429804616 = 17437387088 nsecs, 239 results, 0 scan errors
+642566 [main] INFO  RunVirtuosoExperimentWorkload  - End ScalabilityFunc
+Start time = Κυρ 27 Απρ 2025 11:40:14 μμ EEST
+End time = Κυρ 27 Απρ 2025 11:50:57 μμ EEST

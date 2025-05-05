@@ -1,0 +1,370 @@
+Generation of scalability_10K repository, Phases 2 and 3
+ Phase 2: Copying CSVs of phase-1 to LoadingScripts/postgis ...
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/asWKT_2.csv' -> '/data/strabonloader/LoadingScripts/postgis/asWKT_2.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/bnodes.csv' -> '/data/strabonloader/LoadingScripts/postgis/bnodes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/datatypes.csv' -> '/data/strabonloader/LoadingScripts/postgis/datatypes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/datetime.csv' -> '/data/strabonloader/LoadingScripts/postgis/datetime.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/geo_values.csv' -> '/data/strabonloader/LoadingScripts/postgis/geo_values.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/has_code_72.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_code_72.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/has_fclass_74.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_fclass_74.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/hasGeometry_78.csv' -> '/data/strabonloader/LoadingScripts/postgis/hasGeometry_78.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/hash.csv' -> '/data/strabonloader/LoadingScripts/postgis/hash.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/has_name_76.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_name_76.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/has_osm_id_77.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_osm_id_77.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/has_population_1546.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_population_1546.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/languages.csv' -> '/data/strabonloader/LoadingScripts/postgis/languages.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/long_labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/long_uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_uris.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/numerics.csv' -> '/data/strabonloader/LoadingScripts/postgis/numerics.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/tmp0.csv' -> '/data/strabonloader/LoadingScripts/postgis/tmp0.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/type_4.csv' -> '/data/strabonloader/LoadingScripts/postgis/type_4.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_10K/uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/uris.csv'
+ Phase 3: Creating PostGIS database, importing CSVs to PostGIS tables, indexing PostGIS tables ...
+Sun 04 May 2025 12:49:56 am EEST
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 2598
+COPY 2662
+COPY 0
+COPY 0
+COPY 6020
+COPY 29
+COPY 0
+COPY 760
+COPY 3358
+COPY 0
+CREATE TABLE
+COPY 1487
+psql:/tmp/dictionary.26062.tmp:4: WARNING:  Could not convert 'strdfgeo' in 'public.geo_values' to use typmod with srid 0, type MultiPolygon: Geometry type (Point) does not match column type (MultiPolygon)
+ populate_geometry_columns 
+---------------------------
+ probed:1 inserted:0
+(1 row)
+
+               updategeometrysrid                
+-------------------------------------------------
+ public.geo_values.strdfgeo SRID changed to 4326
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE TABLE
+COPY 1487
+CREATE TABLE
+COPY 1136
+CREATE TABLE
+COPY 1136
+CREATE TABLE
+COPY 1135
+CREATE TABLE
+COPY 1136
+CREATE TABLE
+COPY 1136
+CREATE TABLE
+COPY 212
+CREATE TABLE
+COPY 2622
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+VACUUM
+-------------------------------
+Scalability_10K Repository Generation (Phases 2 and 3) Duration : 17 secs
+Generation of scalability_100K repository, Phases 2 and 3
+ Phase 2: Copying CSVs of phase-1 to LoadingScripts/postgis ...
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/asWKT_2.csv' -> '/data/strabonloader/LoadingScripts/postgis/asWKT_2.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/bnodes.csv' -> '/data/strabonloader/LoadingScripts/postgis/bnodes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/datatypes.csv' -> '/data/strabonloader/LoadingScripts/postgis/datatypes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/datetime.csv' -> '/data/strabonloader/LoadingScripts/postgis/datetime.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/geo_values.csv' -> '/data/strabonloader/LoadingScripts/postgis/geo_values.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/has_code_72.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_code_72.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/has_fclass_74.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_fclass_74.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/hasGeometry_78.csv' -> '/data/strabonloader/LoadingScripts/postgis/hasGeometry_78.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/hash.csv' -> '/data/strabonloader/LoadingScripts/postgis/hash.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/has_name_76.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_name_76.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/has_osm_id_77.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_osm_id_77.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/has_population_1546.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_population_1546.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/languages.csv' -> '/data/strabonloader/LoadingScripts/postgis/languages.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/long_labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/long_uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_uris.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/numerics.csv' -> '/data/strabonloader/LoadingScripts/postgis/numerics.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/tmp0.csv' -> '/data/strabonloader/LoadingScripts/postgis/tmp0.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/type_4.csv' -> '/data/strabonloader/LoadingScripts/postgis/type_4.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_100K/uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/uris.csv'
+ Phase 3: Creating PostGIS database, importing CSVs to PostGIS tables, indexing PostGIS tables ...
+Sun 04 May 2025 12:50:14 am EEST
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 27043
+COPY 25614
+COPY 0
+COPY 0
+COPY 55093
+COPY 44
+COPY 0
+COPY 2436
+COPY 29479
+COPY 0
+CREATE TABLE
+COPY 13392
+psql:/tmp/dictionary.26259.tmp:4: WARNING:  Could not convert 'strdfgeo' in 'public.geo_values' to use typmod with srid 0, type MultiPolygon: Geometry type (Point) does not match column type (MultiPolygon)
+ populate_geometry_columns 
+---------------------------
+ probed:1 inserted:0
+(1 row)
+
+               updategeometrysrid                
+-------------------------------------------------
+ public.geo_values.strdfgeo SRID changed to 4326
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE TABLE
+COPY 13393
+CREATE TABLE
+COPY 12168
+CREATE TABLE
+COPY 12168
+CREATE TABLE
+COPY 12166
+CREATE TABLE
+COPY 12166
+CREATE TABLE
+COPY 12166
+CREATE TABLE
+COPY 212
+CREATE TABLE
+COPY 25561
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+VACUUM
+-------------------------------
+Scalability_100K Repository Generation (Phases 2 and 3) Duration : 24 secs
+Generation of scalability_1M repository, Phases 2 and 3
+ Phase 2: Copying CSVs of phase-1 to LoadingScripts/postgis ...
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/asWKT_2.csv' -> '/data/strabonloader/LoadingScripts/postgis/asWKT_2.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/bnodes.csv' -> '/data/strabonloader/LoadingScripts/postgis/bnodes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/datatypes.csv' -> '/data/strabonloader/LoadingScripts/postgis/datatypes.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/datetime.csv' -> '/data/strabonloader/LoadingScripts/postgis/datetime.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/geo_values.csv' -> '/data/strabonloader/LoadingScripts/postgis/geo_values.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_code_72.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_code_72.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_fclass_74.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_fclass_74.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/hasGeometry_78.csv' -> '/data/strabonloader/LoadingScripts/postgis/hasGeometry_78.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/hash.csv' -> '/data/strabonloader/LoadingScripts/postgis/hash.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_name_76.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_name_76.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_osm_id_77.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_osm_id_77.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_population_1546.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_population_1546.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/has_width_201900.csv' -> '/data/strabonloader/LoadingScripts/postgis/has_width_201900.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/languages.csv' -> '/data/strabonloader/LoadingScripts/postgis/languages.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/long_labels.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_labels.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/long_uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/long_uris.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/numerics.csv' -> '/data/strabonloader/LoadingScripts/postgis/numerics.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/tmp0.csv' -> '/data/strabonloader/LoadingScripts/postgis/tmp0.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/type_4.csv' -> '/data/strabonloader/LoadingScripts/postgis/type_4.csv'
+'/data/LOGS/RepoCreation/StrabonSUT/StrabonLoader/NTriples2CSVs/Scalability_1M/uris.csv' -> '/data/strabonloader/LoadingScripts/postgis/uris.csv'
+ Phase 3: Creating PostGIS database, importing CSVs to PostGIS tables, indexing PostGIS tables ...
+Sun 04 May 2025 12:50:41 am EEST
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 228469
+COPY 239843
+COPY 0
+COPY 0
+COPY 502811
+COPY 329
+COPY 0
+COPY 34499
+COPY 262968
+COPY 0
+CREATE TABLE
+COPY 121111
+psql:/tmp/dictionary.26460.tmp:4: WARNING:  Could not convert 'strdfgeo' in 'public.geo_values' to use typmod with srid 0, type MultiPolygon: Geometry type (Point) does not match column type (MultiPolygon)
+ populate_geometry_columns 
+---------------------------
+ probed:1 inserted:0
+(1 row)
+
+               updategeometrysrid                
+-------------------------------------------------
+ public.geo_values.strdfgeo SRID changed to 4326
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE TABLE
+COPY 121219
+CREATE TABLE
+COPY 118644
+CREATE TABLE
+COPY 118644
+CREATE TABLE
+COPY 118161
+CREATE TABLE
+COPY 118161
+CREATE TABLE
+COPY 118161
+CREATE TABLE
+COPY 9207
+CREATE TABLE
+COPY 37941
+CREATE TABLE
+COPY 239862
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+VACUUM
+-------------------------------
+Scalability_1M Repository Generation (Phases 2 and 3) Duration : 53 secs

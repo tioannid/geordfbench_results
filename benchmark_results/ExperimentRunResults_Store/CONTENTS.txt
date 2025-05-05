@@ -1,7 +1,0 @@
-Contents
---------
-1) Detailed
-   Contains the results and statistics generated in the default location (filesystem) exactly as they were generated under "data/Results_Store" which is the experiment's host "reportsBaseDir" property value specified in /data/XXXX-2/json_defs/hosts/nuc8i7behHOSToriginal.json.
-2) Summarized
-   Contains the results and statistics after being processed by the help of the data/XXXX-2/scripts/createreport.sh script which generates a single CSV file for each system-experiment combination. Each CSV contains the entries of all detailed report files under "Detailed" folder which have a name "*-long"
-

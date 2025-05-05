@@ -1,0 +1,1439 @@
+ARGS = -rbd graphdb-10.8.4/data -expdesc 2025-04-26_GraphDBSUT_RunWL_Scal100K -wl /data/geordfbench/json_defs/workloads/scalabilityFunc100K_WLoriginal.json -h /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json -rs /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json -rpsr /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RunSUTExperimentWorkload  - args[0] = -rbd
+1    [main] INFO  RunSUTExperimentWorkload  - args[1] = graphdb-10.8.4/data
+1    [main] INFO  RunSUTExperimentWorkload  - args[2] = -expdesc
+1    [main] INFO  RunSUTExperimentWorkload  - args[3] = 2025-04-26_GraphDBSUT_RunWL_Scal100K
+1    [main] INFO  RunSUTExperimentWorkload  - args[4] = -wl
+1    [main] INFO  RunSUTExperimentWorkload  - args[5] = /data/geordfbench/json_defs/workloads/scalabilityFunc100K_WLoriginal.json
+1    [main] INFO  RunSUTExperimentWorkload  - args[6] = -h
+1    [main] INFO  RunSUTExperimentWorkload  - args[7] = /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+2    [main] INFO  RunSUTExperimentWorkload  - args[8] = -rs
+2    [main] INFO  RunSUTExperimentWorkload  - args[9] = /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+2    [main] INFO  RunSUTExperimentWorkload  - args[10] = -rpsr
+2    [main] INFO  RunSUTExperimentWorkload  - args[11] = /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+4    [main] INFO  RunSUTExperimentWorkload  - |==> Experiment related options
+7    [main] INFO  RunSUTExperimentWorkload  - Experiment description:	2025-04-26_GraphDBSUT_RunWL_Scal100K
+7    [main] INFO  RunSUTExperimentWorkload  - |==> Workload, Host, Report related options
+8    [main] INFO  RunSUTExperimentWorkload  - Workload specs configuration JSON file:	/data/geordfbench/json_defs/workloads/scalabilityFunc100K_WLoriginal.json
+8    [main] INFO  RunSUTExperimentWorkload  - List of queries to include in the run:	all
+8    [main] INFO  RunSUTExperimentWorkload  - Host configuration JSON file:	/data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+8    [main] INFO  RunSUTExperimentWorkload  - Report specs configuration JSON file:	/data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+9    [main] INFO  RunSUTExperimentWorkload  - Report source specs configuration JSON file:	/data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+9    [main] INFO  RunGraphDBExperimentWorkload  - |==> System options
+9    [main] INFO  RunGraphDBExperimentWorkload  - BaseDir:	graphdb-10.8.4/data
+435  [main] INFO  RunSUTExperimentWorkload  - {SimpleGeospatialWL: ScalabilityFunc, ,
+	{GeographicaDS: scalability_100K, Scalability/100K,
+	{GenericGeospatialSimpleDS: scalability_100K, N-TRIPLES}}
+	{StaticTempParamQS: scalabilityFunc, ,false, SimpleES{ COLD=3, WARM=3, action=RUN, maxduration=604800 secs, repmaxduration=86400 secs, func=QUERY_MEDIAN }}}
+864  [main] INFO  GraphDBSUT  - Initializing..
+1431 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+1444 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+1449 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+1453 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+1456 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+1457 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+1457 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+1459 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+1462 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - Active locations health:
+1463 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /data/graphdb-10.8.4/data/repositories/scalability_10K: 77.0% (OK)
+1464 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /data/graphdb-10.8.4/data/repositories/scalability_1M: 77.0% (OK)
+1464 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /data/graphdb-10.8.4/data/repositories/scalability_100K: 77.0% (OK)
+1464 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /data/graphdb-10.8.4/logs: 77.0% (OK)
+1464 [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /data/graphdb-10.8.4/work: 77.0% (OK)
+1568 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+1652 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+1838 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+1847 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 186 ms.
+1902 [main] WARN  com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage  - Loading entity types from persistence
+java.io.IOException: An old version of DatatypeLanguageSet was detected (was [0] but expected [-32768]! Needs rebuilding!
+	at com.ontotext.trree.entitypool.impl.storage.DatatypeLanguageSet.loadFrom(DatatypeLanguageSet.java:223)
+	at com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage.attemptLoad(EntityTypeStorage.java:185)
+	at com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage.<init>(EntityTypeStorage.java:71)
+	at com.ontotext.trree.entitypool.impl.TransactionalEntityPool.<init>(TransactionalEntityPool.java:142)
+	at com.ontotext.trree.entitypool.EntityPoolFactory.getEntityPool(EntityPoolFactory.java:93)
+	at com.ontotext.trree.OwlimSchemaRepository.initEntityPool(OwlimSchemaRepository.java:1390)
+	at com.ontotext.trree.OwlimSchemaRepository.initializeInternalNoCleanup(OwlimSchemaRepository.java:254)
+	at com.ontotext.trree.io.FileSystemHealth.executeWithReducedThreshold(FileSystemHealth.java:353)
+	at com.ontotext.trree.OwlimSchemaRepository.initializeInternal(OwlimSchemaRepository.java:185)
+	at org.eclipse.rdf4j.sail.helpers.AbstractSail.init(AbstractSail.java:183)
+	at org.eclipse.rdf4j.repository.sail.SailRepository.initializeInternal(SailRepository.java:158)
+	at org.eclipse.rdf4j.repository.base.AbstractRepository.init(AbstractRepository.java:36)
+	at org.eclipse.rdf4j.repository.manager.LocalRepositoryManager.createRepository(LocalRepositoryManager.java:212)
+	at org.eclipse.rdf4j.repository.manager.RepositoryManager.getRepository(RepositoryManager.java:326)
+	at gr.uoa.di.rdf.geordfbench.runtime.sys.interfaces.impl.RDF4JBasedGeographicaSystem.init(RDF4JBasedGeographicaSystem.java:369)
+	at gr.uoa.di.rdf.geordfbench.runtime.sys.interfaces.impl.AbstractGeographicaSystem.setSysProps(AbstractGeographicaSystem.java:54)
+	at gr.uoa.di.rdf.geordfbench.runtime.sys.interfaces.impl.RDF4JBasedGeographicaSystem.<init>(RDF4JBasedGeographicaSystem.java:135)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.GraphDBSystem.<init>(GraphDBSystem.java:58)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.GraphDBSUT.initialize(GraphDBSUT.java:27)
+	at gr.uoa.di.rdf.geordfbench.runtime.experiments.Experiment.<init>(Experiment.java:63)
+	at gr.uoa.di.rdf.geordfbench.runtime.experiments.ExperimentWorkload.<init>(ExperimentWorkload.java:45)
+	at gr.uoa.di.rdf.geordfbench.runtime.runsut.RunSUTExperimentWorkload.runExperiment(RunSUTExperimentWorkload.java:197)
+	at gr.uoa.di.rdf.geordfbench.runtime.runsut.RunSUTExperimentWorkload.run(RunSUTExperimentWorkload.java:249)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.RunGraphDBExperimentWorkload.main(RunGraphDBExperimentWorkload.java:78)
+1981 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - Begin restoring from persistence: types array
+2368 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - Done in 387ms.
+2573 [main] INFO  com.ontotext.trree.util.lru.LimitedObjectCacheFactory  - Using LRU cache type: synch
+2990 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+3018 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+3018 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+3026 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+3074 [main] INFO  com.ontotext.license.LicenseRegistry  - License configuration: Embedded license
+3074 [main] INFO  com.ontotext.license.LicenseRegistry  - License file: jar:file:/data/geordfbench/GraphDBSUT/target/graphdb-runtime-10.8.5.jar!/GRAPHDB_LITE.license
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Product:                 GRAPHDB_LITE
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Capabilities:            [LUCENE_CONNECTOR]
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Usage restriction:       null
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Licensee:                Freeware
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Version:                 10.8
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Expiry date:             none
+3077 [main] INFO  com.ontotext.license.LicenseRegistry  - Latest publication date: none
+3078 [main] INFO  com.ontotext.license.LicenseRegistry  - Max CPU cores:           1
+3112 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+3418 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+3442 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+3442 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+4323 [main] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.FunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.Localname replaces existing service class com.ontotext.trree.query.functions.afn.old.Localname
+4335 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+5299 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1 (file:/data/geordfbench/GraphDBSUT/target/jaxb-impl-2.1.1.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+WARNING: Please consider reporting this to the maintainers of com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+6316 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+6318 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+6490 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+6497 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+6497 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+6497 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+6592 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+6766 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+6766 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 174 ms.
+6901 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+6939 [main] INFO  com.ontotext.plugin.literals-index  - Rebuilding literals indexes. Starting from id: 47
+7224 [main] INFO  com.ontotext.plugin.literals-index  - Complete in 0.283, num entries indexed:44
+7233 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+7878 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+8115 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+8116 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+8116 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+8116 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 508 MB
+8384 [main] INFO  com.ontotext.rio.parallel.ParallelLoader  - Data will be parsed + resolved + loaded.
+8811 [main] INFO  ExperimentWorkload  - GraphDBSystem-dependent translation of the queryset scalabilityFunc
+8811 [main] INFO  ExperimentWorkload  - GraphDBSystem-dependent namespace prefixes merged with the prefixes of queryset scalabilityFunc
+8812 [main] INFO  GraphDBSUT  - Closing..
+8812 [main] INFO  GraphDBSystem  - Closing connection...
+9319 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+9435 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+9435 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+9441 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+9630 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+9630 [main] INFO  GraphDBSystem  - Repository closed.
+14661 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+14809 [main] INFO  RunSUTExperimentWorkload  - Start ScalabilityFunc
+14815 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+14815 [main] INFO  UbuntuJammyOS  - Syncing...
+15038 [main] INFO  UbuntuJammyOS  - Clearing caches...
+20167 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+20167 [main] INFO  GraphDBSUT  - Initializing..
+20248 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+20248 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+20248 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+20248 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+20248 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+20248 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+20248 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+20248 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+20276 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+20341 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+20528 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+20528 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 187 ms.
+21235 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+21266 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+21266 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+21292 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+21297 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+21385 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+21447 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+21447 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+22182 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+22864 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+23594 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+23595 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+23664 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+23668 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+23668 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+23668 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+23769 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+24237 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+24237 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 468 ms.
+24372 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+24403 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+24432 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+24991 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+25017 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+25017 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+25017 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+25017 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 212 MB
+25537 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+25560 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+25560 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+25560 [Thread-7] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+25561 [Thread-7] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+25710 [Thread-7] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+25751 [Thread-7] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.TupleFunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.apf.StrSplit replaces existing service class com.ontotext.trree.query.functions.apf.old.StrSplitOld
+25751 [Thread-7] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.TupleFunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.apf.ConcatTupleFunction replaces existing service class com.ontotext.trree.query.functions.apf.old.ConcatOld
+25751 [Thread-7] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.TupleFunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.list.Member replaces existing service class com.ontotext.trree.query.functions.list.old.MemberOld
+25751 [Thread-7] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.TupleFunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.list.Index replaces existing service class com.ontotext.trree.query.functions.list.old.IndexOld
+25751 [Thread-7] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.TupleFunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.list.Length replaces existing service class com.ontotext.trree.query.functions.list.old.LengthOld
+25933 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+25933 [Thread-7] INFO  RDF4JbasedExecutor  - 	s1		o1		
+25933 [Thread-7] INFO  RDF4JbasedExecutor  - ------------------------------------>
+25933 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+26312 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+26313 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+26313 [Thread-7] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+27233 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+27234 [Thread-7] INFO  RDF4JbasedExecutor  - <------------------------------------
+27234 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+27234 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+27274 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): <COMPLETED-NONE> 223176042 + 1300260653 = 1523436695 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+27282 [main] INFO  GraphDBSUT  - Closing..
+27282 [main] INFO  GraphDBSystem  - Closing connection...
+27416 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+27615 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+27615 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+27615 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+27841 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+27842 [main] INFO  GraphDBSystem  - Repository closed.
+32879 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+32880 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+32880 [main] INFO  UbuntuJammyOS  - Syncing...
+33114 [main] INFO  UbuntuJammyOS  - Clearing caches...
+38187 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+38187 [main] INFO  GraphDBSUT  - Initializing..
+38265 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+38265 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+38265 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+38265 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+38265 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+38265 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+38265 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+38265 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+38320 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+38363 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+38626 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+38627 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 263 ms.
+39279 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+39460 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+39460 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+39488 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+39500 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+39612 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+39705 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+39706 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+40589 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+41316 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+42036 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+42038 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+42052 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+42056 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+42056 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+42056 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+42157 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+42636 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+42636 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 479 ms.
+42771 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+42791 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+42817 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+43753 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+43772 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+43772 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+43772 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+43772 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+44245 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+44246 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+44246 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+44246 [Thread-12] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+44248 [Thread-12] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+44255 [Thread-12] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+44290 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+44290 [Thread-12] INFO  RDF4JbasedExecutor  - 	s1		o1		
+44290 [Thread-12] INFO  RDF4JbasedExecutor  - ------------------------------------>
+44290 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+44645 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+44646 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+44647 [Thread-12] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+45549 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+45549 [Thread-12] INFO  RDF4JbasedExecutor  - <------------------------------------
+45549 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+45549 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+45577 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): <COMPLETED-NONE> 34310826 + 1259496952 = 1293807778 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+45577 [main] INFO  GraphDBSUT  - Closing..
+45577 [main] INFO  GraphDBSystem  - Closing connection...
+55805 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+55887 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+55887 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+55888 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+56054 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+56055 [main] INFO  GraphDBSystem  - Repository closed.
+61090 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+61090 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+61090 [main] INFO  UbuntuJammyOS  - Syncing...
+61458 [main] INFO  UbuntuJammyOS  - Clearing caches...
+66531 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+66531 [main] INFO  GraphDBSUT  - Initializing..
+66866 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+66866 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+66866 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+66866 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+66866 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+66866 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+66866 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+66866 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+66891 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+66952 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+67440 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+67440 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 488 ms.
+68135 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+68238 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+68238 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+68251 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+68323 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+68468 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+68557 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+68558 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+69351 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+70070 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+70603 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+70604 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+70614 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+70617 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+70617 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+70617 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+70869 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+71369 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+71370 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 499 ms.
+71533 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+71539 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+71554 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+72348 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+72373 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+72373 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+72373 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+72373 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 216 MB
+72914 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+72915 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+72915 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+72915 [Thread-16] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+72917 [Thread-16] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+72925 [Thread-16] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+72937 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+72937 [Thread-16] INFO  RDF4JbasedExecutor  - 	s1		o1		
+72937 [Thread-16] INFO  RDF4JbasedExecutor  - ------------------------------------>
+72937 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+73244 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+73244 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+73245 [Thread-16] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+74125 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+74125 [Thread-16] INFO  RDF4JbasedExecutor  - <------------------------------------
+74125 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+74125 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+74155 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): <COMPLETED-NONE> 11586745 + 1188244622 = 1199831367 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+74155 [main] INFO  GraphDBSUT  - Closing..
+74155 [main] INFO  GraphDBSystem  - Closing connection...
+104748 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+104827 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+104827 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+104828 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+105016 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+105017 [main] INFO  GraphDBSystem  - Repository closed.
+110043 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+110044 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+110044 [main] INFO  UbuntuJammyOS  - Syncing...
+110237 [main] INFO  UbuntuJammyOS  - Clearing caches...
+115332 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+115332 [main] INFO  GraphDBSUT  - Initializing..
+115391 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+115391 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+115391 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+115391 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+115391 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+115391 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+115391 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+115391 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+115445 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+115484 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+115648 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+115648 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 164 ms.
+116161 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+116239 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+116240 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+116260 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+116263 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+116376 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+116444 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+116444 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+117167 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+117879 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+118493 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+118494 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+118504 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+118506 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+118506 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+118506 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+118707 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+118862 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+118863 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 155 ms.
+119009 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+119075 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+119109 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+119798 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+119816 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+119816 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+119816 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+119816 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 216 MB
+120381 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+120382 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+120382 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+120382 [Thread-20] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+120384 [Thread-20] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+120415 [Thread-20] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+120527 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+120527 [Thread-20] INFO  RDF4JbasedExecutor  - 	s1		s2		
+120527 [Thread-20] INFO  RDF4JbasedExecutor  - ------------------------------------>
+120527 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+121190 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+126921 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+126930 [Thread-20] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+143386 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+143386 [Thread-20] INFO  RDF4JbasedExecutor  - <------------------------------------
+143386 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+143386 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+143436 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 112095128 + 22858760859 = 22970855987 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+143436 [main] INFO  GraphDBSUT  - Closing..
+143436 [main] INFO  GraphDBSystem  - Closing connection...
+143639 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+143719 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+143719 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+143721 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+143885 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+143885 [main] INFO  GraphDBSystem  - Repository closed.
+148930 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+148930 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+148930 [main] INFO  UbuntuJammyOS  - Syncing...
+149208 [main] INFO  UbuntuJammyOS  - Clearing caches...
+154300 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+154301 [main] INFO  GraphDBSUT  - Initializing..
+154469 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+154469 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+154469 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+154469 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+154469 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+154469 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+154469 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+154470 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+154491 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+154527 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+154703 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+154703 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 176 ms.
+155269 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+155287 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+155287 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+155295 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+155299 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+155480 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+155557 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+155557 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+156345 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+157121 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+157794 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+157795 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+157920 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+157926 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+157926 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+157927 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+158029 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+158209 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+158209 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 179 ms.
+158342 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+158386 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+158419 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+159274 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+159294 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+159294 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+159294 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+159294 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+159811 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+159812 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+159813 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+159813 [Thread-24] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+159814 [Thread-24] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+159816 [Thread-24] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+159855 [Thread-24] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+159855 [Thread-24] INFO  RDF4JbasedExecutor  - 	s1		s2		
+159855 [Thread-24] INFO  RDF4JbasedExecutor  - ------------------------------------>
+159855 [Thread-24] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+160438 [Thread-24] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+166223 [Thread-24] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+166259 [Thread-24] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+182723 [Thread-24] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+182723 [Thread-24] INFO  RDF4JbasedExecutor  - <------------------------------------
+182723 [Thread-24] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+182723 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+182769 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 39012371 + 22868151075 = 22907163446 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+182769 [main] INFO  GraphDBSUT  - Closing..
+182769 [main] INFO  GraphDBSystem  - Closing connection...
+182911 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+182991 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+182992 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+182993 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+183179 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+183180 [main] INFO  GraphDBSystem  - Repository closed.
+188224 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+188224 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+188225 [main] INFO  UbuntuJammyOS  - Syncing...
+188665 [main] INFO  UbuntuJammyOS  - Clearing caches...
+193756 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+193756 [main] INFO  GraphDBSUT  - Initializing..
+193827 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+193827 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+193828 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+193828 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+193828 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+193881 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+193881 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+193881 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+193907 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+193974 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+194146 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+194146 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 172 ms.
+194694 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+194774 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+194774 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+194778 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+194791 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+194995 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+195080 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+195080 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+195733 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+196567 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+197148 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+197150 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+197158 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+197160 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+197160 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+197160 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+197352 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+197530 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+197530 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 178 ms.
+197676 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+197749 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+197784 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+198762 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+198788 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+198788 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+198788 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+198788 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+199242 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+199243 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+199243 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+199243 [Thread-28] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+199245 [Thread-28] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+199254 [Thread-28] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+199283 [Thread-28] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+199283 [Thread-28] INFO  RDF4JbasedExecutor  - 	s1		s2		
+199283 [Thread-28] INFO  RDF4JbasedExecutor  - ------------------------------------>
+199283 [Thread-28] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+199810 [Thread-28] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+205489 [Thread-28] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+205529 [Thread-28] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+221965 [Thread-28] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+221965 [Thread-28] INFO  RDF4JbasedExecutor  - <------------------------------------
+221965 [Thread-28] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+221965 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+221999 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 29273871 + 22681950456 = 22711224327 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+221999 [main] INFO  GraphDBSUT  - Closing..
+221999 [main] INFO  GraphDBSystem  - Closing connection...
+222186 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+222361 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+222361 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+222363 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+222571 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+222571 [main] INFO  GraphDBSystem  - Repository closed.
+227617 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+227618 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+227618 [main] INFO  UbuntuJammyOS  - Syncing...
+227932 [main] INFO  UbuntuJammyOS  - Clearing caches...
+233009 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+233009 [main] INFO  GraphDBSUT  - Initializing..
+233061 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+233061 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+233061 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+233061 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+233061 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+233061 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+233061 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+233061 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+233107 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+233152 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+233519 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+233520 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 367 ms.
+233953 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+233985 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+233985 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+234008 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+234011 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+234090 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+234156 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+234156 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+234989 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+235790 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+236365 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+236366 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+236463 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+236468 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+236468 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+236468 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+236563 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+236737 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+236737 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 173 ms.
+236876 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+236916 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+236950 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+237926 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+237949 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+237950 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+237950 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+237950 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+238380 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+238381 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+238381 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+238382 [Thread-32] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+238383 [Thread-32] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+238414 [Thread-32] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+238506 [Thread-32] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+238506 [Thread-32] INFO  RDF4JbasedExecutor  - 	s1		s2		
+238506 [Thread-32] INFO  RDF4JbasedExecutor  - ------------------------------------>
+238506 [Thread-32] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+239260 [Thread-32] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+239266 [Thread-32] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+239462 [Thread-32] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+247276 [Thread-32] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+247276 [Thread-32] INFO  RDF4JbasedExecutor  - <------------------------------------
+247276 [Thread-32] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+247276 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+247309 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 92312519 + 8769542841 = 8861855360 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+247309 [main] INFO  GraphDBSUT  - Closing..
+247309 [main] INFO  GraphDBSystem  - Closing connection...
+247456 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+247637 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+247637 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+247638 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+247870 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+247871 [main] INFO  GraphDBSystem  - Repository closed.
+252913 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+252913 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+252914 [main] INFO  UbuntuJammyOS  - Syncing...
+253083 [main] INFO  UbuntuJammyOS  - Clearing caches...
+258168 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+258168 [main] INFO  GraphDBSUT  - Initializing..
+258217 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+258217 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+258217 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+258217 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+258217 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+258217 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+258217 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+258217 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+258275 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+258308 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+258769 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+258769 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 461 ms.
+259299 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+259318 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+259318 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+259343 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+259355 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+259434 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+259501 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+259501 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+260300 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+261060 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+261596 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+261597 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+261636 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+261639 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+261639 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+261639 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+261863 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+262041 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+262041 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 178 ms.
+262185 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+262249 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+262285 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+262897 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+262927 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+262927 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+262927 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+262927 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 236 MB
+263472 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+263473 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+263473 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+263474 [Thread-36] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+263475 [Thread-36] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+263483 [Thread-36] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+263536 [Thread-36] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+263536 [Thread-36] INFO  RDF4JbasedExecutor  - 	s1		s2		
+263536 [Thread-36] INFO  RDF4JbasedExecutor  - ------------------------------------>
+263536 [Thread-36] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+264266 [Thread-36] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+264280 [Thread-36] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+264424 [Thread-36] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+272299 [Thread-36] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+272299 [Thread-36] INFO  RDF4JbasedExecutor  - <------------------------------------
+272299 [Thread-36] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+272299 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+272333 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 52863998 + 8762684892 = 8815548890 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+272333 [main] INFO  GraphDBSUT  - Closing..
+272333 [main] INFO  GraphDBSystem  - Closing connection...
+272475 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+272558 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+272558 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+272560 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+272748 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+272748 [main] INFO  GraphDBSystem  - Repository closed.
+277792 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+277792 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+277792 [main] INFO  UbuntuJammyOS  - Syncing...
+277905 [main] INFO  UbuntuJammyOS  - Clearing caches...
+283025 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+283025 [main] INFO  GraphDBSUT  - Initializing..
+283062 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+283062 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+283062 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+283062 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+283062 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+283062 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+283062 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+283062 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+283100 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+283152 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+283537 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+283537 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 384 ms.
+284088 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+284091 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+284091 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+284101 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+284147 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+284261 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+284334 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+284334 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+285066 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+285817 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+286421 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+286422 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+286430 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+286433 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+286433 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+286433 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+286574 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+286785 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+286786 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 211 ms.
+286975 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+286982 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+287002 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+287654 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+287672 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+287672 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+287672 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+287672 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+288344 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+288344 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+288345 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+288345 [Thread-40] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+288346 [Thread-40] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+288352 [Thread-40] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+288403 [Thread-40] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+288403 [Thread-40] INFO  RDF4JbasedExecutor  - 	s1		s2		
+288403 [Thread-40] INFO  RDF4JbasedExecutor  - ------------------------------------>
+288404 [Thread-40] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+289045 [Thread-40] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+289050 [Thread-40] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+289220 [Thread-40] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+297058 [Thread-40] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+297058 [Thread-40] INFO  RDF4JbasedExecutor  - <------------------------------------
+297058 [Thread-40] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+297058 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+297091 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 51635038 + 8654120099 = 8705755137 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+297091 [main] INFO  GraphDBSUT  - Closing..
+297091 [main] INFO  GraphDBSystem  - Closing connection...
+297219 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+297401 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+297401 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+297402 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+297635 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+297636 [main] INFO  GraphDBSystem  - Repository closed.
+302679 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+302680 [main] INFO  UbuntuJammyOS  - Syncing...
+302792 [main] INFO  UbuntuJammyOS  - Clearing caches...
+307878 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+307878 [main] INFO  GraphDBSUT  - Initializing..
+307932 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+307932 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+307932 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_100K in READ/WRITE mode.
+307932 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+307932 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+307932 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+307932 [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+307932 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+307992 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+308040 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+308678 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 55137 entities allocating 12.0 MB
+308678 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 637 ms.
+309112 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+309118 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 8 entries in predicate statistics
+309119 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+309138 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+309143 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+309334 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+309423 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+309423 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+310178 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+310970 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+311470 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+311471 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_100K/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+311526 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+311529 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+311529 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_100K/storage/history/tx-metadata'
+311530 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+311641 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+312069 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+312069 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 428 ms.
+312230 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+312236 [main] INFO  com.ontotext.plugin.literals-index  - Literals indices restored.
+312258 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+312936 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+312961 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+312961 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+312961 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+312961 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 200 MB
+313417 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [0, SC1_Geometries_Intersects_GivenPolygon] to warm up caches
+313418 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+313418 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+313419 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+313419 [Thread-44] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+313421 [Thread-44] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+313425 [Thread-44] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+313466 [Thread-44] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+313466 [Thread-44] INFO  RDF4JbasedExecutor  - 	s1		o1		
+313466 [Thread-44] INFO  RDF4JbasedExecutor  - ------------------------------------>
+313466 [Thread-44] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+313754 [Thread-44] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+313755 [Thread-44] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+313755 [Thread-44] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+314595 [Thread-44] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+314595 [Thread-44] INFO  RDF4JbasedExecutor  - <------------------------------------
+314595 [Thread-44] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+314595 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+314631 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+314631 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+314632 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+314632 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+314632 [Thread-45] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+314632 [Thread-45] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+314633 [Thread-45] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+314634 [Thread-45] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+314634 [Thread-45] INFO  RDF4JbasedExecutor  - 	s1		o1		
+314634 [Thread-45] INFO  RDF4JbasedExecutor  - ------------------------------------>
+314634 [Thread-45] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+314634 [Thread-45] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+314634 [Thread-45] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+314634 [Thread-45] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315023 [Thread-45] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+315023 [Thread-45] INFO  RDF4JbasedExecutor  - <------------------------------------
+315023 [Thread-45] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+315023 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+315061 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): <COMPLETED-NONE> 1179326 + 389016315 = 390195641 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+315061 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+315061 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+315062 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+315062 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+315062 [Thread-46] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+315062 [Thread-46] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+315063 [Thread-46] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+315064 [Thread-46] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+315064 [Thread-46] INFO  RDF4JbasedExecutor  - 	s1		o1		
+315064 [Thread-46] INFO  RDF4JbasedExecutor  - ------------------------------------>
+315064 [Thread-46] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+315064 [Thread-46] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315064 [Thread-46] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315065 [Thread-46] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315446 [Thread-46] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+315447 [Thread-46] INFO  RDF4JbasedExecutor  - <------------------------------------
+315447 [Thread-46] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+315447 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+315482 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): <COMPLETED-NONE> 1179431 + 382496956 = 383676387 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+315482 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+315482 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+315482 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+315482 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+315483 [Thread-47] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+315483 [Thread-47] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+315484 [Thread-47] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+315485 [Thread-47] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+315485 [Thread-47] INFO  RDF4JbasedExecutor  - 	s1		o1		
+315485 [Thread-47] INFO  RDF4JbasedExecutor  - ------------------------------------>
+315485 [Thread-47] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+315485 [Thread-47] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315485 [Thread-47] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315485 [Thread-47] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+315826 [Thread-47] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+315826 [Thread-47] INFO  RDF4JbasedExecutor  - <------------------------------------
+315826 [Thread-47] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+315826 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+315850 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): <COMPLETED-NONE> 1140095 + 341014338 = 342154433 nsecs, 6278 results, 0 scan errors - ACCURACY NOT DETERMINED
+315851 [main] INFO  UbuntuJammyOS  - Syncing...
+316114 [main] INFO  UbuntuJammyOS  - Clearing caches...
+321179 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+321180 [main] INFO  GraphDBSUT  - Initializing..
+321232 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] to warm up caches
+321232 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+321232 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+321232 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+321233 [Thread-48] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+321233 [Thread-48] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+321234 [Thread-48] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+321326 [Thread-48] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+321326 [Thread-48] INFO  RDF4JbasedExecutor  - 	s1		s2		
+321326 [Thread-48] INFO  RDF4JbasedExecutor  - ------------------------------------>
+321326 [Thread-48] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+321518 [Thread-48] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+327259 [Thread-48] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+327265 [Thread-48] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+343545 [Thread-48] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+343545 [Thread-48] INFO  RDF4JbasedExecutor  - <------------------------------------
+343545 [Thread-48] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+343545 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+343583 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+343583 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+343583 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+343583 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+343583 [Thread-49] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+343584 [Thread-49] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+343584 [Thread-49] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+343586 [Thread-49] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+343586 [Thread-49] INFO  RDF4JbasedExecutor  - 	s1		s2		
+343586 [Thread-49] INFO  RDF4JbasedExecutor  - ------------------------------------>
+343586 [Thread-49] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+343679 [Thread-49] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+349104 [Thread-49] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+349106 [Thread-49] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+365791 [Thread-49] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+365791 [Thread-49] INFO  RDF4JbasedExecutor  - <------------------------------------
+365791 [Thread-49] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+365792 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+365818 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 1489972 + 22205623390 = 22207113362 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+365818 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+365818 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+365818 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+365818 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+365818 [Thread-50] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+365818 [Thread-50] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+365819 [Thread-50] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+365892 [Thread-50] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+365892 [Thread-50] INFO  RDF4JbasedExecutor  - 	s1		s2		
+365892 [Thread-50] INFO  RDF4JbasedExecutor  - ------------------------------------>
+365892 [Thread-50] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+366015 [Thread-50] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+371723 [Thread-50] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+371725 [Thread-50] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+389108 [Thread-50] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+389108 [Thread-50] INFO  RDF4JbasedExecutor  - <------------------------------------
+389108 [Thread-50] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+389108 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+389145 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 72956567 + 23215422568 = 23288379135 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+389145 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+389145 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+389145 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+389145 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+389145 [Thread-51] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+389146 [Thread-51] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+389146 [Thread-51] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+389148 [Thread-51] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+389148 [Thread-51] INFO  RDF4JbasedExecutor  - 	s1		s2		
+389148 [Thread-51] INFO  RDF4JbasedExecutor  - ------------------------------------>
+389148 [Thread-51] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+389248 [Thread-51] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+394976 [Thread-51] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+394979 [Thread-51] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+411927 [Thread-51] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+411927 [Thread-51] INFO  RDF4JbasedExecutor  - <------------------------------------
+411927 [Thread-51] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+411927 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+411959 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 1441933 + 22779608679 = 22781050612 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+411959 [main] INFO  UbuntuJammyOS  - Syncing...
+412043 [main] INFO  UbuntuJammyOS  - Clearing caches...
+417150 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+417150 [main] INFO  GraphDBSUT  - Initializing..
+417184 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] to warm up caches
+417184 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+417184 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+417184 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+417185 [Thread-52] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+417185 [Thread-52] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+417187 [Thread-52] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+417231 [Thread-52] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+417231 [Thread-52] INFO  RDF4JbasedExecutor  - 	s1		s2		
+417231 [Thread-52] INFO  RDF4JbasedExecutor  - ------------------------------------>
+417231 [Thread-52] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+417512 [Thread-52] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+417514 [Thread-52] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+417638 [Thread-52] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+425330 [Thread-52] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+425330 [Thread-52] INFO  RDF4JbasedExecutor  - <------------------------------------
+425330 [Thread-52] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+425330 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+425357 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+425357 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+425357 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+425357 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+425357 [Thread-53] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+425358 [Thread-53] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+425358 [Thread-53] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+425359 [Thread-53] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+425360 [Thread-53] INFO  RDF4JbasedExecutor  - 	s1		s2		
+425360 [Thread-53] INFO  RDF4JbasedExecutor  - ------------------------------------>
+425360 [Thread-53] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+425510 [Thread-53] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+425512 [Thread-53] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+425649 [Thread-53] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+433347 [Thread-53] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+433347 [Thread-53] INFO  RDF4JbasedExecutor  - <------------------------------------
+433348 [Thread-53] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+433348 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+433376 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 1422557 + 7987848679 = 7989271236 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+433376 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+433377 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+433377 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+433377 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+433377 [Thread-54] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+433377 [Thread-54] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+433378 [Thread-54] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+433381 [Thread-54] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+433381 [Thread-54] INFO  RDF4JbasedExecutor  - 	s1		s2		
+433381 [Thread-54] INFO  RDF4JbasedExecutor  - ------------------------------------>
+433381 [Thread-54] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+433532 [Thread-54] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+433535 [Thread-54] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+433655 [Thread-54] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+441345 [Thread-54] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+441345 [Thread-54] INFO  RDF4JbasedExecutor  - <------------------------------------
+441345 [Thread-54] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+441346 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+441377 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 3080595 + 7964537531 = 7967618126 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+441377 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX ext: <http://rdf.useekm.com/ext#> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+441377 [main] INFO  GraphDBSUT  - Starting QueryExecutor thread
+441377 [main] INFO  GraphDBSUT  - Waiting for QueryExecutor thread to finish
+441377 [main] INFO  GraphDBSUT  - Timeout progress step is 21600000 msecs
+441377 [Thread-55] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+441378 [Thread-55] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+441379 [Thread-55] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+441381 [Thread-55] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+441381 [Thread-55] INFO  RDF4JbasedExecutor  - 	s1		s2		
+441381 [Thread-55] INFO  RDF4JbasedExecutor  - ------------------------------------>
+441381 [Thread-55] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+441537 [Thread-55] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+441539 [Thread-55] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+441684 [Thread-55] INFO  RDF4JbasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360628	
+449617 [Thread-55] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+449617 [Thread-55] INFO  RDF4JbasedExecutor  - <------------------------------------
+449617 [Thread-55] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+449617 [main] INFO  GraphDBSUT  - Percentage of expired timeout is 0.0 %
+449649 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 2233542 + 8236446004 = 8238679546 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+449649 [main] INFO  GraphDBSUT  - Closing..
+449649 [main] INFO  GraphDBSystem  - Closing connection...
+469678 [main] WARN  org.eclipse.rdf4j.sail.helpers.AbstractSail  - Closing active connection due to shut down; consider setting the org.eclipse.rdf4j.repository.debug system property
+469679 [main] WARN  org.eclipse.rdf4j.sail.helpers.AbstractSail  - Closing active connection due to shut down; consider setting the org.eclipse.rdf4j.repository.debug system property
+469865 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+470083 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 100000
+470083 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 100000
+470115 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+470292 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+470293 [main] INFO  GraphDBSystem  - Repository closed.
+475341 [main] INFO  GraphDBSUT  - Closed (caches not cleared)
+475936 [main] INFO  PostgreSQLRepSrc  - Deferred mode for PostgreSQLRepSrc was enabled. 18 records were flushed
+475940 [main] INFO  GenericExprerimentResultsCollector  - Export statistics in "/data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload"
+476218 [main] INFO  GenericExprerimentResultsCollector  - Created non existing directory
+476264 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold
+476267 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold-long
+476267 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold
+476267 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold-long
+476267 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold
+476267 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold-long
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm-long
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm-long
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm
+476268 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/GraphDBSUT/2025-04-26_GraphDBSUT_RunWL_Scal100K/Scalability/100K/GraphDBSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm-long
+476268 [main] INFO  GenericExprerimentResultsCollector  - Cache COLD
+476268 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 223176042 + 1300260653 = 1523436695 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 34310826 + 1259496952 = 1293807778 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 11586745 + 1188244622 = 1199831367 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 112095128 + 22858760859 = 22970855987 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 39012371 + 22868151075 = 22907163446 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 29273871 + 22681950456 = 22711224327 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 92312519 + 8769542841 = 8861855360 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 52863998 + 8762684892 = 8815548890 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 51635038 + 8654120099 = 8705755137 nsecs, 239 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - Cache WARM
+476268 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 1179326 + 389016315 = 390195641 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 1179431 + 382496956 = 383676387 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 1140095 + 341014338 = 342154433 nsecs, 6278 results, 0 scan errors
+476268 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+476268 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 1489972 + 22205623390 = 22207113362 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 72956567 + 23215422568 = 23288379135 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 1441933 + 22779608679 = 22781050612 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+476269 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 1422557 + 7987848679 = 7989271236 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 3080595 + 7964537531 = 7967618126 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 2233542 + 8236446004 = 8238679546 nsecs, 239 results, 0 scan errors
+476269 [main] INFO  RunSUTExperimentWorkload  - End ScalabilityFunc
+Start time = Σαβ 26 Απρ 2025 03:04:28 μμ EEST
+End time = Σαβ 26 Απρ 2025 03:12:28 μμ EEST

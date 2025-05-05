@@ -1,0 +1,177 @@
+Creating database "scalability_100K" by importing files from "/data/Geographica2_Datasets/Scalability/100K/"
+Creating Virtuoso database: /data/virtuoso-opensource-7.2.14/repos/scalability_100K
+Creating directory /data/virtuoso-opensource-7.2.14/repos/scalability_100K
+/data/geordfbench/VirtuosoSUT/scripts/CreateRepos/../Admin/start.sh /data/virtuoso-opensource-7.2.14/bin /data/virtuoso-opensource-7.2.14/repos/scalability_100K 15
+cwd = /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+changed working directory to /data/virtuoso-opensource-7.2.14/repos/scalability_100K
+changed working directory back to /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 44 msec.
+Create PGOS: 0secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 1 msec.
+Adds files to control list set up in the virtuoso.ini file: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 975 msec.
+RDF Bulk load: 1 secs
+Wait: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 1163 msec.
+Checkpoint: 1 secs
+Files loaded:
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+ll_file                                                                           ll_graph                                                                          ll_state    ll_started           ll_done              ll_host     ll_work_time  ll_error
+VARCHAR NOT NULL                                                                  VARCHAR                                                                           INTEGER     TIMESTAMP            TIMESTAMP            INTEGER     INTEGER     VARCHAR
+_______________________________________________________________________________
+
+/data/Geographica2_Datasets/Scalability/100K/scalability_100K.nt                  <http://geographica.gr>                                                           2           2025.4.26 16:38.59 819888000  2025.4.26 16:39.0 829532000  0           NULL        NULL
+
+1 Rows. -- 1 msec.
+Storing time all: 2 secs
+Virtuoso Server with pid=7451 has been terminated.
+
+real	0m17,877s
+user	0m0,075s
+sys	0m0,163s
+Creating database "scalability_1M" by importing files from "/data/Geographica2_Datasets/Scalability/1M/"
+Creating Virtuoso database: /data/virtuoso-opensource-7.2.14/repos/scalability_1M
+Creating directory /data/virtuoso-opensource-7.2.14/repos/scalability_1M
+/data/geordfbench/VirtuosoSUT/scripts/CreateRepos/../Admin/start.sh /data/virtuoso-opensource-7.2.14/bin /data/virtuoso-opensource-7.2.14/repos/scalability_1M 15
+cwd = /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+changed working directory to /data/virtuoso-opensource-7.2.14/repos/scalability_1M
+changed working directory back to /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 45 msec.
+Create PGOS: 0secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 1 msec.
+Adds files to control list set up in the virtuoso.ini file: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 4960 msec.
+RDF Bulk load: 5 secs
+Wait: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 7901 msec.
+Checkpoint: 8 secs
+Files loaded:
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+ll_file                                                                           ll_graph                                                                          ll_state    ll_started           ll_done              ll_host     ll_work_time  ll_error
+VARCHAR NOT NULL                                                                  VARCHAR                                                                           INTEGER     TIMESTAMP            TIMESTAMP            INTEGER     INTEGER     VARCHAR
+_______________________________________________________________________________
+
+/data/Geographica2_Datasets/Scalability/1M/scalability_1M.nt                      <http://geographica.gr>                                                           2           2025.4.26 16:39.17 399691000  2025.4.26 16:39.22 615893000  0           NULL        NULL
+
+1 Rows. -- 1 msec.
+Storing time all: 13 secs
+Virtuoso Server with pid=7521 has been terminated.
+
+real	0m28,066s
+user	0m0,077s
+sys	0m0,076s
+Creating database "scalability_10K" by importing files from "/data/Geographica2_Datasets/Scalability/10K/"
+Creating Virtuoso database: /data/virtuoso-opensource-7.2.14/repos/scalability_10K
+Creating directory /data/virtuoso-opensource-7.2.14/repos/scalability_10K
+/data/geordfbench/VirtuosoSUT/scripts/CreateRepos/../Admin/start.sh /data/virtuoso-opensource-7.2.14/bin /data/virtuoso-opensource-7.2.14/repos/scalability_10K 15
+cwd = /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+changed working directory to /data/virtuoso-opensource-7.2.14/repos/scalability_10K
+changed working directory back to /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 23 msec.
+Create PGOS: 0secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 2 msec.
+Adds files to control list set up in the virtuoso.ini file: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 167 msec.
+RDF Bulk load: 0 secs
+Wait: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 550 msec.
+Checkpoint: 1 secs
+Files loaded:
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+ll_file                                                                           ll_graph                                                                          ll_state    ll_started           ll_done              ll_host     ll_work_time  ll_error
+VARCHAR NOT NULL                                                                  VARCHAR                                                                           INTEGER     TIMESTAMP            TIMESTAMP            INTEGER     INTEGER     VARCHAR
+_______________________________________________________________________________
+
+/data/Geographica2_Datasets/Scalability/10K/scalability_10K.nt                    <http://geographica.gr>                                                           2           2025.5.3 20:6.38 756407000  2025.5.3 20:6.38 920656000  0           NULL        NULL
+
+1 Rows. -- 0 msec.
+Storing time all: 1 secs
+Virtuoso Server with pid=7595 has been terminated.
+
+real	0m15,868s
+user	0m0,072s
+sys	0m0,050s

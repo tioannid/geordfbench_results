@@ -1,0 +1,54 @@
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = 531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+ActiveSUT = RDF4JSUT
+ExperimentResultDir = /data/RDF4JSUT/531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+ExperimentDesc = 531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+RDF4J SUT
+---------
+RDF4JRepoBaseDir = /data/RDF4J_4.3.15_Repos/server
+EnableLuceneSail = false
+RDF4JLuceneReposPrefix = 
+Version = 4.3.15
+
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = 531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+ActiveSUT = RDF4JSUT
+ExperimentResultDir = /data/RDF4JSUT/531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+ExperimentDesc = 531f9c1#_2025-04-26_RDF4JSUT_CreateRepo_Scalability10K_1M_RDF4J
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+RDF4J SUT
+---------
+RDF4JRepoBaseDir = /data/RDF4J_4.3.15_Repos/server
+EnableLuceneSail = false
+RDF4JLuceneReposPrefix = 
+Version = 4.3.15
+

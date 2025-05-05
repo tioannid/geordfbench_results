@@ -1,6 +1,0 @@
-00 SC1 Geometries_Intersects_GivenPolygon cold 80500 35499728 3793204524 3828704252 3.828
-00 SC1 Geometries_Intersects_GivenPolygon warm 80500 319925 3245875459 3246195384 3.246
-01 SC2 Intensive_Geometries_Intersect_Geometries cold 813 142975442 21065870961 21208846403 21.208
-01 SC2 Intensive_Geometries_Intersect_Geometries warm 813 557313 18940356527 18940913840 18.940
-02 SC3 Relaxed_Geometries_Intersect_Geometries cold 239 138656151 13859248606 13997904757 13.997
-02 SC3 Relaxed_Geometries_Intersect_Geometries warm 239 20891739 11474767675 11495659414 11.495

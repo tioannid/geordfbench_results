@@ -1,0 +1,71 @@
+All of the following environment variables (geordfbench/scripts/prepareRunEnvironment.sh) are defined: 
+	{DatasetBaseDir, RDF4JRepoBaseDir, JVM_Xmx, EnableLuceneSail, CompletionReportDaemonIP, CompletionReportDaemonPort, ScalabilityGenScriptName, ScalabilityGzipRefDSName}
+Running script with syntax: 
+	./createAllRDF4JRepos.sh false /data/Geographica2_Datasets /data/RDF4J_4.3.15_Repos/server -Xmx24g false 192.168.1.44 3333 /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+Script start time: Σαβ 26 Απρ 2025 02:37:52 μμ EEST
+/data/RDF4J_4.3.15_Repos/server dir does not exist.
+	Creating it now ...
+Checking/Creating scalability 10K dataset ...
+	Scalability 10K dataset already exists
+Generating scalability 10K repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_Repos/server scalability_10K false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/10K -Xmx24g false "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_Repos/server" "scalability_10K" "FALSE" "false" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_Repos/server" "scalability_10K" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/10K" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+78   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes
+208  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_10K
+402  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_10K
+432  [main] INFO  RepoUtil  - RDF4J created with manager repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_10K" in 68 msecs
+432  [main] INFO  RDF4JSystem  - Closing connection...
+434  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - Loading file scalability_10K.nt ...
+590  [main] INFO  RDF4JSystem  - Finished loading file scalability_10K.nt in 586 msecs
+597  [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/10K" to repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_10K" in 621 msecs
+597  [main] INFO  RDF4JSystem  - Closing connection...
+597  [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_10K" has size: 4MB
+Checking/Creating scalability 100K dataset ...
+	Scalability 100K dataset already exists
+Generating scalability 100K repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_Repos/server scalability_100K false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/100K -Xmx24g false "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_Repos/server" "scalability_100K" "FALSE" "false" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_Repos/server" "scalability_100K" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/100K" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+71   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes
+190  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_100K
+289  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_100K
+310  [main] INFO  RepoUtil  - RDF4J created with manager repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_100K" in 66 msecs
+310  [main] INFO  RDF4JSystem  - Closing connection...
+311  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - Loading file scalability_100K.nt ...
+1784 [main] INFO  RDF4JSystem  - Finished loading file scalability_100K.nt in 1780 msecs
+1790 [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/100K" to repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_100K" in 1799 msecs
+1790 [main] INFO  RDF4JSystem  - Closing connection...
+1791 [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_100K" has size: 14MB
+Checking/Creating scalability 1M dataset ...
+	Scalability 1M dataset already exists
+Generating scalability 1M repository ...
+	./createRDF4JRepo.sh /data/RDF4J_4.3.15_Repos/server scalability_1M false "spoc,posc" N-TRIPLES /data/Geographica2_Datasets/Scalability/1M -Xmx24g false "http://www.opengis.net/ont/geosparql#asWKT" 192.168.1.44 3333
+CREATE_REPO_ARGS = createman "/data/RDF4J_4.3.15_Repos/server" "scalability_1M" "FALSE" "false" "spoc,posc" "http://www.opengis.net/ont/geosparql#asWKT"
+LOAD_REPO_ARGS = dirloadman "/data/RDF4J_4.3.15_Repos/server" "scalability_1M" "N-TRIPLES" "/data/Geographica2_Datasets/Scalability/1M" true
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - No LocalRepositoryManager instance present, creating a new one.
+64   [main] INFO  RDF4JSystem  - Creating NativeStore base sail with spoc,posc indexes
+205  [main] INFO  RDF4JSystem  - Creating new repository object for repo id = scalability_1M
+304  [main] INFO  RDF4JSystem  - Initialing new repository object for repo id = scalability_1M
+326  [main] INFO  RepoUtil  - RDF4J created with manager repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_1M" in 69 msecs
+326  [main] INFO  RDF4JSystem  - Closing connection...
+327  [main] INFO  RDF4JSystem  - Repository closed.
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RDF4JSystem  - Loading file scalability_1M.nt ...
+11123 [main] INFO  RDF4JSystem  - Finished loading file scalability_1M.nt in 11120 msecs
+11129 [main] INFO  RepoUtil  - RDF4J loaded with manager all files from "/data/Geographica2_Datasets/Scalability/1M" to repo "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_1M" in 11135 msecs
+11129 [main] INFO  RDF4JSystem  - Closing connection...
+11130 [main] INFO  RDF4JSystem  - Repository closed.
+RDF4J repository "/data/RDF4J_4.3.15_Repos/server/repositories/scalability_1M" has size: 135MB
+Script end time: Σαβ 26 Απρ 2025 02:37:52 μμ EEST

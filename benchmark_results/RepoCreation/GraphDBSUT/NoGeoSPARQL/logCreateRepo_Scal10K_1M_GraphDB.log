@@ -1,0 +1,364 @@
+All of the following environment variables (Geographica/scripts/prepareRunEnvironment.sh) are defined: 
+	{DatasetBaseDir, GraphDBBaseDir, JVM_Xmx, EnableGeoSPARQLPlugin, IndexingAlgorithm, IndexingPrecision, CompletionReportDaemonIP, CompletionReportDaemonPort, ScalabilityGenScriptName, ScalabilityGzipRefDSName}
+0 args provided
+Running script with syntax: 
+	./createAllGraphDBRepos.sh /data/Geographica2_Datasets /data/graphdb-10.8.4 -Xmx24g false quad 11 192.168.1.44 3333 /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+Script start time: Σαβ 26 Απρ 2025 02:59:47 μμ EEST
+/data/graphdb-10.8.4/data dir does not exist.\n\tCreating it now ...
+Checking/Creating scalability 10K dataset ...
+	Scalability 10K dataset already exists
+Generating scalability 10K repository ...
+./createGraphDBRepo.sh scalability_10K.ttl /data/Geographica2_Datasets/Scalability/10K N-TRIPLES /data/graphdb-10.8.4 false quad 11 192.168.1.44 3333
+14:59:52.657 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Input folders recursively: false
+14:59:52.659 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Iterator cache set to: 'auto'
+14:59:52.660 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Chunk size set to: 'auto'
+14:59:52.660 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Parsing tasks: 4
+14:59:52.660 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Temporary data folder: /data/Geographica2_Datasets/Scalability/10K/.
+14:59:52.661 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore point interval: 3,600s
+14:59:52.661 [main] INFO  c.ontotext.graphdb.importrdf.Preload - CONFIG FILE: /data/geordfbench/GraphDBSUT/scripts/CreateRepos/scalability_10K.ttl
+14:59:52.680 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Attaching to location: /data/graphdb-10.8.4/data
+14:59:53.732 [repository-manager-0] INFO  c.o.t.u.l.LimitedObjectCacheFactory - Using LRU cache type: synch
+14:59:54.131 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear triple statisctics collection
+14:59:54.142 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear PSOT collection
+14:59:54.142 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear POST collection
+14:59:54.143 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Rebuild triple collections. start entity pool scan...
+14:59:54.159 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Entity pool scan completed! Commiting...
+14:59:54.472 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check whether all predicates in the predicate statistics have correct collection sizes.
+14:59:54.472 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check for missing statement predicates in the predicate statistics
+14:59:55.670 [repository-manager-0] WARN  o.e.r.q.a.e.f.FunctionRegistry - New service class com.ontotext.trree.query.functions.afn.old.Localname replaces existing service class org.eclipse.rdf4j.spin.function.Localname
+14:59:59.034 [repository-manager-0] INFO  c.o.rio.parallel.ParallelLoader - Data will be parsed + resolved + loaded.
+14:59:59.245 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Analysing input data. It may take a while ...
+14:59:59.298 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Dataset:
+	number of files 1
+	total files size 3 MB
+	estimated number of statements 20,330
+	estimated number of entities 5,808
+14:59:59.325 [main] WARN  c.ontotext.graphdb.importrdf.Preload - Entity pool was set to 'on-heap' no off-heap memory 109,696 will be used!
+14:59:59.325 [main] INFO  c.ontotext.graphdb.importrdf.Preload - FreeHeap=8,251,561,296	commonHeap=1,895,935,104
+14:59:59.325 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Set min heap requirements=6,355,617,552	mem for indexes=8,640
+14:59:59.326 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Memory estimation:
+	free heap	8,251,561,296	max heap	8,380,219,392
+	free non-heap	8,294,911,824	max non-heap	8,380,219,392
+	need heap	4,955,943,744
+	need non-heap	0
+14:59:59.326 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Calculated using 'auto' --chunk=5,000,000, 'auto' --iter.cache=128, heap for parsing 3,060,000,000, heap for indexing 44,040,192
+14:59:59.326 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Initial restore point created, count so far 0
+15:00:00.595 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore manager started. Interval is 3600 seconds.
+15:00:00.596 [parsing-scalability_10K.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Loading file: scalability_10K.nt
+15:00:01.064 [parsing-scalability_10K.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Parsed 10,000 statements. Resolved statements so far: 0 pre-indexed tuples 0
+15:00:01.065 [main] INFO  c.ontotext.graphdb.importrdf.Preload - The parsing took 468ms. Updating entity pool...
+15:00:01.065 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Entity pool commit took 1ms
+15:00:01.160 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver end. Time active:109ms, Idle when waiting for sorter 0ms
+15:00:01.160 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver finished.
+15:00:01.166 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter end. Time active:6ms
+15:00:01.166 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter thread finished.
+15:00:01.166 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 570ms, statements: 10,000, sorted: 10,000
+15:00:01.659 [main] INFO  c.ontotext.graphdb.importrdf.Preload - All data parsed! Create intermediate restore point ...
+15:00:01.660 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POS q
+15:00:01.856 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSO q
+15:00:02.005 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing predlists q
+15:00:02.121 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing NUM q
+15:00:02.204 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing DATES q
+15:00:02.205 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POST q
+15:00:02.206 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSOT q
+15:00:02.206 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Intermediate restore point created!
+15:00:02.380 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - enum numeric and date literals
+15:00:02.381 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Full-text search functionality is disabled
+15:00:02.382 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOC
+15:00:02.382 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POSC
+15:00:02.383 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - indexing predlists
+15:00:02.383 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals indices restored.
+15:00:02.383 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing numerics queue 29 to add
+15:00:02.392 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOT
+15:00:02.395 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - PSOT commit 0... cross check from predicate statistics 0 statements
+15:00:02.396 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POST
+15:00:02.399 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from PSOC  queue processed ...
+15:00:02.413 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from POSC  queue processed ...
+15:00:02.417 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.417 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 25 ms
+15:00:02.417 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing dates queue 0 to add
+15:00:02.417 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOT queue
+15:00:02.419 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - POST commit 0 statements ...
+15:00:02.428 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from predlists  queue processed ...
+15:00:02.428 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.428 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.429 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 37 ms
+15:00:02.429 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - closing POST queue
+15:00:02.553 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - POSC commit 10,000 statements ...
+15:00:02.559 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - PSOC commit 10,000... cross check from predicate statistics 10,000 statements
+15:00:02.569 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists commit 14,521 pairs ...
+15:00:02.589 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.589 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!. Commiting literals index...
+15:00:02.589 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!.
+15:00:02.589 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.591 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.592 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals index created
+15:00:02.592 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.592 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 10,000 in 210 ms
+15:00:02.592 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - closing POSC queue
+15:00:02.592 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.592 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 10,000 in 211 ms
+15:00:02.592 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOC queue
+15:00:02.592 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.592 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.592 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists pairs enum done in 209 ms
+15:00:02.593 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - closing predlists queue
+15:00:02.593 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.593 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.593 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.593 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.594 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.594 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:02.594 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:02.595 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:02.598 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 8 predicates in 3 ms, total tuples 10,000
+15:00:02.598 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:02.599 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 0 predicates in 1 ms, total tuples 0
+15:00:02.602 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Processing finished 2,885ms. Shutting down ...
+15:00:02.602 [main] INFO  c.ontotext.graphdb.importrdf.Preload - epool commited phase 2, entities 6,064
+15:00:02.610 [main] INFO  c.ontotext.graphdb.importrdf.Preload - shutting down repository collections
+15:00:02.613 [main] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:02.690 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 2,973ms
+
+real	0m14,893s
+user	0m18,161s
+sys	0m1,878s
+GraphDB repository (no GeoSPARQL plugin) "/data/graphdb-10.8.4/data/repositories/scalability_10K/" has size: 28MB
+Checking/Creating scalability 100K dataset ...
+	Scalability 100K dataset already exists
+Generating scalability 100K repository ...
+./createGraphDBRepo.sh scalability_100K.ttl /data/Geographica2_Datasets/Scalability/100K N-TRIPLES /data/graphdb-10.8.4 false quad 11 192.168.1.44 3333
+15:00:03.699 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Input folders recursively: false
+15:00:03.700 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Iterator cache set to: 'auto'
+15:00:03.701 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Chunk size set to: 'auto'
+15:00:03.701 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Parsing tasks: 4
+15:00:03.701 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Temporary data folder: /data/Geographica2_Datasets/Scalability/100K/.
+15:00:03.701 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore point interval: 3,600s
+15:00:03.701 [main] INFO  c.ontotext.graphdb.importrdf.Preload - CONFIG FILE: /data/geordfbench/GraphDBSUT/scripts/CreateRepos/scalability_100K.ttl
+15:00:03.711 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Attaching to location: /data/graphdb-10.8.4/data
+15:00:04.834 [repository-manager-0] INFO  c.o.t.u.l.LimitedObjectCacheFactory - Using LRU cache type: synch
+15:00:05.019 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear triple statisctics collection
+15:00:05.023 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear PSOT collection
+15:00:05.024 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear POST collection
+15:00:05.024 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Rebuild triple collections. start entity pool scan...
+15:00:05.037 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Entity pool scan completed! Commiting...
+15:00:05.413 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check whether all predicates in the predicate statistics have correct collection sizes.
+15:00:05.413 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check for missing statement predicates in the predicate statistics
+15:00:05.892 [repository-manager-0] WARN  o.e.r.q.a.e.f.FunctionRegistry - New service class com.ontotext.trree.query.functions.afn.old.Localname replaces existing service class org.eclipse.rdf4j.spin.function.Localname
+15:00:08.386 [repository-manager-0] INFO  c.o.rio.parallel.ParallelLoader - Data will be parsed + resolved + loaded.
+15:00:08.635 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Analysing input data. It may take a while ...
+15:00:08.685 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Dataset:
+	number of files 1
+	total files size 19 MB
+	estimated number of statements 110,234
+	estimated number of entities 31,495
+15:00:08.715 [main] WARN  c.ontotext.graphdb.importrdf.Preload - Entity pool was set to 'on-heap' no off-heap memory 777,940 will be used!
+15:00:08.715 [main] INFO  c.ontotext.graphdb.importrdf.Preload - FreeHeap=8,251,193,776	commonHeap=1,896,603,348
+15:00:08.715 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Set min heap requirements=6,354,542,476	mem for indexes=47,952
+15:00:08.716 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Memory estimation:
+	free heap	8,251,193,776	max heap	8,380,219,392
+	free non-heap	8,294,946,392	max non-heap	8,380,219,392
+	need heap	4,956,651,300
+	need non-heap	0
+15:00:08.716 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Calculated using 'auto' --chunk=5,000,000, 'auto' --iter.cache=128, heap for parsing 3,060,000,000, heap for indexing 44,040,192
+15:00:08.716 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Initial restore point created, count so far 0
+15:00:10.187 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore manager started. Interval is 3600 seconds.
+15:00:10.189 [parsing-scalability_100K.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Loading file: scalability_100K.nt
+15:00:11.104 [parsing-scalability_100K.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Parsed 100,000 statements. Resolved statements so far: 34,878 pre-indexed tuples 0
+15:00:11.104 [main] INFO  c.ontotext.graphdb.importrdf.Preload - The parsing took 916ms. Updating entity pool...
+15:00:11.104 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Entity pool commit took 0ms
+15:00:11.261 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver end. Time active:459ms, Idle when waiting for sorter 0ms
+15:00:11.261 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver finished.
+15:00:11.277 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter end. Time active:17ms
+15:00:11.277 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter thread finished.
+15:00:11.278 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 1,090ms, statements: 100,000, sorted: 100,000
+15:00:12.178 [main] INFO  c.ontotext.graphdb.importrdf.Preload - All data parsed! Create intermediate restore point ...
+15:00:12.178 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POS q
+15:00:12.534 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSO q
+15:00:12.958 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing predlists q
+15:00:13.331 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing NUM q
+15:00:13.479 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing DATES q
+15:00:13.479 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POST q
+15:00:13.480 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSOT q
+15:00:13.480 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Intermediate restore point created!
+15:00:13.614 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - enum numeric and date literals
+15:00:13.615 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Full-text search functionality is disabled
+15:00:13.616 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals indices restored.
+15:00:13.617 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOC
+15:00:13.617 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing numerics queue 44 to add
+15:00:13.624 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POSC
+15:00:13.643 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - indexing predlists
+15:00:13.651 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from PSOC  queue processed ...
+15:00:13.654 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing dates queue 0 to add
+15:00:13.661 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POST
+15:00:13.682 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from predlists  queue processed ...
+15:00:13.689 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - POST commit 0 statements ...
+15:00:13.713 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOT
+15:00:13.723 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - PSOT commit 0... cross check from predicate statistics 0 statements
+15:00:13.723 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:13.725 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!. Commiting literals index...
+15:00:13.725 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 83 ms
+15:00:13.725 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:13.725 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!.
+15:00:13.725 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOT queue
+15:00:13.725 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:13.725 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 83 ms
+15:00:13.725 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - closing POST queue
+15:00:13.727 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals index created
+15:00:13.730 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from POSC  queue processed ...
+15:00:13.768 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:13.772 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:13.822 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:13.825 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:13.875 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:14.194 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - PSOC commit 100,000... cross check from predicate statistics 100,000 statements
+15:00:14.216 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - POSC commit 100,000 statements ...
+15:00:14.217 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:14.217 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 100,000 in 602 ms
+15:00:14.217 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOC queue
+15:00:14.234 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:14.234 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:14.234 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 100,000 in 611 ms
+15:00:14.234 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - closing POSC queue
+15:00:14.253 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:14.253 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:14.265 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:14.323 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists commit 141,685 pairs ...
+15:00:14.329 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:14.329 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists pairs enum done in 686 ms
+15:00:14.329 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - closing predlists queue
+15:00:14.329 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:14.330 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:14.330 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:14.333 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 8 predicates in 3 ms, total tuples 100,000
+15:00:14.333 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:14.333 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 0 predicates in 0 ms, total tuples 0
+15:00:14.336 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Processing finished 5,226ms. Shutting down ...
+15:00:14.336 [main] INFO  c.ontotext.graphdb.importrdf.Preload - epool commited phase 2, entities 55,137
+15:00:14.337 [main] INFO  c.ontotext.graphdb.importrdf.Preload - shutting down repository collections
+15:00:14.342 [main] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:14.550 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 5,439ms
+
+real	0m11,823s
+user	0m21,849s
+sys	0m1,594s
+GraphDB repository (no GeoSPARQL plugin) "/data/graphdb-10.8.4/data/repositories/scalability_100K/" has size: 38MB
+Checking/Creating scalability 1M dataset ...
+	Scalability 1M dataset already exists
+Generating scalability 1M repository ...
+./createGraphDBRepo.sh scalability_1M.ttl /data/Geographica2_Datasets/Scalability/1M N-TRIPLES /data/graphdb-10.8.4 false quad 11 192.168.1.44 3333
+15:00:15.421 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Input folders recursively: false
+15:00:15.423 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Iterator cache set to: 'auto'
+15:00:15.424 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Chunk size set to: 'auto'
+15:00:15.424 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Parsing tasks: 4
+15:00:15.424 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Temporary data folder: /data/Geographica2_Datasets/Scalability/1M/.
+15:00:15.425 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore point interval: 3,600s
+15:00:15.425 [main] INFO  c.ontotext.graphdb.importrdf.Preload - CONFIG FILE: /data/geordfbench/GraphDBSUT/scripts/CreateRepos/scalability_1M.ttl
+15:00:15.435 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Attaching to location: /data/graphdb-10.8.4/data
+15:00:16.259 [repository-manager-0] INFO  c.o.t.u.l.LimitedObjectCacheFactory - Using LRU cache type: synch
+15:00:16.468 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear triple statisctics collection
+15:00:16.471 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear PSOT collection
+15:00:16.472 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear POST collection
+15:00:16.472 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Rebuild triple collections. start entity pool scan...
+15:00:16.486 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Entity pool scan completed! Commiting...
+15:00:16.714 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check whether all predicates in the predicate statistics have correct collection sizes.
+15:00:16.714 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check for missing statement predicates in the predicate statistics
+15:00:17.092 [repository-manager-0] WARN  o.e.r.q.a.e.f.FunctionRegistry - New service class com.ontotext.trree.query.functions.afn.old.Localname replaces existing service class org.eclipse.rdf4j.spin.function.Localname
+15:00:19.156 [repository-manager-0] INFO  c.o.rio.parallel.ParallelLoader - Data will be parsed + resolved + loaded.
+15:00:19.361 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Analysing input data. It may take a while ...
+15:00:19.399 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Dataset:
+	number of files 1
+	total files size 193 MB
+	estimated number of statements 1,089,363
+	estimated number of entities 311,246
+15:00:19.432 [main] WARN  c.ontotext.graphdb.importrdf.Preload - Entity pool was set to 'on-heap' no off-heap memory 7,734,952 will be used!
+15:00:19.432 [main] INFO  c.ontotext.graphdb.importrdf.Preload - FreeHeap=8,247,447,320	commonHeap=1,903,560,360
+15:00:19.432 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Set min heap requirements=6,343,411,760	mem for indexes=475,200
+15:00:19.433 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Memory estimation:
+	free heap	8,247,447,320	max heap	8,380,219,392
+	free non-heap	8,295,794,424	max non-heap	8,380,219,392
+	need heap	4,964,035,560
+	need non-heap	0
+15:00:19.433 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Calculated using 'auto' --chunk=5,000,000, 'auto' --iter.cache=128, heap for parsing 3,060,000,000, heap for indexing 44,040,192
+15:00:19.433 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Initial restore point created, count so far 0
+15:00:20.669 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore manager started. Interval is 3600 seconds.
+15:00:20.670 [parsing-scalability_1M.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Loading file: scalability_1M.nt
+15:00:24.480 [parsing-scalability_1M.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Parsed 1,000,000 statements. Resolved statements so far: 945,777 pre-indexed tuples 0
+15:00:24.481 [main] INFO  c.ontotext.graphdb.importrdf.Preload - The parsing took 3,811ms. Updating entity pool...
+15:00:24.481 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Entity pool commit took 0ms
+15:00:24.544 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver end. Time active:2,248ms, Idle when waiting for sorter 0ms
+15:00:24.544 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver finished.
+15:00:24.578 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter end. Time active:34ms
+15:00:24.578 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter thread finished.
+15:00:24.578 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 3,908ms, statements: 1,000,000, sorted: 1,000,000
+15:00:26.307 [main] INFO  c.ontotext.graphdb.importrdf.Preload - All data parsed! Create intermediate restore point ...
+15:00:26.308 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POS q
+15:00:27.373 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSO q
+15:00:28.400 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing predlists q
+15:00:29.405 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing NUM q
+15:00:29.486 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing DATES q
+15:00:29.487 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POST q
+15:00:29.487 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSOT q
+15:00:29.487 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Intermediate restore point created!
+15:00:29.595 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - enum numeric and date literals
+15:00:29.596 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Full-text search functionality is disabled
+15:00:29.596 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOC
+15:00:29.597 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals indices restored.
+15:00:29.598 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing numerics queue 329 to add
+15:00:29.614 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POSC
+15:00:29.614 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POST
+15:00:29.623 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - POST commit 0 statements ...
+15:00:29.628 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:29.628 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 14 ms
+15:00:29.628 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - closing POST queue
+15:00:29.628 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:29.629 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - indexing predlists
+15:00:29.629 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOT
+15:00:29.631 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - PSOT commit 0... cross check from predicate statistics 0 statements
+15:00:29.664 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from predlists  queue processed ...
+15:00:29.693 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from PSOC  queue processed ...
+15:00:29.707 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from POSC  queue processed ...
+15:00:29.747 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:29.756 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:29.757 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 143 ms
+15:00:29.757 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOT queue
+15:00:29.757 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:29.817 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:29.817 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing dates queue 0 to add
+15:00:29.845 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!. Commiting literals index...
+15:00:29.850 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!.
+15:00:29.852 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals index created
+15:00:29.852 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:29.903 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:31.675 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - POSC commit 1,000,000 statements ...
+15:00:31.689 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:31.689 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 1,000,000 in 2,075 ms
+15:00:31.689 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - closing POSC queue
+15:00:31.689 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:31.725 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:31.874 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - PSOC commit 1,000,000... cross check from predicate statistics 1,000,000 statements
+15:00:31.877 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:31.877 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 1,000,000 in 2,282 ms
+15:00:31.877 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOC queue
+15:00:31.877 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:31.891 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:32.028 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists commit 1,380,619 pairs ...
+15:00:32.032 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:32.032 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists pairs enum done in 2,403 ms
+15:00:32.032 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - closing predlists queue
+15:00:32.032 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+15:00:32.032 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+15:00:32.033 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:32.035 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 9 predicates in 2 ms, total tuples 1,000,000
+15:00:32.035 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+15:00:32.036 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 0 predicates in 1 ms, total tuples 0
+15:00:32.038 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Processing finished 12,227ms. Shutting down ...
+15:00:32.038 [main] INFO  c.ontotext.graphdb.importrdf.Preload - epool commited phase 2, entities 502,855
+15:00:32.038 [main] INFO  c.ontotext.graphdb.importrdf.Preload - shutting down repository collections
+15:00:32.043 [main] INFO  c.ontotext.graphdb.importrdf.Preload - done
+15:00:32.190 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 12,378ms
+
+real	0m17,588s
+user	0m41,184s
+sys	0m1,786s
+GraphDB repository (no GeoSPARQL plugin) "/data/graphdb-10.8.4/data/repositories/scalability_1M/" has size: 144MB

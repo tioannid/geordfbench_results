@@ -1,0 +1,29 @@
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = 42014ca#_2025-04-28_GraphDBSUT_CreateRepo_Scalability10K_Pred_1M_GraphDB_GeoSPARQL_Enabled_Quad_11
+ActiveSUT = GraphDBSUT
+ExperimentResultDir = /data/GraphDBSUT/42014ca#_2025-04-28_GraphDBSUT_CreateRepo_Scalability10K_Pred_1M_GraphDB_GeoSPARQL_Enabled_Quad_11
+ExperimentDesc = 42014ca#_2025-04-28_GraphDBSUT_CreateRepo_Scalability10K_Pred_1M_GraphDB_GeoSPARQL_Enabled_Quad_11
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+GraphDB SUT
+-----------
+GraphDBBaseDir = /data/graphdb-10.8.4
+GraphDBDataDir = /data/graphdb-10.8.4/data
+EnableGeoSPARQLPlugin = true
+IndexingAlgorithm = quad
+IndexingPrecision = 11
+Version = 10.8.4
+

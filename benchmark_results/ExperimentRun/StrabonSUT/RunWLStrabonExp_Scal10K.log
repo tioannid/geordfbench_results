@@ -1,0 +1,949 @@
+ARGS = -expdesc 2025-05-04_StrabonSUT_RunWL_Scal10K -dbh localhost -dbp 5432 -dbn scalability_10K -dbu postgres -dbps postgres -wl /data/geordfbench/json_defs/workloads/scalabilityFunc10K_WLoriginal_GOLD_STANDARD.json -h /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json -rs /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json -rpsr /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RunStrabonExperimentWorkload  - args[0] = -expdesc
+1    [main] INFO  RunStrabonExperimentWorkload  - args[1] = 2025-05-04_StrabonSUT_RunWL_Scal10K
+1    [main] INFO  RunStrabonExperimentWorkload  - args[2] = -dbh
+1    [main] INFO  RunStrabonExperimentWorkload  - args[3] = localhost
+1    [main] INFO  RunStrabonExperimentWorkload  - args[4] = -dbp
+1    [main] INFO  RunStrabonExperimentWorkload  - args[5] = 5432
+1    [main] INFO  RunStrabonExperimentWorkload  - args[6] = -dbn
+1    [main] INFO  RunStrabonExperimentWorkload  - args[7] = scalability_10K
+1    [main] INFO  RunStrabonExperimentWorkload  - args[8] = -dbu
+1    [main] INFO  RunStrabonExperimentWorkload  - args[9] = postgres
+1    [main] INFO  RunStrabonExperimentWorkload  - args[10] = -dbps
+1    [main] INFO  RunStrabonExperimentWorkload  - args[11] = postgres
+1    [main] INFO  RunStrabonExperimentWorkload  - args[12] = -wl
+1    [main] INFO  RunStrabonExperimentWorkload  - args[13] = /data/geordfbench/json_defs/workloads/scalabilityFunc10K_WLoriginal_GOLD_STANDARD.json
+1    [main] INFO  RunStrabonExperimentWorkload  - args[14] = -h
+1    [main] INFO  RunStrabonExperimentWorkload  - args[15] = /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+1    [main] INFO  RunStrabonExperimentWorkload  - args[16] = -rs
+1    [main] INFO  RunStrabonExperimentWorkload  - args[17] = /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+2    [main] INFO  RunStrabonExperimentWorkload  - args[18] = -rpsr
+2    [main] INFO  RunStrabonExperimentWorkload  - args[19] = /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+6    [main] INFO  RunStrabonExperimentWorkload  - |==> Experiment related options
+6    [main] INFO  RunStrabonExperimentWorkload  - Experiment description:	2025-05-04_StrabonSUT_RunWL_Scal10K
+6    [main] INFO  RunStrabonExperimentWorkload  - |==> Workload, Host, Report related options
+6    [main] INFO  RunStrabonExperimentWorkload  - Workload specs configuration JSON file:	/data/geordfbench/json_defs/workloads/scalabilityFunc10K_WLoriginal_GOLD_STANDARD.json
+6    [main] INFO  RunStrabonExperimentWorkload  - List of queries to include in the run:	all
+6    [main] INFO  RunStrabonExperimentWorkload  - Host configuration JSON file:	/data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+6    [main] INFO  RunStrabonExperimentWorkload  - Report specs configuration JSON file:	/data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+6    [main] INFO  RunStrabonExperimentWorkload  - Report source specs configuration JSON file:	/data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+6    [main] INFO  RunStrabonExperimentWorkload  - |==> System options
+6    [main] INFO  RunStrabonExperimentWorkload  - Server:	localhost
+7    [main] INFO  RunStrabonExperimentWorkload  - Database:	scalability_10K
+7    [main] INFO  RunStrabonExperimentWorkload  - Port:	5432
+7    [main] INFO  RunStrabonExperimentWorkload  - Username:	postgres
+7    [main] INFO  RunStrabonExperimentWorkload  - Password:	postgres
+357  [main] INFO  RunStrabonExperimentWorkload  - {SimpleGeospatialWL: ScalabilityFunc, ,
+	{GeographicaDS: scalability_10K, Scalability/10K,
+	{GenericGeospatialSimpleDS: scalability_10K, N-TRIPLES}}
+	{StaticTempParamQS: scalabilityFunc, ,false, SimpleES{ COLD=3, WARM=3, action=RUN, maxduration=604800 secs, repmaxduration=86400 secs, func=QUERY_MEDIAN }}}
+756  [main] INFO  SesamePostGISBasedSUT  - Reading SesamePostGISBasedSUT properties from file : jar:file:/data/geordfbench/StrabonSUT/target/runtime-1.0.0.jar!/postgresql.properties
+797  [main] INFO  SesamePostGISBasedSUT  - Checking if PostgreSQL is running...
+847  [main] INFO  SesamePostGISBasedSUT  - PostgreSQL is currently running
+849  [main] INFO  StrabonSUT  - Initializing..
+864  [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+894  [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+1841 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+1842 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 947 ms.
+1842 [main] INFO  ExperimentWorkload  - StrabonSystem-dependent translation of the queryset scalabilityFunc
+1842 [main] INFO  ExperimentWorkload  - StrabonSystem-dependent namespace prefixes merged with the prefixes of queryset scalabilityFunc
+1843 [main] INFO  StrabonSUT  - Closing..
+6867 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+6867 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+7197 [main] INFO  RunStrabonExperimentWorkload  - Start ScalabilityFunc
+7206 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+7206 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+7255 [main] INFO  GenericLinuxOS  - Syncing...
+9173 [main] INFO  GenericLinuxOS  - Clearing caches...
+15046 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+15046 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+18278 [main] INFO  StrabonSUT  - Initializing..
+18279 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+19235 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+21827 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+21827 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 2592 ms.
+21844 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+21888 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+21888 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+21888 [Thread-2] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+21889 [Thread-2] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+22148 [Thread-2] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+22306 [Thread-2] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+22841 [Thread-2] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+22841 [Thread-2] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+22841 [Thread-2] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+22841 [Thread-2] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+23041 [Thread-2] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+23043 [Thread-2] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+23044 [Thread-2] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+23199 [Thread-2] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+23199 [Thread-2] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+23199 [Thread-2] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+23206 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+23241 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): <COMPLETED-NONE> 692873903 + 357253270 = 1050127173 nsecs, 554 results, 0 scan errors - ACCURATE
+23241 [main] INFO  StrabonSUT  - Closing..
+28265 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+28265 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+28301 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+28302 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+28324 [main] INFO  GenericLinuxOS  - Syncing...
+28546 [main] INFO  GenericLinuxOS  - Clearing caches...
+33655 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+33656 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+36927 [main] INFO  StrabonSUT  - Initializing..
+36928 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+37294 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+38937 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+38937 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 1642 ms.
+38937 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+38938 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+38938 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+38938 [Thread-3] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+38938 [Thread-3] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+38940 [Thread-3] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+38944 [Thread-3] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+39138 [Thread-3] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+39139 [Thread-3] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+39139 [Thread-3] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+39139 [Thread-3] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+39139 [Thread-3] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+39139 [Thread-3] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+39139 [Thread-3] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+39186 [Thread-3] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+39186 [Thread-3] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+39186 [Thread-3] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+39186 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+39219 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): <COMPLETED-NONE> 198618438 + 47208371 = 245826809 nsecs, 554 results, 0 scan errors - ACCURATE
+39219 [main] INFO  StrabonSUT  - Closing..
+44233 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+44234 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+44269 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+44269 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+44295 [main] INFO  GenericLinuxOS  - Syncing...
+44499 [main] INFO  GenericLinuxOS  - Clearing caches...
+49563 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+49564 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+52627 [main] INFO  StrabonSUT  - Initializing..
+52627 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+52834 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+53695 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+53695 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 860 ms.
+53695 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+53695 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+53695 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+53695 [Thread-4] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+53696 [Thread-4] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+53698 [Thread-4] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+53701 [Thread-4] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+53823 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+53823 [Thread-4] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+53823 [Thread-4] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+53823 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+53823 [Thread-4] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+53823 [Thread-4] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+53823 [Thread-4] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+53867 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+53868 [Thread-4] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+53868 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+53868 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+53886 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): <COMPLETED-NONE> 124334822 + 44724377 = 169059199 nsecs, 554 results, 0 scan errors - ACCURATE
+53886 [main] INFO  StrabonSUT  - Closing..
+58898 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+58898 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+58929 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+58929 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+58955 [main] INFO  GenericLinuxOS  - Syncing...
+59236 [main] INFO  GenericLinuxOS  - Clearing caches...
+64308 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+64308 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+67205 [main] INFO  StrabonSUT  - Initializing..
+67205 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+67423 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+68157 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+68157 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 733 ms.
+68157 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+68157 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+68157 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+68158 [Thread-5] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+68158 [Thread-5] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+68215 [Thread-5] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+68493 [Thread-5] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+68493 [Thread-5] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+68493 [Thread-5] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+68493 [Thread-5] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+68494 [Thread-5] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+68494 [Thread-5] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+68494 [Thread-5] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+68494 [Thread-5] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+68494 [Thread-5] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+68494 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+68542 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 277878616 + 474488 = 278353104 nsecs, 2 results, 0 scan errors - ACCURATE
+68543 [main] INFO  StrabonSUT  - Closing..
+73564 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+73564 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+73603 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+73603 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+73629 [main] INFO  GenericLinuxOS  - Syncing...
+73854 [main] INFO  GenericLinuxOS  - Clearing caches...
+78917 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+78917 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+81924 [main] INFO  StrabonSUT  - Initializing..
+81924 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+82078 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+83099 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+83099 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 1021 ms.
+83099 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+83099 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+83100 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+83100 [Thread-6] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+83100 [Thread-6] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+83102 [Thread-6] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+83261 [Thread-6] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+83261 [Thread-6] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+83262 [Thread-6] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+83262 [Thread-6] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+83262 [Thread-6] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+83262 [Thread-6] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+83263 [Thread-6] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+83263 [Thread-6] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+83263 [Thread-6] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+83263 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+83285 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 159115031 + 696540 = 159811571 nsecs, 2 results, 0 scan errors - ACCURATE
+83285 [main] INFO  StrabonSUT  - Closing..
+88298 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+88298 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+88333 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+88333 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+88362 [main] INFO  GenericLinuxOS  - Syncing...
+88599 [main] INFO  GenericLinuxOS  - Clearing caches...
+93677 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+93678 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+96534 [main] INFO  StrabonSUT  - Initializing..
+96534 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+96709 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+97433 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+97433 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 724 ms.
+97433 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+97433 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+97433 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+97433 [Thread-7] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+97434 [Thread-7] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+97435 [Thread-7] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+97463 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+97463 [Thread-7] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+97463 [Thread-7] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+97463 [Thread-7] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+97463 [Thread-7] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+97463 [Thread-7] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+97463 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+97463 [Thread-7] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+97463 [Thread-7] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+97463 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+97479 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 27593723 + 201034 = 27794757 nsecs, 2 results, 0 scan errors - ACCURATE
+97479 [main] INFO  StrabonSUT  - Closing..
+102491 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+102491 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+102521 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+102521 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+102545 [main] INFO  GenericLinuxOS  - Syncing...
+102754 [main] INFO  GenericLinuxOS  - Clearing caches...
+107850 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+107850 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+110580 [main] INFO  StrabonSUT  - Initializing..
+110580 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+110730 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+111460 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+111460 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 730 ms.
+111460 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+111461 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+111461 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+111461 [Thread-8] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+111461 [Thread-8] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+111496 [Thread-8] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+111537 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+111537 [Thread-8] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+111537 [Thread-8] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+111537 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+111537 [Thread-8] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+111537 [Thread-8] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+111537 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+111537 [Thread-8] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+111537 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+111537 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+111562 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 41300969 + 120753 = 41421722 nsecs, 2 results, 0 scan errors - ACCURATE
+111562 [main] INFO  StrabonSUT  - Closing..
+116577 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+116577 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+116611 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+116611 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+116635 [main] INFO  GenericLinuxOS  - Syncing...
+116745 [main] INFO  GenericLinuxOS  - Clearing caches...
+121849 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+121849 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+124767 [main] INFO  StrabonSUT  - Initializing..
+124767 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+124924 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+125714 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+125714 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 790 ms.
+125714 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+125715 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+125715 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+125715 [Thread-9] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+125715 [Thread-9] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+125718 [Thread-9] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+125872 [Thread-9] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+125872 [Thread-9] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+125872 [Thread-9] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+125872 [Thread-9] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+125872 [Thread-9] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+125872 [Thread-9] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+125872 [Thread-9] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+125873 [Thread-9] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+125873 [Thread-9] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+125873 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+125923 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 154025346 + 429533 = 154454879 nsecs, 2 results, 0 scan errors - ACCURATE
+125923 [main] INFO  StrabonSUT  - Closing..
+130939 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+130939 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+130974 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+130974 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+130998 [main] INFO  GenericLinuxOS  - Syncing...
+131221 [main] INFO  GenericLinuxOS  - Clearing caches...
+136323 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+136323 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+139294 [main] INFO  StrabonSUT  - Initializing..
+139295 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+139559 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+140471 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+140471 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 912 ms.
+140495 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+140495 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+140495 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+140495 [Thread-10] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+140496 [Thread-10] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+140497 [Thread-10] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+140695 [Thread-10] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+140695 [Thread-10] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+140695 [Thread-10] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+140695 [Thread-10] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+140695 [Thread-10] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+140695 [Thread-10] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+140695 [Thread-10] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+140695 [Thread-10] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+140695 [Thread-10] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+140695 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+140719 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 197229559 + 337528 = 197567087 nsecs, 2 results, 0 scan errors - ACCURATE
+140719 [main] INFO  StrabonSUT  - Closing..
+145738 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+145738 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+145776 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+145802 [main] INFO  GenericLinuxOS  - Syncing...
+146065 [main] INFO  GenericLinuxOS  - Clearing caches...
+151132 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+151132 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+153929 [main] INFO  StrabonSUT  - Initializing..
+153930 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+154085 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+154894 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+154894 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 808 ms.
+154894 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [0, SC1_Geometries_Intersects_GivenPolygon] to warm up caches
+154894 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+154895 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+154895 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+154895 [Thread-11] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+154895 [Thread-11] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+154896 [Thread-11] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+154899 [Thread-11] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+155144 [Thread-11] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+155144 [Thread-11] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+155144 [Thread-11] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+155144 [Thread-11] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+155144 [Thread-11] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155144 [Thread-11] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155145 [Thread-11] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155193 [Thread-11] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+155193 [Thread-11] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+155193 [Thread-11] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+155193 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+155213 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+155214 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+155214 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+155214 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+155214 [Thread-12] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+155214 [Thread-12] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+155215 [Thread-12] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+155216 [Thread-12] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+155229 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+155229 [Thread-12] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+155229 [Thread-12] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+155229 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+155229 [Thread-12] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155229 [Thread-12] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155229 [Thread-12] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155271 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+155271 [Thread-12] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+155271 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+155271 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+155286 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): <COMPLETED-NONE> 13818612 + 41785252 = 55603864 nsecs, 554 results, 0 scan errors - ACCURATE
+155286 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+155286 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+155286 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+155286 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+155286 [Thread-13] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+155286 [Thread-13] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+155287 [Thread-13] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+155287 [Thread-13] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+155301 [Thread-13] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+155301 [Thread-13] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+155301 [Thread-13] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+155301 [Thread-13] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+155301 [Thread-13] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155301 [Thread-13] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155301 [Thread-13] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155344 [Thread-13] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+155344 [Thread-13] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+155344 [Thread-13] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+155344 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+155362 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): <COMPLETED-NONE> 14005657 + 42553108 = 56558765 nsecs, 554 results, 0 scan errors - ACCURATE
+155362 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+155362 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+155363 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+155363 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+155363 [Thread-14] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+155363 [Thread-14] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+155364 [Thread-14] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+155364 [Thread-14] WARN  org.openrdf.query.algebra.evaluation.function.spatial.WKTHelper  - [Strabon.WKTHelper] Malformed URI for CRS. The URL was POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526)).
+155377 [Thread-14] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+155377 [Thread-14] INFO  SesamePostGISBasedExecutor  - 	s1		o1		
+155377 [Thread-14] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+155377 [Thread-14] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+155377 [Thread-14] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	"MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155377 [Thread-14] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	"MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155377 [Thread-14] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686306	"MULTIPOLYGON (((-4.0960447 53.0956141, -4.0960086 53.0956258, -4.0959763 53.0955897, -4.0960124 53.0955781, -4.0960447 53.0956141)))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>	
+155417 [Thread-14] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+155417 [Thread-14] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+155417 [Thread-14] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+155417 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+155429 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): <COMPLETED-NONE> 13023920 + 40626787 = 53650707 nsecs, 554 results, 0 scan errors - ACCURATE
+155430 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+155452 [main] INFO  GenericLinuxOS  - Syncing...
+155849 [main] INFO  GenericLinuxOS  - Clearing caches...
+160916 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+160916 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+163822 [main] INFO  StrabonSUT  - Initializing..
+163822 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+163910 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+164684 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+164684 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 773 ms.
+164684 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] to warm up caches
+164684 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+164684 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+164684 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+164684 [Thread-15] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+164684 [Thread-15] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+164685 [Thread-15] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+164785 [Thread-15] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+164785 [Thread-15] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+164786 [Thread-15] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+164786 [Thread-15] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+164786 [Thread-15] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+164786 [Thread-15] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+164786 [Thread-15] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+164786 [Thread-15] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+164786 [Thread-15] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+164786 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+164830 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+164830 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+164831 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+164831 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+164831 [Thread-16] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+164831 [Thread-16] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+164833 [Thread-16] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+164845 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+164845 [Thread-16] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+164845 [Thread-16] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+164845 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+164845 [Thread-16] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+164845 [Thread-16] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+164845 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+164845 [Thread-16] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+164845 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+164845 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+164863 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 11351317 + 95439 = 11446756 nsecs, 2 results, 0 scan errors - ACCURATE
+164863 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+164863 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+164863 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+164863 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+164863 [Thread-17] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+164863 [Thread-17] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+164864 [Thread-17] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+164872 [Thread-17] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+164872 [Thread-17] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+164872 [Thread-17] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+164872 [Thread-17] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+164872 [Thread-17] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+164872 [Thread-17] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+164872 [Thread-17] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+164872 [Thread-17] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+164872 [Thread-17] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+164872 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+164888 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 7352447 + 59830 = 7412277 nsecs, 2 results, 0 scan errors - ACCURATE
+164888 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+164888 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+164889 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+164889 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+164889 [Thread-18] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+164889 [Thread-18] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+164890 [Thread-18] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+164895 [Thread-18] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+164895 [Thread-18] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+164895 [Thread-18] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+164895 [Thread-18] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+164895 [Thread-18] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+164895 [Thread-18] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+164895 [Thread-18] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+164895 [Thread-18] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+164895 [Thread-18] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+164895 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+164909 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 5248043 + 77349 = 5325392 nsecs, 2 results, 0 scan errors - ACCURATE
+164910 [main] INFO  StrabonSUT  - Stopping PostgreSQL...
+164932 [main] INFO  GenericLinuxOS  - Syncing...
+165150 [main] INFO  GenericLinuxOS  - Clearing caches...
+170266 [main] INFO  GenericLinuxOS  - Caches cleared after delay of 5000 msecs
+170266 [main] INFO  StrabonSUT  - Starting PostgreSQL...
+173012 [main] INFO  StrabonSUT  - Initializing..
+173012 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Cleaning...
+173085 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Clearing Successful.
+173783 [main] INFO  eu.earthobservatory.runtime.postgis.Strabon  - [Strabon] Initialization completed.
+173783 [main] INFO  eu.earthobservatory.runtime.generaldb.Strabon  - [Strabon] Initialization took 698 ms.
+173783 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] to warm up caches
+173783 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+173783 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+173783 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+173784 [Thread-19] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+173784 [Thread-19] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+173785 [Thread-19] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+173823 [Thread-19] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+173823 [Thread-19] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+173823 [Thread-19] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+173823 [Thread-19] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+173823 [Thread-19] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+173823 [Thread-19] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+173823 [Thread-19] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+173823 [Thread-19] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+173823 [Thread-19] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+173823 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+173840 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+173840 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+173841 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+173841 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+173841 [Thread-20] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+173841 [Thread-20] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+173842 [Thread-20] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+173852 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+173852 [Thread-20] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+173852 [Thread-20] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+173852 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+173852 [Thread-20] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+173852 [Thread-20] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+173852 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+173852 [Thread-20] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+173852 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+173852 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+173867 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 9560889 + 60088 = 9620977 nsecs, 2 results, 0 scan errors - ACCURATE
+173868 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+173868 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+173868 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+173868 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+173868 [Thread-21] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+173868 [Thread-21] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+173869 [Thread-21] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+173874 [Thread-21] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+173874 [Thread-21] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+173874 [Thread-21] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+173874 [Thread-21] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+173874 [Thread-21] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+173874 [Thread-21] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+173874 [Thread-21] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+173874 [Thread-21] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+173874 [Thread-21] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+173874 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+173889 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 5350230 + 54503 = 5404733 nsecs, 2 results, 0 scan errors - ACCURATE
+173889 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+173889 [main] INFO  StrabonSUT  - Starting QueryExecutor thread
+173889 [main] INFO  StrabonSUT  - Waiting for QueryExecutor thread to finish
+173889 [main] INFO  StrabonSUT  - Timeout progress step is 21600000 msecs
+173889 [Thread-22] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+173889 [Thread-22] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+173890 [Thread-22] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+173896 [Thread-22] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+173896 [Thread-22] INFO  SesamePostGISBasedExecutor  - 	s1		s2		
+173896 [Thread-22] INFO  SesamePostGISBasedExecutor  - ------------------------------------>
+173896 [Thread-22] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+173896 [Thread-22] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+173896 [Thread-22] INFO  SesamePostGISBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+173896 [Thread-22] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+173896 [Thread-22] INFO  SesamePostGISBasedExecutor  - <------------------------------------
+173896 [Thread-22] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+173896 [main] INFO  StrabonSUT  - Percentage of expired timeout is 0.0 %
+173911 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 6077665 + 56259 = 6133924 nsecs, 2 results, 0 scan errors - ACCURATE
+173911 [main] INFO  StrabonSUT  - Closing..
+178925 [main] INFO  StrabonSUT  - Closed (caches not cleared)
+178925 [main] INFO  StrabonSUT  - Restoring PostgreSQL to its original running state...
+180083 [main] INFO  JDBCRepSrc  - Deferred mode for JDBCRepSrc was enabled. 18 records were flushed
+180083 [main] INFO  GenericExprerimentResultsCollector  - Export statistics in "/data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload"
+180293 [main] INFO  GenericExprerimentResultsCollector  - Created non existing directory
+180323 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold
+180323 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold-long
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold-long
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold-long
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm
+180324 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm-long
+180325 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm
+180325 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm-long
+180325 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm
+180325 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/StrabonSUT/2025-05-04_StrabonSUT_RunWL_Scal10K/Scalability/10K/StrabonSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm-long
+180325 [main] INFO  GenericExprerimentResultsCollector  - Cache COLD
+180325 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+180325 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 692873903 + 357253270 = 1050127173 nsecs, 554 results, 0 scan errors
+180325 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 198618438 + 47208371 = 245826809 nsecs, 554 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 124334822 + 44724377 = 169059199 nsecs, 554 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 277878616 + 474488 = 278353104 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 159115031 + 696540 = 159811571 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 27593723 + 201034 = 27794757 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 41300969 + 120753 = 41421722 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 154025346 + 429533 = 154454879 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 197229559 + 337528 = 197567087 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - Cache WARM
+180326 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 13818612 + 41785252 = 55603864 nsecs, 554 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 14005657 + 42553108 = 56558765 nsecs, 554 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 13023920 + 40626787 = 53650707 nsecs, 554 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 11351317 + 95439 = 11446756 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 7352447 + 59830 = 7412277 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 5248043 + 77349 = 5325392 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 9560889 + 60088 = 9620977 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 5350230 + 54503 = 5404733 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 6077665 + 56259 = 6133924 nsecs, 2 results, 0 scan errors
+180326 [main] INFO  RunStrabonExperimentWorkload  - End ScalabilityFunc
+Start time = Κυρ 04 Μαΐ 2025 12:51:28 πμ EEST
+End time = Κυρ 04 Μαΐ 2025 12:54:32 πμ EEST

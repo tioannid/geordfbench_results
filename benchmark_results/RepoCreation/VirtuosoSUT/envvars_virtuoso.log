@@ -1,0 +1,29 @@
+All SUTs
+--------
+Environment = NUC8I7BEH
+EnvironmentBaseDir = /data
+GeoRDFBenchScriptsDir = /data/geordfbench/scripts
+GeoRDFBenchJSONLibDir = /data/geordfbench/json_defs
+DatasetBaseDir = /data/Geographica2_Datasets
+QuerysetBaseDir = /data/Geographica2_Datasets/QuerySets
+ResultsBaseDir = /data
+ResultsDirName = 031e50e#_2025-04-27_VirtuosoSUT_CreateRepo_Scalability10K_1M_Virtuoso
+ActiveSUT = VirtuosoSUT
+ExperimentResultDir = /data/VirtuosoSUT/031e50e#_2025-04-27_VirtuosoSUT_CreateRepo_Scalability10K_1M_Virtuoso
+ExperimentDesc = 031e50e#_2025-04-27_VirtuosoSUT_CreateRepo_Scalability10K_1M_Virtuoso
+CompletionReportDaemonIP = 192.168.1.44
+CompletionReportDaemonPort = 3333
+ScalabilityGenScriptName = /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh
+ScalabilityGzipRefDSName = /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+SystemMemorySizeInGB = 32 GBs
+JVM_Xmx = -Xmx24g
+
+Virtuoso SUT
+-----------
+VirtuosoBaseDir = /data/virtuoso-opensource-7.2.14
+VirtuosoDataBaseDir = /data/virtuoso-opensource-7.2.14/repos
+VirtuosoTemplateConfigurationFile = /data/geordfbench/scripts/../VirtuosoSUT/scripts/CreateRepos/virtuoso_geographica.ini
+NumberOfBuffers = 1974697 8k-pages
+MaxDirtyBuffers = 1184818 8k-pages
+Version = 7.2.14
+
