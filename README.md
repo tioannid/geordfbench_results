@@ -1,5 +1,8 @@
 # GeoRDFBench Framework Benchmark Results
 
+[![License](https://img.shields.io/badge/license-Apache2.0-green)](./LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15349540.svg)](https://doi.org/10.5281/zenodo.15349540)
+[![Execution framework docs](https://img.shields.io/badge/docs-Execution_framework-red)](https://github.com/tioannid/geordfbench/README.md)
 
 ## Benchmark Results v2.0
 
