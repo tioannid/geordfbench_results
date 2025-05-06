@@ -1,9 +1,0 @@
-Contents
---------
-1) RepoCreation_Logs
-   The logs produced by the repository generation wrapper scripts
-2) ExperimentRun_Logs
-   The logs produced by the experiment run script
-3) ExperimentRunResults_Store
-   Contains the results and statistics generated in the default location (filesystem)
-
