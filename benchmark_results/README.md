@@ -17,7 +17,7 @@ with an RDF Module of the GeoRDFBench Framework.
     └── runVirtuoso_Scal10K_1M.sh
 ```
 
-#### benchmark_results/RepoCreation:
+#### benchmark_results/RepoCreation
 This folder contains:
 - The _environment variables_ as set by the **environment preparation 
 scrip** and recorded by the **print environment script** of each system configuration
@@ -44,7 +44,7 @@ configuration variant
 │       └── logCreateRepos_Scal10K_1M_Virtuoso.log
 ```
 
-#### benchmark_results/ExperimentResults: 
+#### benchmark_results/ExperimentResults 
 This folder contains the _results_ and _statistics_ generated in the default 
 location (filesystem) by the **experiment run script**.
 ```
@@ -70,7 +70,7 @@ location (filesystem) by the **experiment run script**.
 │       └── 2025-04-27_VirtuosoSUT_RunWL_Scal1M
 ```
 
-#### benchmark_results/ExperimentRun:
+#### benchmark_results/ExperimentRun
 This folder contains the logs produced by the **experiment run script**.
 ```
 ├── ExperimentRun
@@ -95,3 +95,17 @@ This folder contains the logs produced by the **experiment run script**.
 │       └── RunWLVirtuosoExp_Scal1M.log
 ```
 
+#### benchmark_results/Charts
+This folder contains the charts created based on the results. For each 
+one of the three queries (SC1, SC2, SC3) there is one chart for COLD
+and one with WARM caches, a total of 6 charts. The response time axis
+is in logarithmic scale.
+```
+├── Charts
+│   ├── SC1_COLD.png
+│   ├── SC1_WARM.png
+│   ├── SC2_COLD.png
+│   ├── SC2_WARM.png
+│   ├── SC3_COLD.png
+│   └── SC3_WARM.png
+```
