@@ -1,0 +1,881 @@
+ARGS = -rbd JenaGeoSPARQL_4.10.0_Repos -expdesc 2025-12-13_JenaGeoSPARQL_RunWL_Scal10M -wl /data/geordfbench/json_defs/workloads/scalabilityFunc10M_WLoriginal.json -h /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json -rs /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json -rpsr /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[0] = -rbd
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[1] = JenaGeoSPARQL_4.10.0_Repos
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[2] = -expdesc
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[3] = 2025-12-13_JenaGeoSPARQL_RunWL_Scal10M
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[4] = -wl
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[5] = /data/geordfbench/json_defs/workloads/scalabilityFunc10M_WLoriginal.json
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[6] = -h
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[7] = /data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[8] = -rs
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[9] = /data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[10] = -rpsr
+1    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - args[11] = /data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+3    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - |==> Experiment related options
+6    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Experiment description:	2025-12-13_JenaGeoSPARQL_RunWL_Scal10M
+7    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - |==> Workload, Host, Report related options
+7    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Workload specs configuration JSON file:	/data/geordfbench/json_defs/workloads/scalabilityFunc10M_WLoriginal.json
+7    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - List of queries to include in the run:	all
+8    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Host configuration JSON file:	/data/geordfbench/json_defs/hosts/nuc8i7behHOSToriginal.json
+8    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Report specs configuration JSON file:	/data/geordfbench/json_defs/reportspecs/simplereportspec_original.json
+8    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Report source specs configuration JSON file:	/data/geordfbench/json_defs/reportsources/nuc8i7behHOSToriginal.json
+8    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - |==> System options
+8    [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - BaseDir:	JenaGeoSPARQL_4.10.0_Repos
+430  [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - {SimpleGeospatialWL: ScalabilityFunc, ,
+	{GeographicaDS: scalability_10M, Scalability/10M,
+	{GenericGeospatialSimpleDS: scalability_10M, N-TRIPLES}}
+	{StaticTempParamQS: scalabilityFunc, ,false, SimpleES{ COLD=3, WARM=3, action=RUN, maxduration=604800 secs, repmaxduration=86400 secs, func=QUERY_MEDIAN }}}
+727  [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+1558 [main] WARN  org.apache.sis.system  - The “SIS_DATA” environment variable is not set.
+2257 [main] INFO  ExperimentWorkload  - JenaBasedGeographicaSystem-dependent translation of the queryset scalabilityFunc
+2257 [main] INFO  ExperimentWorkload  - JenaBasedGeographicaSystem-dependent namespace prefixes merged with the prefixes of queryset scalabilityFunc
+2259 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+2259 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+2260 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+7279 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+7413 [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - Start ScalabilityFunc
+7430 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+7468 [main] INFO  UbuntuJammyOS  - Syncing...
+7853 [main] INFO  UbuntuJammyOS  - Clearing caches...
+13356 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+13426 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+13442 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+13444 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+13446 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+13448 [Thread-4] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+13448 [Thread-4] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+13544 [Thread-4] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+13556 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+13556 [Thread-4] INFO  JenaBasedExecutor  - 	s1		o1		
+13556 [Thread-4] INFO  JenaBasedExecutor  - ------------------------------------>
+13556 [Thread-4] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+13952 [Thread-4] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+13977 [Thread-4] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+13978 [Thread-4] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+49278 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+49278 [Thread-4] INFO  JenaBasedExecutor  - <------------------------------------
+49279 [Thread-4] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+49279 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+50803 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 0): <COMPLETED-NONE> 11835922 + 35721938822 = 35733774744 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+50814 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+50814 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+50814 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+57105 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+57105 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+57165 [main] INFO  UbuntuJammyOS  - Syncing...
+57414 [main] INFO  UbuntuJammyOS  - Clearing caches...
+62533 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+62545 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+62698 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+62699 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+62700 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+62700 [Thread-8] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+62702 [Thread-8] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+62706 [Thread-8] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+62707 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+62707 [Thread-8] INFO  JenaBasedExecutor  - 	s1		o1		
+62707 [Thread-8] INFO  JenaBasedExecutor  - ------------------------------------>
+62707 [Thread-8] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+62765 [Thread-8] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+62789 [Thread-8] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+62790 [Thread-8] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+78637 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+78637 [Thread-8] INFO  JenaBasedExecutor  - <------------------------------------
+78637 [Thread-8] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+78637 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+80688 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 1): <COMPLETED-NONE> 654320 + 15929286704 = 15929941024 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+80688 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+80688 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+80688 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+87222 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+87223 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+87238 [main] INFO  UbuntuJammyOS  - Syncing...
+87405 [main] INFO  UbuntuJammyOS  - Clearing caches...
+92499 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+92503 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+92552 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+92552 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+92552 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+92553 [Thread-12] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+92553 [Thread-12] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+92560 [Thread-12] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+92560 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+92560 [Thread-12] INFO  JenaBasedExecutor  - 	s1		o1		
+92560 [Thread-12] INFO  JenaBasedExecutor  - ------------------------------------>
+92560 [Thread-12] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+92577 [Thread-12] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+92578 [Thread-12] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+92578 [Thread-12] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+108931 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+108932 [Thread-12] INFO  JenaBasedExecutor  - <------------------------------------
+108932 [Thread-12] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+108932 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+111080 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (COLD, 2): <COMPLETED-NONE> 221020 + 16370924484 = 16371145504 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+111080 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+111080 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+111080 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+118040 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+118040 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+118053 [main] INFO  UbuntuJammyOS  - Syncing...
+118236 [main] INFO  UbuntuJammyOS  - Clearing caches...
+123352 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+123355 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+123420 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+123420 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+123420 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+123421 [Thread-16] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+123422 [Thread-16] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+123572 [Thread-16] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+123573 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+123573 [Thread-16] INFO  JenaBasedExecutor  - 	s1		s2		
+123573 [Thread-16] INFO  JenaBasedExecutor  - ------------------------------------>
+123573 [Thread-16] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+124139 [Thread-16] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+124140 [Thread-16] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+124244 [Thread-16] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+305860 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+305861 [Thread-16] INFO  JenaBasedExecutor  - <------------------------------------
+305861 [Thread-16] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+305861 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+307296 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 443623 + 182286988042 = 182287431665 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+307296 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+307296 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+307296 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+313690 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+313690 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+313704 [main] INFO  UbuntuJammyOS  - Syncing...
+313871 [main] INFO  UbuntuJammyOS  - Clearing caches...
+319013 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+319041 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+319174 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+319174 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+319175 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+319175 [Thread-20] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+319176 [Thread-20] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+319182 [Thread-20] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+319182 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+319182 [Thread-20] INFO  JenaBasedExecutor  - 	s1		s2		
+319182 [Thread-20] INFO  JenaBasedExecutor  - ------------------------------------>
+319182 [Thread-20] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+319239 [Thread-20] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+319249 [Thread-20] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+319362 [Thread-20] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+495693 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+495693 [Thread-20] INFO  JenaBasedExecutor  - <------------------------------------
+495693 [Thread-20] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+495693 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+497958 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 381455 + 176510820628 = 176511202083 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+497958 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+497958 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+497959 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+504397 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+504398 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+504410 [main] INFO  UbuntuJammyOS  - Syncing...
+504573 [main] INFO  UbuntuJammyOS  - Clearing caches...
+509738 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+509766 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+509767 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+509767 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+509767 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+509767 [Thread-24] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+509767 [Thread-24] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+509770 [Thread-24] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+509770 [Thread-24] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+509770 [Thread-24] INFO  JenaBasedExecutor  - 	s1		s2		
+509770 [Thread-24] INFO  JenaBasedExecutor  - ------------------------------------>
+509770 [Thread-24] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+509779 [Thread-24] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+509804 [Thread-24] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+509927 [Thread-24] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+682194 [Thread-24] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+682194 [Thread-24] INFO  JenaBasedExecutor  - <------------------------------------
+682194 [Thread-24] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+682194 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+683693 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 112464 + 172423851123 = 172423963587 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+683693 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+683693 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+683693 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+689972 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+689972 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+689983 [main] INFO  UbuntuJammyOS  - Syncing...
+690199 [main] INFO  UbuntuJammyOS  - Clearing caches...
+695374 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+695409 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+695409 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+695409 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+695409 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+695409 [Thread-28] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+695410 [Thread-28] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+695533 [Thread-28] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+695533 [Thread-28] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+695533 [Thread-28] INFO  JenaBasedExecutor  - 	s1		s2		
+695533 [Thread-28] INFO  JenaBasedExecutor  - ------------------------------------>
+695533 [Thread-28] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+695581 [Thread-28] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+695582 [Thread-28] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+695689 [Thread-28] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+878068 [Thread-28] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+878068 [Thread-28] INFO  JenaBasedExecutor  - <------------------------------------
+878068 [Thread-28] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+878068 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+880193 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 0): <COMPLETED-NONE> 374929 + 182534286089 = 182534661018 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+880193 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+880193 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+880193 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+886455 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+886455 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+886466 [main] INFO  UbuntuJammyOS  - Syncing...
+886626 [main] INFO  UbuntuJammyOS  - Clearing caches...
+891767 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+891814 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+891838 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+891839 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+891839 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+891839 [Thread-32] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+891840 [Thread-32] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+891843 [Thread-32] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+891844 [Thread-32] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+891881 [Thread-32] INFO  JenaBasedExecutor  - 	s1		s2		
+891881 [Thread-32] INFO  JenaBasedExecutor  - ------------------------------------>
+891881 [Thread-32] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+891903 [Thread-32] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+891904 [Thread-32] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+892033 [Thread-32] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+1067844 [Thread-32] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1067844 [Thread-32] INFO  JenaBasedExecutor  - <------------------------------------
+1067844 [Thread-32] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1067844 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1069285 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 1): <COMPLETED-NONE> 37138911 + 175962870581 = 176000009492 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+1069285 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+1069285 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+1069285 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+1075565 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+1075565 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+1075576 [main] INFO  UbuntuJammyOS  - Syncing...
+1075744 [main] INFO  UbuntuJammyOS  - Clearing caches...
+1080874 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+1080916 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+1081038 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1081039 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1081039 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1081039 [Thread-36] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1081041 [Thread-36] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1081045 [Thread-36] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1081046 [Thread-36] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1081046 [Thread-36] INFO  JenaBasedExecutor  - 	s1		s2		
+1081046 [Thread-36] INFO  JenaBasedExecutor  - ------------------------------------>
+1081046 [Thread-36] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1081110 [Thread-36] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+1081111 [Thread-36] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+1081289 [Thread-36] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+1255265 [Thread-36] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1255265 [Thread-36] INFO  JenaBasedExecutor  - <------------------------------------
+1255265 [Thread-36] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1255288 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1256663 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (COLD, 2): <COMPLETED-NONE> 408405 + 174219049786 = 174219458191 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+1256663 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+1256663 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+1256663 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+1262829 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+1262841 [main] INFO  UbuntuJammyOS  - Syncing...
+1263044 [main] INFO  UbuntuJammyOS  - Clearing caches...
+1268224 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+1268274 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+1268275 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [0, SC1_Geometries_Intersects_GivenPolygon] to warm up caches
+1268276 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1268276 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1268276 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1268276 [Thread-40] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1268276 [Thread-40] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1268277 [Thread-40] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1268277 [Thread-40] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1268277 [Thread-40] INFO  JenaBasedExecutor  - 	s1		o1		
+1268277 [Thread-40] INFO  JenaBasedExecutor  - ------------------------------------>
+1268277 [Thread-40] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1268305 [Thread-40] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1268340 [Thread-40] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1268340 [Thread-40] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1284677 [Thread-40] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1284677 [Thread-40] INFO  JenaBasedExecutor  - <------------------------------------
+1284677 [Thread-40] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1284677 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1286620 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+1286620 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1286620 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1286620 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1286620 [Thread-41] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1286621 [Thread-41] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1286622 [Thread-41] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1286622 [Thread-41] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1286622 [Thread-41] INFO  JenaBasedExecutor  - 	s1		o1		
+1286622 [Thread-41] INFO  JenaBasedExecutor  - ------------------------------------>
+1286622 [Thread-41] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1286623 [Thread-41] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1286623 [Thread-41] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1286623 [Thread-41] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1298750 [Thread-41] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1298750 [Thread-41] INFO  JenaBasedExecutor  - <------------------------------------
+1298750 [Thread-41] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1298750 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1300734 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 0): <COMPLETED-NONE> 98189 + 12127299567 = 12127397756 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+1300734 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+1300734 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1300734 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1300734 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1300735 [Thread-42] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1300735 [Thread-42] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1300736 [Thread-42] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1300736 [Thread-42] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1300736 [Thread-42] INFO  JenaBasedExecutor  - 	s1		o1		
+1300736 [Thread-42] INFO  JenaBasedExecutor  - ------------------------------------>
+1300736 [Thread-42] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1300737 [Thread-42] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1300737 [Thread-42] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1300737 [Thread-42] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1313223 [Thread-42] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1313223 [Thread-42] INFO  JenaBasedExecutor  - <------------------------------------
+1313223 [Thread-42] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1313223 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1315209 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 1): <COMPLETED-NONE> 83560 + 12486601387 = 12486684947 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+1315209 [main] INFO  ExperimentWorkload  - |==> Executing query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?o1 WHERE { 
+ ?s1 geo:asWKT ?o1 . 
+  FILTER(geof:sfIntersects(?o1, "POLYGON((23.708496093749996 37.95719224376526,22.906494140625 40.659805938378526,11.524658203125002 48.16425348854739,-0.1181030273437499 51.49506473014367,-3.2189941406250004 55.92766341247031,-5.940856933593749 54.59116279530599,-3.1668090820312504 51.47967237816337,23.708496093749996 37.95719224376526))"^^<http://www.opengis.net/ont/geosparql#wktLiteral>)). 
+} 
+
+1315209 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1315209 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1315209 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1315210 [Thread-43] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1315210 [Thread-43] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1315211 [Thread-43] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1315211 [Thread-43] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1315211 [Thread-43] INFO  JenaBasedExecutor  - 	s1		o1		
+1315211 [Thread-43] INFO  JenaBasedExecutor  - ------------------------------------>
+1315211 [Thread-43] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1315213 [Thread-43] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1315213 [Thread-43] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/buildings/Geometry/111686299	MULTIPOLYGON (((-4.0803447 53.0841743, -4.0803 53.0841838, -4.080264 53.084123, -4.0803086 53.0841134, -4.0803447 53.0841743)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1315213 [Thread-43] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/transport/Geometry/111686304	MULTIPOLYGON (((-4.1180155 53.1046596, -4.1179132 53.1046853, -4.1177627 53.1044688, -4.117865 53.1044432, -4.1180155 53.1046596)))^^http://www.opengis.net/ont/geosparql#wktLiteral	
+1327461 [Thread-43] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1327461 [Thread-43] INFO  JenaBasedExecutor  - <------------------------------------
+1327461 [Thread-43] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1327461 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1329550 [main] INFO  ExperimentWorkload  - |<== Executed query [0, SC1_Geometries_Intersects_GivenPolygon] (WARM, 2): <COMPLETED-NONE> 115135 + 12249678536 = 12249793671 nsecs, 442580 results, 0 scan errors - ACCURACY NOT DETERMINED
+1329588 [main] INFO  UbuntuJammyOS  - Syncing...
+1329862 [main] INFO  UbuntuJammyOS  - Clearing caches...
+1335025 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+1335087 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+1335088 [main] FATAL JenaGeoSPARQLSUT  - Cannot initialize JenaGeoSPARQLSUT
+1335088 [main] FATAL JenaGeoSPARQLSUT  - org.apache.jena.dboe.transaction.txn.TransactionException: Currently in an active transaction
+1335088 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] to warm up caches
+1335088 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1335088 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1335088 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1335088 [Thread-47] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1335088 [Thread-47] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1335089 [Thread-47] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1335089 [Thread-47] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1335089 [Thread-47] INFO  JenaBasedExecutor  - 	s1		s2		
+1335089 [Thread-47] INFO  JenaBasedExecutor  - ------------------------------------>
+1335089 [Thread-47] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1335126 [Thread-47] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+1335126 [Thread-47] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+1335289 [Thread-47] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+1519618 [Thread-47] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1519618 [Thread-47] INFO  JenaBasedExecutor  - <------------------------------------
+1519618 [Thread-47] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1519618 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1521084 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+1521084 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1521084 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1521084 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1521084 [Thread-48] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1521085 [Thread-48] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1521086 [Thread-48] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1521086 [Thread-48] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1521086 [Thread-48] INFO  JenaBasedExecutor  - 	s1		s2		
+1521086 [Thread-48] INFO  JenaBasedExecutor  - ------------------------------------>
+1521086 [Thread-48] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1521094 [Thread-48] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+1521094 [Thread-48] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+1521167 [Thread-48] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+1685711 [Thread-48] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1685711 [Thread-48] INFO  JenaBasedExecutor  - <------------------------------------
+1685711 [Thread-48] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1685711 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1687346 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 78848 + 164624732606 = 164624811454 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+1687346 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+1687346 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1687346 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1687346 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1687346 [Thread-49] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1687347 [Thread-49] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1687348 [Thread-49] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1687348 [Thread-49] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1687348 [Thread-49] INFO  JenaBasedExecutor  - 	s1		s2		
+1687348 [Thread-49] INFO  JenaBasedExecutor  - ------------------------------------>
+1687348 [Thread-49] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1687355 [Thread-49] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+1687356 [Thread-49] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+1687434 [Thread-49] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+1845883 [Thread-49] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+1845883 [Thread-49] INFO  JenaBasedExecutor  - <------------------------------------
+1845883 [Thread-49] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+1845884 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+1847368 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 107714 + 158535136224 = 158535243938 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+1847368 [main] INFO  ExperimentWorkload  - |==> Executing query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2 
+WHERE { 
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer . 
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .  
+ FILTER(?code2>5000 && ?code2<6000 && ?code2 != 5260) .
+ FILTER(geof:sfIntersects(?o1, ?o2)). 
+} 
+
+1847368 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+1847368 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+1847368 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+1847368 [Thread-50] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+1847368 [Thread-50] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+1847370 [Thread-50] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+1847370 [Thread-50] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+1847370 [Thread-50] INFO  JenaBasedExecutor  - 	s1		s2		
+1847370 [Thread-50] INFO  JenaBasedExecutor  - ------------------------------------>
+1847370 [Thread-50] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+1847376 [Thread-50] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+1847376 [Thread-50] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+1847449 [Thread-50] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+2005890 [Thread-50] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+2005890 [Thread-50] INFO  JenaBasedExecutor  - <------------------------------------
+2005890 [Thread-50] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+2005891 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+2007903 [main] INFO  ExperimentWorkload  - |<== Executed query [1, SC2_Intensive_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 94670 + 158520378002 = 158520472672 nsecs, 9160 results, 0 scan errors - ACCURACY NOT DETERMINED
+2007937 [main] INFO  UbuntuJammyOS  - Syncing...
+2008107 [main] INFO  UbuntuJammyOS  - Clearing caches...
+2013288 [main] INFO  UbuntuJammyOS  - Caches cleared after delay of 5000 msecs
+2013365 [main] INFO  JenaGeoSPARQLSUT  - Initializing..
+2013384 [main] FATAL JenaGeoSPARQLSUT  - Cannot initialize JenaGeoSPARQLSUT
+2013384 [main] FATAL JenaGeoSPARQLSUT  - org.apache.jena.dboe.transaction.txn.TransactionException: Currently in an active transaction
+2013384 [main] INFO  ExperimentWorkload  - |==> Pseudo-executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] to warm up caches
+2013384 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+2013384 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+2013384 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+2013384 [Thread-54] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+2013385 [Thread-54] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+2013386 [Thread-54] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+2013386 [Thread-54] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+2013386 [Thread-54] INFO  JenaBasedExecutor  - 	s1		s2		
+2013386 [Thread-54] INFO  JenaBasedExecutor  - ------------------------------------>
+2013386 [Thread-54] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+2013416 [Thread-54] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+2013430 [Thread-54] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+2013565 [Thread-54] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+2198635 [Thread-54] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+2198635 [Thread-54] INFO  JenaBasedExecutor  - <------------------------------------
+2198635 [Thread-54] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+2198635 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+2199914 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+2199914 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+2199915 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+2199915 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+2199915 [Thread-55] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+2199915 [Thread-55] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+2199917 [Thread-55] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+2199917 [Thread-55] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+2199917 [Thread-55] INFO  JenaBasedExecutor  - 	s1		s2		
+2199917 [Thread-55] INFO  JenaBasedExecutor  - ------------------------------------>
+2199917 [Thread-55] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+2199929 [Thread-55] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+2199929 [Thread-55] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+2200012 [Thread-55] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+2371113 [Thread-55] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+2371113 [Thread-55] INFO  JenaBasedExecutor  - <------------------------------------
+2371113 [Thread-55] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+2371113 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+2372609 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 0): <COMPLETED-NONE> 94816 + 171195893798 = 171195988614 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+2372609 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+2372609 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+2372609 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+2372609 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+2372609 [Thread-56] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+2372609 [Thread-56] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+2372611 [Thread-56] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+2372612 [Thread-56] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+2372612 [Thread-56] INFO  JenaBasedExecutor  - 	s1		s2		
+2372612 [Thread-56] INFO  JenaBasedExecutor  - ------------------------------------>
+2372612 [Thread-56] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+2372622 [Thread-56] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+2372622 [Thread-56] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+2372706 [Thread-56] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+2537348 [Thread-56] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+2537348 [Thread-56] INFO  JenaBasedExecutor  - <------------------------------------
+2537348 [Thread-56] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+2537349 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+2538750 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 1): <COMPLETED-NONE> 97515 + 164736736320 = 164736833835 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+2538750 [main] INFO  ExperimentWorkload  - |==> Executing query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#> 
+PREFIX geo-sf: <http://www.opengis.net/ont/sf#> 
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/> 
+PREFIX lgo: <http://data.linkedeodata.eu/ontology#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?s1 ?s2
+WHERE {
+ ?s1 geo:hasGeometry [ geo:asWKT ?o1 ] ;
+    lgo:has_code "1001"^^xsd:integer .
+ ?s2 geo:hasGeometry [ geo:asWKT ?o2 ] ;
+    lgo:has_code ?code2 .
+ FILTER(?code2 IN (5622, 5601, 5641, 5621, 5661)) .
+ FILTER(geof:sfIntersects(?o1, ?o2)).
+} 
+
+2538750 [main] INFO  JenaGeoSPARQLSUT  - Starting QueryExecutor thread
+2538750 [main] INFO  JenaGeoSPARQLSUT  - Waiting for QueryExecutor thread to finish
+2538750 [main] INFO  JenaGeoSPARQLSUT  - Timeout progress step is 21600000 msecs
+2538750 [Thread-57] INFO  QueryRepResult  - Transitioning (NOTSTARTED => STARTED)
+2538750 [Thread-57] INFO  QueryRepResult  - Transitioning (STARTED => PREPARING)
+2538751 [Thread-57] INFO  QueryRepResult  - Transitioning (PREPARING => EVALUATING)
+2538751 [Thread-57] INFO  QueryRepResult  - Transitioning (EVALUATING => EVALUATED)
+2538752 [Thread-57] INFO  JenaBasedExecutor  - 	s1		s2		
+2538752 [Thread-57] INFO  JenaBasedExecutor  - ------------------------------------>
+2538752 [Thread-57] INFO  QueryRepResult  - Transitioning (EVALUATED => SCANNING)
+2538761 [Thread-57] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/256429040	
+2538762 [Thread-57] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/47224355	
+2538836 [Thread-57] INFO  JenaBasedExecutor  - http://data.linkedeodata.eu/osm/wales/places/id/335184	http://data.linkedeodata.eu/osm/wales/transport/id/123360606	
+2708696 [Thread-57] INFO  QueryRepResult  - Transitioning (SCANNING => SCANNED)
+2708696 [Thread-57] INFO  JenaBasedExecutor  - <------------------------------------
+2708696 [Thread-57] INFO  QueryRepResult  - Transitioning (SCANNED => COMPLETED)
+2708697 [main] INFO  JenaGeoSPARQLSUT  - Percentage of expired timeout is 0.0 %
+2709945 [main] INFO  ExperimentWorkload  - |<== Executed query [2, SC3_Relaxed_Geometries_Intersect_Geometries] (WARM, 2): <COMPLETED-NONE> 88605 + 169944859781 = 169944948386 nsecs, 239 results, 0 scan errors - ACCURACY NOT DETERMINED
+2709945 [main] INFO  JenaGeoSPARQLSUT  - Closing..
+2709945 [main] INFO  JenaBasedGeographicaSystem  - Closing connection...
+2709946 [main] INFO  JenaBasedGeographicaSystem  - Repository closed.
+2716168 [main] INFO  JenaGeoSPARQLSUT  - Closed (caches not cleared)
+2716886 [main] INFO  PostgreSQLRepSrc  - Deferred mode for PostgreSQLRepSrc was enabled. 18 records were flushed
+2716891 [main] INFO  GenericExprerimentResultsCollector  - Export statistics in "/data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload"
+2717045 [main] INFO  GenericExprerimentResultsCollector  - Created non existing directory
+2717070 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-cold-long
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-cold-long
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-cold-long
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm
+2717073 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/00-SC1_Geometries_Intersects_GivenPolygon-warm-long
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/01-SC2_Intensive_Geometries_Intersect_Geometries-warm-long
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Statistiscs printed: /data/Results_Store/JenaGeoSPARQLSUT/2025-12-13_JenaGeoSPARQL_RunWL_Scal10M/Scalability/10M/JenaGeoSPARQLSUT-ExperimentWorkload/02-SC3_Relaxed_Geometries_Intersect_Geometries-warm-long
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Cache COLD
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 11835922 + 35721938822 = 35733774744 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 654320 + 15929286704 = 15929941024 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 221020 + 16370924484 = 16371145504 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 443623 + 182286988042 = 182287431665 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 381455 + 176510820628 = 176511202083 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 112464 + 172423851123 = 172423963587 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 374929 + 182534286089 = 182534661018 nsecs, 239 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 37138911 + 175962870581 = 176000009492 nsecs, 239 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 408405 + 174219049786 = 174219458191 nsecs, 239 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - Cache WARM
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 0
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 98189 + 12127299567 = 12127397756 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 83560 + 12486601387 = 12486684947 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 115135 + 12249678536 = 12249793671 nsecs, 442580 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 1
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 78848 + 164624732606 = 164624811454 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 107714 + 158535136224 = 158535243938 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 94670 + 158520378002 = 158520472672 nsecs, 9160 results, 0 scan errors
+2717074 [main] INFO  GenericExprerimentResultsCollector  - 	Query 2
+2717075 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 0	<COMPLETED-NONE> 94816 + 171195893798 = 171195988614 nsecs, 239 results, 0 scan errors
+2717075 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 1	<COMPLETED-NONE> 97515 + 164736736320 = 164736833835 nsecs, 239 results, 0 scan errors
+2717075 [main] INFO  GenericExprerimentResultsCollector  - 		Rep 2	<COMPLETED-NONE> 88605 + 169944859781 = 169944948386 nsecs, 239 results, 0 scan errors
+2717075 [main] INFO  RunJenaGeoSPARQLExperimentWorkload  - End ScalabilityFunc
+Start time = Σαβ 13 Δεκ 2025 09:49:31 μμ EET
+End time = Σαβ 13 Δεκ 2025 10:34:53 μμ EET

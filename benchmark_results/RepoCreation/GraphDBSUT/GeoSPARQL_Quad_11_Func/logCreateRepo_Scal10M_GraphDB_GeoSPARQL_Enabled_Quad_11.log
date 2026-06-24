@@ -1,0 +1,283 @@
+All of the following environment variables (Geographica/scripts/prepareRunEnvironment.sh) are defined: 
+	{DatasetBaseDir, GraphDBBaseDir, JVM_Xmx, EnableGeoSPARQLPlugin, IndexingAlgorithm, IndexingPrecision, CompletionReportDaemonIP, CompletionReportDaemonPort, ScalabilityGenScriptName, ScalabilityGzipRefDSName}
+0 args provided
+Running script with syntax: 
+	./createAllGraphDBRepos.sh /data/Geographica2_Datasets /data/graphdb-10.8.4 -Xmx24g true quad 11 192.168.1.44 3333 /data/Geographica2_Datasets/Scalability/scalabilityDSGen.sh /data/Geographica2_Datasets/Scalability/scalability500MRefDS.nt.gz
+Script start time: Σαβ 13 Δεκ 2025 10:53:30 πμ EET
+Checking/Creating scalability 10M dataset ...
+	Scalability 10M dataset already exists
+Generating scalability 10M repository ...
+./createGraphDBRepo.sh scalability_10M.ttl /data/Geographica2_Datasets/Scalability/10M N-TRIPLES /data/graphdb-10.8.4 true quad 11 192.168.1.44 3333
+10:53:35.784 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Input folders recursively: false
+10:53:35.787 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Iterator cache set to: 'auto'
+10:53:35.789 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Chunk size set to: 'auto'
+10:53:35.789 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Parsing tasks: 4
+10:53:35.790 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Temporary data folder: /data/Geographica2_Datasets/Scalability/10M/.
+10:53:35.790 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore point interval: 3,600s
+10:53:35.791 [main] INFO  c.ontotext.graphdb.importrdf.Preload - CONFIG FILE: /data/geordfbench/GraphDBSUT/scripts/CreateRepos/scalability_10M.ttl
+10:53:36.006 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Attaching to location: /data/graphdb-10.8.4/data
+10:53:38.156 [repository-manager-0] INFO  c.o.t.u.l.LimitedObjectCacheFactory - Using LRU cache type: synch
+10:53:38.489 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear triple statisctics collection
+10:53:38.500 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear PSOT collection
+10:53:38.501 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Clear POST collection
+10:53:38.501 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Rebuild triple collections. start entity pool scan...
+10:53:38.539 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Entity pool scan completed! Commiting...
+10:53:38.762 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check whether all predicates in the predicate statistics have correct collection sizes.
+10:53:38.762 [repository-manager-0] WARN  com.ontotext.trree.big.AVLRepository - Check for missing statement predicates in the predicate statistics
+10:53:40.125 [repository-manager-0] WARN  o.e.r.q.a.e.f.FunctionRegistry - New service class com.ontotext.trree.query.functions.afn.old.Localname replaces existing service class org.eclipse.rdf4j.spin.function.Localname
+10:53:43.789 [repository-manager-0] INFO  c.o.rio.parallel.ParallelLoader - Data will be parsed + resolved + loaded.
+10:53:43.976 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Analysing input data. It may take a while ...
+10:53:44.035 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Dataset:
+	number of files 1
+	total files size 1 GB
+	estimated number of statements 10,584,531
+	estimated number of entities 3,024,151
+10:53:44.065 [main] WARN  c.ontotext.graphdb.importrdf.Preload - Entity pool was set to 'on-heap' no off-heap memory 76,289,812 will be used!
+10:53:44.066 [main] INFO  c.ontotext.graphdb.importrdf.Preload - FreeHeap=8,209,578,416	commonHeap=1,972,115,220
+10:53:44.066 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Set min heap requirements=6,232,844,684	mem for indexes=4,618,512
+10:53:44.066 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Memory estimation:
+	free heap	8,209,578,416	max heap	8,380,219,392
+	free non-heap	8,267,285,096	max non-heap	8,380,219,392
+	need heap	5,036,733,732
+	need non-heap	0
+10:53:44.067 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Calculated using 'auto' --chunk=5,000,000, 'auto' --iter.cache=128, heap for parsing 3,060,000,000, heap for indexing 73,400,320
+10:53:44.067 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Initial restore point created, count so far 0
+10:53:46.611 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Restore manager started. Interval is 3600 seconds.
+10:53:46.613 [parsing-scalability_10M.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Loading file: scalability_10M.nt
+10:54:37.447 [parsing-scalability_10M.nt] INFO  c.ontotext.graphdb.importrdf.Preload - Parsed 10,000,000 statements. Resolved statements so far: 9,977,939 pre-indexed tuples 9,000,000
+10:54:37.447 [main] INFO  c.ontotext.graphdb.importrdf.Preload - The parsing took 50,835ms. Updating entity pool...
+10:54:37.447 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Entity pool commit took 0ms
+10:54:37.521 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - 10,000,000 statements ...
+10:54:37.521 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver end. Time active:18,533ms, Idle when waiting for sorter 0ms
+10:54:37.521 [resolver] INFO  c.ontotext.graphdb.importrdf.Preload - Resolver finished.
+10:54:37.557 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter end. Time active:502ms
+10:54:37.558 [sorting] INFO  c.ontotext.graphdb.importrdf.Preload - Sorter thread finished.
+10:54:37.560 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 50,947ms, statements: 10,000,000, sorted: 10,000,000
+10:54:43.507 [main] INFO  c.ontotext.graphdb.importrdf.Preload - All data parsed! Create intermediate restore point ...
+10:54:43.507 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POS q
+10:54:43.507 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSO q
+10:54:43.508 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing predlists q
+10:54:43.508 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing NUM q
+10:54:43.618 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing DATES q
+10:54:43.619 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing POST q
+10:54:43.619 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Storing PSOT q
+10:54:43.619 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Intermediate restore point created!
+10:54:43.918 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - enum numeric and date literals
+10:54:43.919 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Full-text search functionality is disabled
+10:54:43.919 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOC
+10:54:43.920 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals indices restored.
+10:54:43.920 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POSC
+10:54:43.921 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing numerics queue 526 to add
+10:54:43.925 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - indexing predlists
+10:54:43.938 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - indexing PSOT
+10:54:43.941 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - indexing POST
+10:54:43.943 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - POST commit 0 statements ...
+10:54:43.981 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:43.981 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 49 ms
+10:54:43.981 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - closing POST queue
+10:54:43.981 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:43.988 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - PSOT commit 0... cross check from predicate statistics 0 statements
+10:54:44.015 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from PSOC  queue processed ...
+10:54:44.031 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from POSC  queue processed ...
+10:54:44.033 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - 0 from predlists  queue processed ...
+10:54:44.083 [index-POST] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:44.095 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:44.096 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 0 in 164 ms
+10:54:44.096 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOT queue
+10:54:44.096 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:44.184 [index-PSOT] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:44.187 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Processing dates queue 0 to add
+10:54:44.193 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!. Commiting literals index...
+10:54:44.193 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - done!.
+10:54:44.195 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Literals index created
+10:54:44.195 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:44.247 [index-literals] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:55.820 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - 9,979,357 from predlists  queue processed ...
+10:54:55.903 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - PSOC commit 10,000,000... cross check from predicate statistics 10,000,000 statements
+10:54:55.938 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:55.938 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 10,000,000 in 12,019 ms
+10:54:55.938 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - closing PSOC queue
+10:54:55.938 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:56.003 [index-PSOC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:59.176 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - POSC commit 10,000,000 statements ...
+10:54:59.183 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:59.183 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - enumerated 10,000,000 in 15,263 ms
+10:54:59.183 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - closing POSC queue
+10:54:59.183 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:59.199 [index-POSC] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:59.408 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists commit 13,257,965 pairs ...
+10:54:59.414 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:59.414 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - predlists pairs enum done in 15,489 ms
+10:54:59.415 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - closing predlists queue
+10:54:59.415 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Create index mode restore point ...
+10:54:59.415 [index-predlists] INFO  c.ontotext.graphdb.importrdf.Preload - Index mode restore point created!
+10:54:59.419 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+10:54:59.422 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 16 predicates in 3 ms, total tuples 10,000,000
+10:54:59.423 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Generating collected predicate statistics
+10:54:59.423 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Done generating predicate statistics, 0 predicates in 0 ms, total tuples 0
+10:54:59.425 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Processing finished 74,988ms. Shutting down ...
+10:54:59.425 [main] INFO  c.ontotext.graphdb.importrdf.Preload - epool commited phase 2, entities 4,336,081
+10:54:59.432 [main] INFO  c.ontotext.graphdb.importrdf.Preload - shutting down repository collections
+10:54:59.437 [main] INFO  c.ontotext.graphdb.importrdf.Preload - done
+10:54:59.595 [main] INFO  c.ontotext.graphdb.importrdf.Preload - Finished in 75,157ms
+
+real	1m28,847s
+user	3m13,535s
+sys	0m5,753s
+GraphDB repository (no GeoSPARQL plugin) "/data/graphdb-10.8.4/data/repositories/scalability_10M/" has size: 1151MB
+log4j:ERROR Could not connect to remote log4j server at [localhost]. We will try again later.
+0    [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Version: 10.8, revision: 1481262678
+8    [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Build date: Tue Apr 01 13:14:49 EEST 2025
+16   [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Started repository scalability_10M in READ/WRITE mode.
+21   [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'ruleset' to value 'empty'
+22   [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for tuples: 7829
+23   [main] INFO  com.ontotext.GraphDBConfigParameters  - Cache pages for predicates: 1118
+24   [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Configured parameter graphdb.engine.onheap.allocation to true
+32   [main] INFO  com.ontotext.trree.io.FileSystemHealth  - Active locations health:
+34   [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /home/tioannid/.graphdb/logs: 80.0% (OK)
+34   [main] INFO  com.ontotext.trree.io.FileSystemHealth  - /home/tioannid/.graphdb/work: 80.0% (OK)
+53   [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+79   [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+170  [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 4336081 entities allocating 60.0 MB
+171  [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 90 ms.
+188  [main] WARN  com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage  - Loading entity types from persistence
+java.io.IOException: An old version of DatatypeLanguageSet was detected (was [0] but expected [-32768]! Needs rebuilding!
+	at com.ontotext.trree.entitypool.impl.storage.DatatypeLanguageSet.loadFrom(DatatypeLanguageSet.java:223)
+	at com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage.attemptLoad(EntityTypeStorage.java:185)
+	at com.ontotext.trree.entitypool.impl.storage.EntityTypeStorage.<init>(EntityTypeStorage.java:71)
+	at com.ontotext.trree.entitypool.impl.TransactionalEntityPool.<init>(TransactionalEntityPool.java:142)
+	at com.ontotext.trree.entitypool.EntityPoolFactory.getEntityPool(EntityPoolFactory.java:93)
+	at com.ontotext.trree.OwlimSchemaRepository.initEntityPool(OwlimSchemaRepository.java:1390)
+	at com.ontotext.trree.OwlimSchemaRepository.initializeInternalNoCleanup(OwlimSchemaRepository.java:254)
+	at com.ontotext.trree.io.FileSystemHealth.executeWithReducedThreshold(FileSystemHealth.java:353)
+	at com.ontotext.trree.OwlimSchemaRepository.initializeInternal(OwlimSchemaRepository.java:185)
+	at org.eclipse.rdf4j.sail.helpers.AbstractSail.init(AbstractSail.java:183)
+	at org.eclipse.rdf4j.repository.sail.SailRepository.initializeInternal(SailRepository.java:158)
+	at org.eclipse.rdf4j.repository.base.AbstractRepository.init(AbstractRepository.java:36)
+	at org.eclipse.rdf4j.repository.manager.LocalRepositoryManager.createRepository(LocalRepositoryManager.java:212)
+	at org.eclipse.rdf4j.repository.manager.RepositoryManager.getRepository(RepositoryManager.java:326)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.GraphDB.execQuery(GraphDB.java:250)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.GraphDB.execGeoSPARQL_UpdateConfiguration(GraphDB.java:218)
+	at gr.uoa.di.rdf.geordfbench.graphdbsut.RepoUtil.main(RepoUtil.java:29)
+256  [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - Begin restoring from persistence: types array
+887  [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - 1000000 entities so far.
+1166 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - 2000000 entities so far.
+1382 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - 3000000 entities so far.
+1668 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - 4000000 entities so far.
+1784 [main] INFO  com.ontotext.trree.entitypool.util.EntityPoolRestoreUtil  - Done in 1527ms.
+1932 [main] INFO  com.ontotext.trree.util.lru.LimitedObjectCacheFactory  - Using LRU cache type: synch
+2287 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check whether all predicates in the predicate statistics have correct collection sizes.
+2299 [main] INFO  com.ontotext.trree.big.AVLRepository  - Checked 16 entries in predicate statistics
+2299 [main] WARN  com.ontotext.trree.big.AVLRepository  - Check for missing statement predicates in the predicate statistics
+2350 [main] WARN  com.ontotext.trree.OwlimSchemaRepository  - Rule list configuration present, it will override all other rule sets parameters!
+2412 [main] INFO  com.ontotext.license.LicenseRegistry  - License configuration: Embedded license
+2412 [main] INFO  com.ontotext.license.LicenseRegistry  - License file: jar:file:/data/geordfbench/GraphDBSUT/target/graphdb-runtime-10.8.5.jar!/GRAPHDB_LITE.license
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Product:                 GRAPHDB_LITE
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Capabilities:            [LUCENE_CONNECTOR]
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Usage restriction:       null
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Licensee:                Freeware
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Permitted use:           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Version:                 10.8
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Expiry date:             none
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Latest publication date: none
+2417 [main] INFO  com.ontotext.license.LicenseRegistry  - Max CPU cores:           1
+2460 [main] INFO  com.ontotext.trree.InferencerFactory  - ruleSet=rdfs, partialRdfs=false
+2725 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Searching for plugins available in the classpath...
+2766 [main] INFO  com.ontotext.GraphDBConfigParameters  - Reading external plugins from /data/graphdb-10.8.4/lib/plugins
+2766 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'register-external-plugins' to value '[/data/graphdb-10.8.4/lib/plugins]'
+2766 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Registering external plugins...
+2923 [main] WARN  org.eclipse.rdf4j.query.algebra.evaluation.function.FunctionRegistry  - New service class org.eclipse.rdf4j.spin.function.Localname replaces existing service class com.ontotext.trree.query.functions.afn.old.Localname
+2935 [main] INFO  com.ontotext.trree.plugin.geo.FunctionLoader  - Registered 1 functions from package com.ontotext.trree.plugin.geo.
+3201 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Initializing plugins: GeoSPARQL, autocomplete, change-tracking, chatgpt-retrieval-connector, dependencies-plugin, direct, elasticsearch-connector, entity-change, expose-entity, geospatial, history, kafka-connector, literals-index, lucene-connector, magic-predicates, mongodb, notifications, notifications-logger, opensearch-connector, plugincontrol, proof, rdfrank, script, sequences, similarity, solr-connector, sparql-mm, sparql-template, text-mining, tx-rollback, utils
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1 (file:/data/geordfbench/GraphDBSUT/target/jaxb-impl-2.1.1.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+WARNING: Please consider reporting this to the maintainers of com.sun.xml.bind.v2.runtime.reflect.opt.Injector$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+4006 [main] INFO  com.ontotext.trree.geosparql.FunctionLoader  - Registered 50 functions from package com.useekm.geosparql.
+4008 [main] INFO  com.ontotext.trree.plugin.autocomplete.AutocompletePluginUtils  - >>>>>>>> AutocompletePlugin: No configuration file found at /data/graphdb-10.8.4/data/repositories/scalability_10M/storage/autocomplete/v2/config.properties. Assuming default options for plugin.
+4085 [main] INFO  com.ontotext.trree.plugin.geo.GeoSpatialPlugin  - Plugin:geospatial initialized
+4088 [main] INFO  com.ontotext.trree.entitypool.EntityPoolFactory  - Using entity pool implementation: transactional-disk
+4088 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'storage-folder' to value '/data/graphdb-10.8.4/data/repositories/scalability_10M/storage/history/tx-metadata'
+4090 [main] INFO  com.ontotext.config.AbstractParameter  - Configured parameter 'entity-index-size' to value '97.7K'
+4183 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restoring entity hash table...
+4190 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Restored 0 entity allocating 12.0 MB
+4190 [main] INFO  com.ontotext.trree.entitypool.impl.map.PersistedHashMap  - Done in 7 ms.
+4252 [main] INFO  com.ontotext.plugin.literals-index  - Full-text search functionality is disabled
+4256 [main] INFO  com.ontotext.plugin.literals-index  - Rebuilding literals indexes. Starting from id: 47
+4528 [main] INFO  com.ontotext.plugin.literals-index  - 100000/4336081 done
+4585 [main] INFO  com.ontotext.plugin.literals-index  - 200000/4336081 done
+4637 [main] INFO  com.ontotext.plugin.literals-index  - 300000/4336081 done
+4699 [main] INFO  com.ontotext.plugin.literals-index  - 400000/4336081 done
+4729 [main] INFO  com.ontotext.plugin.literals-index  - 500000/4336081 done
+4813 [main] INFO  com.ontotext.plugin.literals-index  - 600000/4336081 done
+4887 [main] INFO  com.ontotext.plugin.literals-index  - 700000/4336081 done
+4917 [main] INFO  com.ontotext.plugin.literals-index  - 800000/4336081 done
+4934 [main] INFO  com.ontotext.plugin.literals-index  - 900000/4336081 done
+4965 [main] INFO  com.ontotext.plugin.literals-index  - 1000000/4336081 done
+4999 [main] INFO  com.ontotext.plugin.literals-index  - 1100000/4336081 done
+5043 [main] INFO  com.ontotext.plugin.literals-index  - 1200000/4336081 done
+5078 [main] INFO  com.ontotext.plugin.literals-index  - 1300000/4336081 done
+5096 [main] INFO  com.ontotext.plugin.literals-index  - 1400000/4336081 done
+5113 [main] INFO  com.ontotext.plugin.literals-index  - 1500000/4336081 done
+5131 [main] INFO  com.ontotext.plugin.literals-index  - 1600000/4336081 done
+5160 [main] INFO  com.ontotext.plugin.literals-index  - 1700000/4336081 done
+5208 [main] INFO  com.ontotext.plugin.literals-index  - 1800000/4336081 done
+5251 [main] INFO  com.ontotext.plugin.literals-index  - 1900000/4336081 done
+5293 [main] INFO  com.ontotext.plugin.literals-index  - 2000000/4336081 done
+5336 [main] INFO  com.ontotext.plugin.literals-index  - 2100000/4336081 done
+5353 [main] INFO  com.ontotext.plugin.literals-index  - 2200000/4336081 done
+5371 [main] INFO  com.ontotext.plugin.literals-index  - 2300000/4336081 done
+5388 [main] INFO  com.ontotext.plugin.literals-index  - 2400000/4336081 done
+5406 [main] INFO  com.ontotext.plugin.literals-index  - 2500000/4336081 done
+5446 [main] INFO  com.ontotext.plugin.literals-index  - 2600000/4336081 done
+5474 [main] INFO  com.ontotext.plugin.literals-index  - 2700000/4336081 done
+5503 [main] INFO  com.ontotext.plugin.literals-index  - 2800000/4336081 done
+5546 [main] INFO  com.ontotext.plugin.literals-index  - 2900000/4336081 done
+5588 [main] INFO  com.ontotext.plugin.literals-index  - 3000000/4336081 done
+5621 [main] INFO  com.ontotext.plugin.literals-index  - 3100000/4336081 done
+5657 [main] INFO  com.ontotext.plugin.literals-index  - 3200000/4336081 done
+5714 [main] INFO  com.ontotext.plugin.literals-index  - 3300000/4336081 done
+5801 [main] INFO  com.ontotext.plugin.literals-index  - 3400000/4336081 done
+5831 [main] INFO  com.ontotext.plugin.literals-index  - 3500000/4336081 done
+5851 [main] INFO  com.ontotext.plugin.literals-index  - 3600000/4336081 done
+5873 [main] INFO  com.ontotext.plugin.literals-index  - 3700000/4336081 done
+5895 [main] INFO  com.ontotext.plugin.literals-index  - 3800000/4336081 done
+5918 [main] INFO  com.ontotext.plugin.literals-index  - 3900000/4336081 done
+5936 [main] INFO  com.ontotext.plugin.literals-index  - 4000000/4336081 done
+5957 [main] INFO  com.ontotext.plugin.literals-index  - 4100000/4336081 done
+5976 [main] INFO  com.ontotext.plugin.literals-index  - 4200000/4336081 done
+6014 [main] INFO  com.ontotext.plugin.literals-index  - 4300000/4336081 done
+6043 [main] INFO  com.ontotext.plugin.literals-index  - Complete in 1.785, num entries indexed:526
+6051 [main] INFO  com.ontotext.trree.plugin.plugincontrol.PluginControlPlugin  - Plugin:plugincontrol initialized
+6688 [main] INFO  com.ontotext.graphdb.sparqlmm.FunctionLoader  - Registered 58 functions from package com.github.tkurz.sparqlmm.function.
+6899 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Finished initializing plugins
+6900 [main] INFO  com.ontotext.trree.MemoryConfig  - Configured global page cache size to 9 GB
+6900 [main] INFO  com.ontotext.trree.MemoryConfig  - Max Heap Size: 24 GB
+6900 [main] INFO  com.ontotext.trree.MemoryConfig  - Initial Heap Size: 840 MB
+7032 [main] INFO  com.ontotext.rio.parallel.ParallelLoader  - Data will be parsed + resolved + loaded.
+7359 [main] INFO  RDF4JBasedSUT  - Executing query : PREFIX : <http://www.ontotext.com/plugins/geosparql#>
+ INSERT DATA { _:s :ignoreErrors "true" . };
+ INSERT DATA { _:s :enabled "true" . };
+ INSERT DATA { _:s :prefixTree "quad"; :precision "11" . };
+ INSERT DATA { _:s :maxBufferedDocs "5000" . };
+ INSERT DATA { _:s :ramBufferSizeMB "512.0" . };
+
+7360 [main] INFO  com.ontotext.trree.monitorRepository.MonitorRepositoryConnection  - Incoming update: PREFIX : <http://www.ontotext.com/plugins/geosparql#>
+ INSERT DATA { _:s :ignoreErrors "true" . };
+ INSERT DATA { _:s :enabled "true" . };
+ INSERT DATA { _:s :prefixTree "quad"; :precision "11" . };
+ INSERT DATA { _:s :maxBufferedDocs "5000" . };
+ INSERT DATA { _:s :ramBufferSizeMB "512.0" . };
+7394 [main] INFO  com.ontotext.plugin.GeoSPARQL  - >>>>>>>> GeoSPARQL: Initializing Lucene indexer...
+7663 [main] INFO  com.ontotext.plugin.GeoSPARQL  - >>>>>>>> GeoSPARQL: Lucene indexer initialized!
+7663 [main] INFO  com.ontotext.plugin.GeoSPARQL  - >>>>>>>> GeoSPARQL: Initializing indexing process...
+77155 [main] INFO  com.ontotext.plugin.GeoSPARQL  - >>>>>>>> GeoSPARQL: Indexing completed!
+97395 [main] WARN  org.eclipse.rdf4j.sail.helpers.AbstractSail  - Closing active connection due to shut down; consider setting the org.eclipse.rdf4j.repository.debug system property
+103118 [main] INFO  com.ontotext.trree.sdk.impl.PluginManager  - Shutting down plugins (DEFAULT)...
+103346 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfStatements = 10000000
+103346 [main] INFO  com.ontotext.trree.big.AVLRepository  - NumberOfExplicitStatements = 10000000
+103347 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Shutting down entity pool
+103568 [main] INFO  com.ontotext.trree.OwlimSchemaRepository  - Entity pool was shut down
+103572 [main] INFO  RepoUtil  - GraphDB configured and enabled GeoSPARQL plugin for repo "scalability_10M" in 103850 msecs
+GraphDB repository (GeoSPARQL plugin quad:11) "/data/graphdb-10.8.4/data/repositories/scalability_10M/" has size: 1637MB

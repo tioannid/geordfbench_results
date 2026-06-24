@@ -1,0 +1,43 @@
+Σαβ 13 Δεκ 2025 09:47:21 μμ EET
+
+/data/JenaGeoSPARQL_4.10.0_Repos dir does not exist.
+	Creating it now ...
+Checking/Creating scalability 10M dataset ...
+	Scalability 10M dataset already exists
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10M repo does not exist
+	/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10M directory created
+vm.max_map_count = 262144
+21:47:29 INFO  loader          :: Loader = LoaderPhased
+21:47:29 INFO  loader          :: Start: /data/Geographica2_Datasets/Scalability/10M/scalability_10M.nt
+21:47:34 INFO  loader          :: Add: 1,000,000 scalability_10M.nt (Batch: 175,654 / Avg: 175,654)
+21:47:40 INFO  loader          :: Add: 2,000,000 scalability_10M.nt (Batch: 190,403 / Avg: 182,731)
+21:47:45 INFO  loader          :: Add: 3,000,000 scalability_10M.nt (Batch: 205,761 / Avg: 189,813)
+21:47:52 INFO  loader          :: Add: 4,000,000 scalability_10M.nt (Batch: 130,650 / Avg: 170,510)
+21:47:59 INFO  loader          :: Add: 5,000,000 scalability_10M.nt (Batch: 143,102 / Avg: 164,219)
+21:48:15 INFO  loader          :: Add: 6,000,000 scalability_10M.nt (Batch: 64,049 / Avg: 130,264)
+21:48:18 INFO  loader          :: Add: 7,000,000 scalability_10M.nt (Batch: 316,255 / Avg: 142,212)
+21:48:27 INFO  loader          :: Add: 8,000,000 scalability_10M.nt (Batch: 108,038 / Avg: 136,803)
+21:48:36 INFO  loader          :: Add: 9,000,000 scalability_10M.nt (Batch: 114,744 / Avg: 133,942)
+21:48:45 INFO  loader          :: Add: 10,000,000 scalability_10M.nt (Batch: 105,999 / Avg: 130,502)
+21:48:45 INFO  loader          ::   Elapsed: 76.63 seconds [2025/12/13 21:48:45 EET]
+21:48:45 INFO  loader          :: Finished: /data/Geographica2_Datasets/Scalability/10M/scalability_10M.nt: 10,000,000 tuples in 76.65s (Avg: 130,464)
+21:48:57 INFO  loader          :: Finish - index SPO
+21:48:57 INFO  loader          :: Start replay index SPO
+21:48:57 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP
+21:48:57 INFO  loader          :: Add: 1,000,000 Index (Batch: 9,803,921 / Avg: 9,803,921)
+21:48:58 INFO  loader          :: Add: 2,000,000 Index (Batch: 887,311 / Avg: 1,627,339)
+21:49:00 INFO  loader          :: Add: 3,000,000 Index (Batch: 685,871 / Avg: 1,116,486)
+21:49:02 INFO  loader          :: Add: 4,000,000 Index (Batch: 469,704 / Avg: 830,564)
+21:49:04 INFO  loader          :: Add: 5,000,000 Index (Batch: 569,800 / Avg: 760,919)
+21:49:05 INFO  loader          :: Add: 6,000,000 Index (Batch: 643,915 / Avg: 738,552)
+21:49:07 INFO  loader          :: Add: 7,000,000 Index (Batch: 633,312 / Avg: 721,426)
+21:49:08 INFO  loader          :: Add: 8,000,000 Index (Batch: 642,260 / Avg: 710,479)
+21:49:10 INFO  loader          :: Add: 9,000,000 Index (Batch: 661,813 / Avg: 704,721)
+21:49:12 INFO  loader          :: Add: 10,000,000 Index (Batch: 647,668 / Avg: 698,567)
+21:49:12 INFO  loader          ::   Elapsed: 14.31 seconds [2025/12/13 21:49:12 EET]
+21:49:12 INFO  loader          :: Index set:  SPO => SPO->POS, SPO->OSP [10,000,000 items, 14.6 seconds]
+21:49:28 INFO  loader          :: Finish - index OSP
+21:49:31 INFO  loader          :: Finish - index POS
+21:49:31 INFO  loader          :: Time = 121.902 seconds : Triples = 10,000,000 : Rate = 82,033 /s
+vm.max_map_count = 65530
+JenaGeoSPARQL TDB2 repository "/data/JenaGeoSPARQL_4.10.0_Repos/scalability_10M" has size: 1977MB

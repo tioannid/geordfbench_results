@@ -1,0 +1,59 @@
+Creating database "scalability_10M" by importing files from "/data/Geographica2_Datasets/Scalability/10M/"
+Creating Virtuoso database: /data/virtuoso-opensource-7.2.14/repos/scalability_10M
+Creating directory /data/virtuoso-opensource-7.2.14/repos/scalability_10M
+/data/geordfbench/VirtuosoSUT/scripts/CreateRepos/../Admin/start.sh /data/virtuoso-opensource-7.2.14/bin /data/virtuoso-opensource-7.2.14/repos/scalability_10M 20
+cwd = /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+changed working directory to /data/virtuoso-opensource-7.2.14/repos/scalability_10M
+changed working directory back to /data/geordfbench/VirtuosoSUT/scripts/CreateRepos
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 18 msec.
+Create PGOS: 0secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 1 msec.
+Adds files to control list set up in the virtuoso.ini file: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 68060 msec.
+RDF Bulk load: 68 secs
+Wait: 0 secs
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+
+Done. -- 11148 msec.
+Checkpoint: 11 secs
+Files loaded:
+OpenLink Virtuoso Interactive SQL (Virtuoso)
+Version 07.20.3240 as of Nov 11 2024
+Type HELP; for help and EXIT; to exit.
+Connected to OpenLink Virtuoso
+Driver: 07.20.3240 OpenLink Virtuoso ODBC Driver
+ll_file                                                                           ll_graph                                                                          ll_state    ll_started           ll_done              ll_host     ll_work_time  ll_error
+VARCHAR NOT NULL                                                                  VARCHAR                                                                           INTEGER     TIMESTAMP            TIMESTAMP            INTEGER     INTEGER     VARCHAR
+_______________________________________________________________________________
+
+/data/Geographica2_Datasets/Scalability/10M/scalability_10M.nt                    <http://geographica.gr>                                                           2           2025.12.14 15:3.49 355886000  2025.12.14 15:4.57 413964000  0           NULL        NULL
+
+1 Rows. -- 1 msec.
+Storing time all: 79 secs
+Virtuoso Server with pid=8226 has been terminated.
+
+real	1m39,708s
+user	0m0,086s
+sys	0m0,085s

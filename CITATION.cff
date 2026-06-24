@@ -5,7 +5,7 @@ authors:
   given-names: "Theofilos"
   orcid: "https://orcid.org/0000-0002-1754-8748"
 title: "GeoRDFBench Framework Benchmark Results"
-version: 2.0
-doi: 10.5281/zenodo.15349540
-date-released: 2025-05-06
+version: 2.2
+doi: 10.5281/zenodo.15349539
+date-released: 2026-06-24
 url: "https://github.com/tioannid/geordfbench_results"
