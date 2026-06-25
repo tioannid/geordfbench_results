@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15352747.svg)](https://doi.org/10.5281/zenodo.15352747)
 [![Execution framework docs](https://img.shields.io/badge/docs-Execution_framework-red)](https://github.com/tioannid/geordfbench/blob/main/README.md)
 
-## Benchmark Results v2.0
+## Benchmark Results v2.2
 
 ### Description
 #### 1. Purpose
@@ -19,23 +19,23 @@ license renewal without which experiments fail*. Therefore we used all the other
 implemented RDF modules of GeoRDFBench, but we used several configuration options
 on the RDF4J and GraphDB SUTs, which effectively gave 8 system variants.
 
-| **ExpIDs** | **ConfigName**    | **System**                   | **ConfigDesc**                  |
-|:----------:|-------------------|------------------------------|---------------------------------|
-|     1-3    | **RDF4J**         | RDF4J                        | v4.3.15                         |
-|     4-6    | **JenaGeoSPARQL** | Jena GeoSPARQL               | v4.10.0                         |
-|     7-9    | **GraphDB**       | GraphDB                      | v10.8.5                         |
-|  10,11,14  | **Virtuoso**      | Virtuoso Open Server         | v7.2.14, _2D Rtree_             |
-|    15-17   | **GraphDB+**      | GraphDB + _GeoSPARQL plugin_ | v10.8.5, _Quad-11_              |
-|    18-20   | **GraphDB+P**     | GraphDB + _GeoSPARQL plugin_ | v10.8.5, _Quad-11, Pred_        |
-|    21-23   | **RDF4J+**        | RDF4J + _Lucene Sail_        | v4.3.15, _Lucene spatial index_ |
-|    31-33   | **Strabon**       | Strabon                      | 3.3.3-SNAPSHOT                  |
+|  **ExpIDs**  | **ConfigName**    | **System**                   | **ConfigDesc**                  |
+|:------------:|-------------------|------------------------------|---------------------------------|
+| 1-3, 106     | **RDF4J**         | RDF4J                        | v4.3.15                         |
+| 4-6, 111     | **JenaGeoSPARQL** | Jena GeoSPARQL               | v4.10.0                         |
+| 7-9, 108     | **GraphDB**       | GraphDB                      | v10.8.5                         |
+| 10,11,14,121 | **Virtuoso**      | Virtuoso Open Server         | v7.2.14, _2D Rtree_             |
+| 15-17, 109   | **GraphDB+**      | GraphDB + _GeoSPARQL plugin_ | v10.8.5, _Quad-11_              |
+| 18-20, 110   | **GraphDB+P**     | GraphDB + _GeoSPARQL plugin_ | v10.8.5, _Quad-11, Pred_        |
+| 21-23, 107   | **RDF4J+**        | RDF4J + _Lucene Sail_        | v4.3.15, _Lucene spatial index_ |
+| 31-33, 124   | **Strabon**       | Strabon                      | 3.3.3-SNAPSHOT                  |
 
 #### 2. Workloads
 
-[![Scalability DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13283414.svg)](https://doi.org/10.5281/zenodo.13283414)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13283414.svg)](https://doi.org/10.5281/zenodo.13283414)
 
-We chose the 10K, 100K and 1M variants of the Scalability workload where the 
-respective datasets contain 10K, 100K and 1M triples. The basic characteristics 
+We chose the 10K, 100K, 1M and 10M variants of the Scalability workload where the 
+respective datasets contain 10K, 100K, 1M and 10M triples. The basic characteristics 
 of the datasets (e.g., features and geometries) are described in the following
 table.
 
@@ -44,7 +44,7 @@ table.
 |     **10K** |              1,135 |              587 |               0 |                900 |
 |    **100K** |             12,166 |            6,623 |           4,239 |              2,531 |
 |      **1M** |            118,161 |           46,781 |          45,238 |             29,200 |
-|         10M |          1,038,739 |          317,865 |         328,630 |            427,842 |
+|     **10M** |          1,038,739 |          317,865 |         328,630 |            427,842 |
 |        100M |         10,259,959 |          904,677 |       2,058,386 |          7,553,440 |
 |        500M |         48,623,878 |        5,520,767 |      15,771,932 |         23,390,220 |
 
@@ -58,9 +58,8 @@ predicates__.
 The experiments have been run with GeoRDFBench branch **_releases/v2.0.0_**.
 
 #### 4. Host Hardware
-The hardware platform for the experiments was an Intel NUC8i7BEH box,  
-Ubuntu 22.04.5 LTS with 32GB DDR4-2400MHz, a Samsung SSD NVMe 970 EVO Plus 
-500GB system disk and a secondary data disk Western Digital WDC WD20SPZX-75U 
-2TB mounted on **/data**. Both filesystems **/** and **/data** 
-were formatted as _'ext4'_. All SUTs and their repository data were 
+The hardware platform for the experiments was an Intel NUC8i7BEH box, Ubuntu 22.04.5 LTS 
+with 32GB DDR4-2400MHz, a Samsung SSD NVMe 970 EVO Plus 500GB system disk and a secondary 
+data disk Western Digital WDC WD20SPZX-75U 2TB mounted on **/data**. Both filesystems 
+**/** and **/data** were formatted as _'ext4'_. All SUTs and their repository data were 
 intentionally placed under the slower **/data** filesystem.
